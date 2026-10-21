@@ -50,7 +50,7 @@ jobs:
       GOTOOLCHAIN: local
       # The tetriz-connectors revision the wiring module's go.sum was tidied
       # against. Move it and re-run `go mod tidy` in defectlineage/wiring together.
-      CONNECTORS_REF: 9fd2fa79b46ff13c4ca2806dc732f88a7301cd40
+      CONNECTORS_REF: 537fa6a90187233d0d8e01c6bf9a1ea263f8693f
       CONNECTORS_REPOSITORY: ${{ github.repository_owner }}/tetriz-connectors
       # Without this the host-contract test skips.
       DEFECTLINEAGE_TEST_DSN: "host=127.0.0.1 port=5432 user=postgres password=ci-only dbname=defectlineage sslmode=disable"
