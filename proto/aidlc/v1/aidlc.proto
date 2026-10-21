@@ -1,0 +1,843 @@
+// Copyright 2026 Workloom Solutions Private Limited
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+package aidlc.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/tetriz-ai/tetriz-engineering-intelligence/gen/aidlc/v1;aidlcv1";
+
+// AidlcStage is one of the nine software-lifecycle stages the map has a row for.
+// The numbering is the order the map renders in, not an importance ranking. The
+// vocabulary is closed, so a stage outside it has no row.
+enum AidlcStage {
+  // AIDLC_STAGE_UNSPECIFIED on a cell or stage means the stage could not be
+  // resolved. In a stage map it is a definitive "serves no lifecycle stage": a
+  // read answer, distinct from an artifact that has no entry at all.
+  AIDLC_STAGE_UNSPECIFIED = 0;
+  // AIDLC_STAGE_PRODUCT_SPEC covers deciding and writing what to build.
+  AIDLC_STAGE_PRODUCT_SPEC = 1;
+  // AIDLC_STAGE_TECH_SPEC covers the technical design of an agreed change.
+  AIDLC_STAGE_TECH_SPEC = 2;
+  // AIDLC_STAGE_PLAN covers breaking a design into sequenced, assignable work.
+  AIDLC_STAGE_PLAN = 3;
+  // AIDLC_STAGE_CODE covers authoring the change itself.
+  AIDLC_STAGE_CODE = 4;
+  // AIDLC_STAGE_REVIEW covers assessing a proposed change before it merges.
+  AIDLC_STAGE_REVIEW = 5;
+  // AIDLC_STAGE_TEST_QA covers deciding what to verify and verifying it.
+  AIDLC_STAGE_TEST_QA = 6;
+  // AIDLC_STAGE_CI_CD covers the build and delivery pipeline.
+  AIDLC_STAGE_CI_CD = 7;
+  // AIDLC_STAGE_DEPLOY covers releasing a change and rolling it back.
+  AIDLC_STAGE_DEPLOY = 8;
+  // AIDLC_STAGE_OPERATE covers running what has shipped: incidents, alerts, and
+  // remediation.
+  AIDLC_STAGE_OPERATE = 9;
+}
+
+// AidlcLevel is one of the five autonomy levels the map has a column for. The
+// levels are ordinal, not numeric: a frontier of L3 is higher than one of L2, and
+// nothing may sum, average, or treat the gap between levels as a quantity.
+enum AidlcLevel {
+  // AIDLC_LEVEL_UNSPECIFIED means the level could not be resolved. On a frontier it
+  // is a real reading, no level is established, not a missing value.
+  AIDLC_LEVEL_UNSPECIFIED = 0;
+  // AIDLC_LEVEL_L1 is Assisted: the AI produces fragments on request and a person
+  // authors the artifact and every decision.
+  AIDLC_LEVEL_L1 = 1;
+  // AIDLC_LEVEL_L2 is Conversational: the AI drafts and the person edits and
+  // decides at each turn, remaining the author of record.
+  AIDLC_LEVEL_L2 = 2;
+  // AIDLC_LEVEL_L3 is Supervised agentic: an agent produces a complete artifact and
+  // a person approves it before it takes effect.
+  AIDLC_LEVEL_L3 = 3;
+  // AIDLC_LEVEL_L4 is Autonomous: an agent completes the stage's work unattended and
+  // it takes effect after a check of the result, not of each step.
+  AIDLC_LEVEL_L4 = 4;
+  // AIDLC_LEVEL_L5 is Orchestrated: several agents coordinate under the
+  // organisation's own policy, which decides per risk class when a person is
+  // pulled in.
+  AIDLC_LEVEL_L5 = 5;
+}
+
+// CellState is the verdict for one cell: exactly one of three, always set.
+enum CellState {
+  // CELL_STATE_UNSPECIFIED means no verdict was produced, so the cell is malformed.
+  // Distinct from NOT_YET_VISIBLE, which is itself a decided answer.
+  CELL_STATE_UNSPECIFIED = 0;
+  // CELL_STATE_MET means the rule for this level was read and fired.
+  CELL_STATE_MET = 1;
+  // CELL_STATE_NOT_REACHED means the rule was read at trusted coverage and did not
+  // fire. A position, not a failure.
+  CELL_STATE_NOT_REACHED = 2;
+  // CELL_STATE_NOT_YET_VISIBLE is the abstain: no answer. It is never evidence that
+  // the practice is absent, only that this profile cannot see it, so it contributes
+  // to no total and no ceiling.
+  CELL_STATE_NOT_YET_VISIBLE = 3;
+}
+
+// DecidedBy says what awarded a met cell. A cell that is not met carries
+// UNSPECIFIED.
+enum DecidedBy {
+  // DECIDED_BY_UNSPECIFIED means the cell is not met, so nothing awarded it.
+  DECIDED_BY_UNSPECIFIED = 0;
+  // DECIDED_BY_RULE means a deterministic rule read this level's own signals and
+  // fired.
+  DECIDED_BY_RULE = 1;
+  // DECIDED_BY_IMPLIED_FLOOR means nothing decided this level on its own and a
+  // higher level on the same stage is met, so the capability that higher level
+  // demonstrates includes this one. An inference, not an observation.
+  DECIDED_BY_IMPLIED_FLOOR = 2;
+  // DECIDED_BY_JUDGMENT means the award came from a judgment against cited
+  // numbers rather than a rule. The scorer in this module never produces it.
+  DECIDED_BY_JUDGMENT = 3;
+}
+
+// AbstainKind says why a cell has no answer. None of these kinds is evidence that
+// the practice is absent. Set if and only if the state is NOT_YET_VISIBLE.
+enum AbstainKind {
+  // ABSTAIN_KIND_UNSPECIFIED means the cell is not an abstain.
+  ABSTAIN_KIND_UNSPECIFIED = 0;
+  // ABSTAIN_KIND_COVERAGE means the rule was read, but not over enough of the
+  // organisation for the result to stand.
+  ABSTAIN_KIND_COVERAGE = 1;
+  // ABSTAIN_KIND_GAP means a signal the rule needs is not collected, so the rule
+  // could not be evaluated.
+  ABSTAIN_KIND_GAP = 2;
+  // ABSTAIN_KIND_JUDGMENT means the rule needs a judgment this profile does not
+  // make deterministically.
+  ABSTAIN_KIND_JUDGMENT = 3;
+  // ABSTAIN_KIND_NO_POPULATION means nothing of this kind happened in the window,
+  // so there is no population to assess.
+  ABSTAIN_KIND_NO_POPULATION = 4;
+  // ABSTAIN_KIND_ROW_ABSENT means a reading the rule needs was produced with no
+  // value for this organisation.
+  ABSTAIN_KIND_ROW_ABSENT = 5;
+  // ABSTAIN_KIND_DISPUTED means adjudication could not settle the verdict. The
+  // scorer in this module never produces it.
+  ABSTAIN_KIND_DISPUTED = 6;
+  // ABSTAIN_KIND_POPULATION_FLOOR means the population behind the rule was too thin
+  // to establish the practice either way: too few items, or too few people.
+  ABSTAIN_KIND_POPULATION_FLOOR = 7;
+  // ABSTAIN_KIND_INSTRUMENTED_ONLY means the signal reads zero and only ever
+  // observes an instrumented artifact, so it cannot evidence the absence of the
+  // uninstrumented form of the same practice.
+  ABSTAIN_KIND_INSTRUMENTED_ONLY = 8;
+  // ABSTAIN_KIND_AUTOMATED_ONLY means the signal reads zero because nobody chose an
+  // artifact for this stage by hand, while installed configuration serving the
+  // stage did fire.
+  ABSTAIN_KIND_AUTOMATED_ONLY = 9;
+}
+
+// SignalCoverage says how much of the population one reading saw.
+enum SignalCoverage {
+  // SIGNAL_COVERAGE_UNSPECIFIED means coverage was not resolved.
+  SIGNAL_COVERAGE_UNSPECIFIED = 0;
+  // SIGNAL_COVERAGE_FULL means the signal was read across the whole population.
+  SIGNAL_COVERAGE_FULL = 1;
+  // SIGNAL_COVERAGE_PARTIAL means only part of the population was visible, so the
+  // reading is a floor rather than a measurement.
+  SIGNAL_COVERAGE_PARTIAL = 2;
+  // SIGNAL_COVERAGE_DECLARED_PARTIAL means the source declares that it reports only
+  // a subset: partial by construction, not by collection gap.
+  SIGNAL_COVERAGE_DECLARED_PARTIAL = 3;
+  // SIGNAL_COVERAGE_NONE means the signal covers none of the population.
+  SIGNAL_COVERAGE_NONE = 4;
+  // SIGNAL_COVERAGE_UNKNOWN means coverage could not be established. Treat it as
+  // weaker than PARTIAL, never as FULL.
+  SIGNAL_COVERAGE_UNKNOWN = 5;
+}
+
+// Impact ranks how much a bottleneck constrains the organisation, and carries to
+// every recommendation answering it. Three bands, no score, most constraining
+// first.
+enum Impact {
+  // IMPACT_UNSPECIFIED means the band was not resolved.
+  IMPACT_UNSPECIFIED = 0;
+  // IMPACT_HIGH is the most constraining band.
+  IMPACT_HIGH = 1;
+  // IMPACT_MEDIUM_HIGH sits between HIGH and MEDIUM.
+  IMPACT_MEDIUM_HIGH = 2;
+  // IMPACT_MEDIUM is the least constraining band. There is no low band: something
+  // that constrains nothing is not a bottleneck.
+  IMPACT_MEDIUM = 3;
+}
+
+// PrevalenceBand is how established a level's practice is over its population, set
+// only on a cell decided by rule.
+enum PrevalenceBand {
+  // PREVALENCE_BAND_UNSPECIFIED means no band applies.
+  PREVALENCE_BAND_UNSPECIFIED = 0;
+  // PREVALENCE_BAND_ESTABLISHED means the practice holds across most of the
+  // population.
+  PREVALENCE_BAND_ESTABLISHED = 1;
+  // PREVALENCE_BAND_EMERGING means the practice is demonstrated on a real minority
+  // and not yet most of the population.
+  PREVALENCE_BAND_EMERGING = 2;
+}
+
+// ShareGrain says what a share's population counts, so a ratio is read against the
+// right denominator.
+enum ShareGrain {
+  // SHARE_GRAIN_UNSPECIFIED means the grain was not resolved.
+  SHARE_GRAIN_UNSPECIFIED = 0;
+  // SHARE_GRAIN_MERGED_CHANGES means the population is merged pull requests.
+  SHARE_GRAIN_MERGED_CHANGES = 1;
+  // SHARE_GRAIN_PEOPLE means the population is people.
+  SHARE_GRAIN_PEOPLE = 2;
+}
+
+// PreconditionKey names one precondition a profile is published under.
+enum PreconditionKey {
+  // PRECONDITION_KEY_UNSPECIFIED means the check was not resolved.
+  PRECONDITION_KEY_UNSPECIFIED = 0;
+  // PRECONDITION_KEY_PATH_COVERAGE checks that enough of the merged pull requests
+  // carry file paths for the path-defined signals to stand.
+  PRECONDITION_KEY_PATH_COVERAGE = 1;
+  // PRECONDITION_KEY_NO_SEATED_ACTIVITY checks that at least one pull request by a
+  // seat-holder merged in the window. Path coverage is trivially 1.0 over zero
+  // pull requests, which is why this is its own key.
+  PRECONDITION_KEY_NO_SEATED_ACTIVITY = 2;
+}
+
+// InstrumentationGap names one gap in what the data supplies: the reason a cell
+// cannot be read. Each gap's remediation class is declared by the ruleset.
+enum InstrumentationGap {
+  // INSTRUMENTATION_GAP_UNSPECIFIED means no gap applies.
+  INSTRUMENTATION_GAP_UNSPECIFIED = 0;
+  // INSTRUMENTATION_GAP_G1 is check and build outcomes reduced to counters, so a
+  // per-run pass or fail cannot be read.
+  INSTRUMENTATION_GAP_G1 = 1;
+  // INSTRUMENTATION_GAP_G2 is planning work and tracker issues not being read
+  // together, or no tracker issue in the window.
+  INSTRUMENTATION_GAP_G2 = 2;
+  // INSTRUMENTATION_GAP_G3 is commits not being joined to their pull requests.
+  INSTRUMENTATION_GAP_G3 = 3;
+  // INSTRUMENTATION_GAP_G4 is the organisation's policy evidence: the practices it
+  // enforces and the review policy it declares.
+  INSTRUMENTATION_GAP_G4 = 4;
+  // INSTRUMENTATION_GAP_G5 is runs that span repositories not being linked.
+  INSTRUMENTATION_GAP_G5 = 5;
+  // INSTRUMENTATION_GAP_G6 is design documents not being compared with the code
+  // they describe.
+  INSTRUMENTATION_GAP_G6 = 6;
+  // INSTRUMENTATION_GAP_G7 is deploy and rollback events reaching no stream.
+  INSTRUMENTATION_GAP_G7 = 7;
+  // INSTRUMENTATION_GAP_G8 is incident and alert events reaching no stream.
+  INSTRUMENTATION_GAP_G8 = 8;
+  // INSTRUMENTATION_GAP_G9 is a source that supplies no pull-request file paths.
+  INSTRUMENTATION_GAP_G9 = 9;
+}
+
+// SignalKey is the closed vocabulary of ruleset signals: the key a reading is set
+// under and the key a cell check names.
+enum SignalKey {
+  // SIGNAL_KEY_UNSPECIFIED means the signal was not resolved.
+  SIGNAL_KEY_UNSPECIFIED = 0;
+
+  // Presence numerators: seat-holders who did a stage's work with an AI artifact,
+  // divided by the seat roster. They observe instrumented artifacts only, so a
+  // zero never denies the chat-only form.
+
+  // SIGNAL_KEY_PRODUCT_SPEC_HARNESS_SEAT_HOLDERS is the seat-holders who invoked a
+  // product-spec artifact in the window (product spec L1).
+  SIGNAL_KEY_PRODUCT_SPEC_HARNESS_SEAT_HOLDERS = 1;
+  // SIGNAL_KEY_SPEC_DRAFTING_COMMAND_SEAT_HOLDERS is the seat-holders who typed a
+  // spec-drafting command (product spec L2). Command telemetry is a declared
+  // subset, so the signal abstains rather than deciding.
+  SIGNAL_KEY_SPEC_DRAFTING_COMMAND_SEAT_HOLDERS = 2;
+  // SIGNAL_KEY_TECH_SPEC_HARNESS_SEAT_HOLDERS is the seat-holders who invoked a
+  // design artifact (tech spec L1).
+  SIGNAL_KEY_TECH_SPEC_HARNESS_SEAT_HOLDERS = 3;
+  // SIGNAL_KEY_REVIEW_HARNESS_SEAT_HOLDERS is the seat-holders who invoked a review
+  // artifact in a session (review L1).
+  SIGNAL_KEY_REVIEW_HARNESS_SEAT_HOLDERS = 4;
+  // SIGNAL_KEY_CI_TOOL_SEAT_HOLDERS_BY_FUNCTION is the seat-holders who invoked a
+  // CI artifact (CI/CD L1).
+  SIGNAL_KEY_CI_TOOL_SEAT_HOLDERS_BY_FUNCTION = 5;
+  // SIGNAL_KEY_DEPLOY_HARNESS_SEAT_HOLDERS is the seat-holders who invoked a deploy
+  // artifact (deploy L1).
+  SIGNAL_KEY_DEPLOY_HARNESS_SEAT_HOLDERS = 6;
+  // SIGNAL_KEY_OBSERVABILITY_TOOL_SEAT_HOLDERS is the seat-holders whose sessions
+  // used an observability tool (operate L1). Tool inventories are a declared
+  // subset, so the signal abstains rather than deciding.
+  SIGNAL_KEY_OBSERVABILITY_TOOL_SEAT_HOLDERS = 7;
+  // SIGNAL_KEY_DEBUGGING_ARTIFACT_SEAT_HOLDERS is the seat-holders who invoked a
+  // debugging artifact (operate L2).
+  SIGNAL_KEY_DEBUGGING_ARTIFACT_SEAT_HOLDERS = 8;
+
+  // Merged-change numerators: the share of a stage's merged pull requests done a
+  // given way.
+
+  // SIGNAL_KEY_AI_ATTRIBUTED_PRD_PRS_MERGED_AFTER_REVIEW is the AI-authored merged
+  // requirement pull requests a person reviewed (product spec L3).
+  SIGNAL_KEY_AI_ATTRIBUTED_PRD_PRS_MERGED_AFTER_REVIEW = 9;
+  // SIGNAL_KEY_HARNESS_ROUTED_PRD_PRS_MERGED is the AI-authored merged requirement
+  // pull requests whose session invoked an artifact the harness selected (product
+  // spec L4). A declared subset, so it abstains.
+  SIGNAL_KEY_HARNESS_ROUTED_PRD_PRS_MERGED = 10;
+  // SIGNAL_KEY_AI_ATTRIBUTED_DESIGN_DOC_PRS_MERGED is the AI-authored merged
+  // design-document pull requests (tech spec L2).
+  SIGNAL_KEY_AI_ATTRIBUTED_DESIGN_DOC_PRS_MERGED = 11;
+  // SIGNAL_KEY_AI_ATTRIBUTED_DESIGN_DOC_PRS_MERGED_AFTER_REVIEW is the AI-authored
+  // merged design-document pull requests a person reviewed (tech spec L3).
+  SIGNAL_KEY_AI_ATTRIBUTED_DESIGN_DOC_PRS_MERGED_AFTER_REVIEW = 12;
+  // SIGNAL_KEY_HARNESS_ROUTED_DESIGN_DOC_PRS_MERGED is the harness-routed merged
+  // design-document pull requests (tech spec L4). A declared subset, so it
+  // abstains.
+  SIGNAL_KEY_HARNESS_ROUTED_DESIGN_DOC_PRS_MERGED = 13;
+  // SIGNAL_KEY_AI_ATTRIBUTED_MERGED_PRS is the AI-authored merged feature and
+  // bugfix pull requests (code L1).
+  SIGNAL_KEY_AI_ATTRIBUTED_MERGED_PRS = 14;
+  // SIGNAL_KEY_AI_ATTRIBUTED_MERGED_PRS_HUMAN_REVIEWED is the AI-authored merged
+  // delivery pull requests a person reviewed (code L3).
+  SIGNAL_KEY_AI_ATTRIBUTED_MERGED_PRS_HUMAN_REVIEWED = 15;
+  // SIGNAL_KEY_AI_DELIVERY_PRS_LOW_TURN is the AI-authored merged delivery pull
+  // requests with at most four human turns across their authoring sessions (code
+  // L4).
+  SIGNAL_KEY_AI_DELIVERY_PRS_LOW_TURN = 16;
+  // SIGNAL_KEY_BOT_PRESENT_PRS is the merged pull requests a review bot reviewed
+  // (review L3).
+  SIGNAL_KEY_BOT_PRESENT_PRS = 17;
+  // SIGNAL_KEY_BOT_CLEARED_NO_HUMAN is the merged pull requests a bot reviewed with
+  // no human review (review L4).
+  SIGNAL_KEY_BOT_CLEARED_NO_HUMAN = 18;
+  // SIGNAL_KEY_AI_DELIVERY_PRS_TOUCHING_TESTS is the AI-authored merged delivery
+  // pull requests that touch test files (test & QA L2).
+  SIGNAL_KEY_AI_DELIVERY_PRS_TOUCHING_TESTS = 19;
+  // SIGNAL_KEY_AI_LOW_TURN_PRS_TOUCHING_TESTS is the low-turn AI-authored merged
+  // delivery pull requests that touch test files (test & QA L3).
+  SIGNAL_KEY_AI_LOW_TURN_PRS_TOUCHING_TESTS = 20;
+  // SIGNAL_KEY_AI_ATTRIBUTED_CI_PRS_MERGED is the AI-authored merged CI
+  // configuration pull requests (CI/CD L2).
+  SIGNAL_KEY_AI_ATTRIBUTED_CI_PRS_MERGED = 21;
+  // SIGNAL_KEY_AI_ATTRIBUTED_CI_PRS_MERGED_AFTER_REVIEW is the AI-authored merged
+  // CI configuration pull requests a person reviewed (CI/CD L3).
+  SIGNAL_KEY_AI_ATTRIBUTED_CI_PRS_MERGED_AFTER_REVIEW = 22;
+  // SIGNAL_KEY_AI_ATTRIBUTED_RELEASE_PRS_MERGED is the AI-authored merged release
+  // pull requests, by branch or title. No rule of the ruleset reads it; the fold
+  // reports it beside the release-branch signals.
+  SIGNAL_KEY_AI_ATTRIBUTED_RELEASE_PRS_MERGED = 23;
+  // SIGNAL_KEY_AI_ATTRIBUTED_RELEASE_PRS_MERGED_AFTER_REVIEW is the AI-authored
+  // merged release pull requests a person reviewed. No rule of the ruleset reads
+  // it.
+  SIGNAL_KEY_AI_ATTRIBUTED_RELEASE_PRS_MERGED_AFTER_REVIEW = 24;
+  // SIGNAL_KEY_AI_ATTRIBUTED_MONITORING_PRS_MERGED is the AI-authored merged
+  // monitoring-as-code pull requests (operate L3).
+  SIGNAL_KEY_AI_ATTRIBUTED_MONITORING_PRS_MERGED = 25;
+
+  // Denominators: the population each share divides by. SEAT_HOLDERS counts
+  // people; the rest count merged pull requests.
+
+  // SIGNAL_KEY_SEAT_HOLDERS is the seat roster, the denominator every presence
+  // level divides by.
+  SIGNAL_KEY_SEAT_HOLDERS = 26;
+  // SIGNAL_KEY_PRODUCT_SPEC_AGENT_UNIVERSE is the AI-authored merged requirement
+  // pull requests.
+  SIGNAL_KEY_PRODUCT_SPEC_AGENT_UNIVERSE = 27;
+  // SIGNAL_KEY_TECH_SPEC_SEAT_LINKED_ARTIFACTS is the merged design-document pull
+  // requests by seat-holders.
+  SIGNAL_KEY_TECH_SPEC_SEAT_LINKED_ARTIFACTS = 28;
+  // SIGNAL_KEY_TECH_SPEC_AGENT_UNIVERSE is the AI-authored merged design-document
+  // pull requests.
+  SIGNAL_KEY_TECH_SPEC_AGENT_UNIVERSE = 29;
+  // SIGNAL_KEY_CODE_SEAT_LINKED_ARTIFACTS is the merged feature and bugfix pull
+  // requests by seat-holders.
+  SIGNAL_KEY_CODE_SEAT_LINKED_ARTIFACTS = 30;
+  // SIGNAL_KEY_CODE_AGENT_UNIVERSE is the AI-authored merged delivery pull
+  // requests.
+  SIGNAL_KEY_CODE_AGENT_UNIVERSE = 31;
+  // SIGNAL_KEY_REVIEW_RULE_APPLICABLE_PRS is the merged pull requests the
+  // bot-review rule could be evaluated against.
+  SIGNAL_KEY_REVIEW_RULE_APPLICABLE_PRS = 32;
+  // SIGNAL_KEY_REVIEW_BOT_SEEN_PRS is the merged pull requests a bot did review.
+  SIGNAL_KEY_REVIEW_BOT_SEEN_PRS = 33;
+  // SIGNAL_KEY_TEST_QA_SEAT_LINKED_ARTIFACTS is the merged delivery pull requests by
+  // seat-holders.
+  SIGNAL_KEY_TEST_QA_SEAT_LINKED_ARTIFACTS = 34;
+  // SIGNAL_KEY_TEST_QA_AGENT_LOW_TURN_UNIVERSE is the low-turn AI delivery whose
+  // file list is readable.
+  SIGNAL_KEY_TEST_QA_AGENT_LOW_TURN_UNIVERSE = 35;
+  // SIGNAL_KEY_CI_CD_SEAT_LINKED_ARTIFACTS is the merged CI configuration pull
+  // requests by seat-holders.
+  SIGNAL_KEY_CI_CD_SEAT_LINKED_ARTIFACTS = 36;
+  // SIGNAL_KEY_CI_CD_AGENT_UNIVERSE is the AI-authored merged CI configuration pull
+  // requests.
+  SIGNAL_KEY_CI_CD_AGENT_UNIVERSE = 37;
+  // SIGNAL_KEY_DEPLOY_SEAT_LINKED_ARTIFACTS is the merged release pull requests by
+  // seat-holders. No rule of the ruleset reads it.
+  SIGNAL_KEY_DEPLOY_SEAT_LINKED_ARTIFACTS = 38;
+  // SIGNAL_KEY_DEPLOY_AGENT_UNIVERSE is the AI-authored merged release pull
+  // requests. No rule of the ruleset reads it.
+  SIGNAL_KEY_DEPLOY_AGENT_UNIVERSE = 39;
+  // SIGNAL_KEY_OPERATE_SEAT_LINKED_ARTIFACTS is the merged monitoring-as-code pull
+  // requests by seat-holders.
+  SIGNAL_KEY_OPERATE_SEAT_LINKED_ARTIFACTS = 40;
+
+  // Control and validity terms: read beside a rule, never as its share.
+
+  // SIGNAL_KEY_NON_AI_BASELINE_REVIEW_RATE is how often a stage's non-AI work is
+  // reviewed, the control an L3 level reads so a review on AI work counts only
+  // where review is a live practice. Unresolvable means abstain, not deny.
+  SIGNAL_KEY_NON_AI_BASELINE_REVIEW_RATE = 41;
+  // SIGNAL_KEY_COMPLEXITY_SCORE is the change-complexity reading attached to code
+  // L4, so the low-turn pull requests are not only the trivial ones. Reported,
+  // never a gate.
+  SIGNAL_KEY_COMPLEXITY_SCORE = 42;
+
+  // The L5 policy column.
+
+  // SIGNAL_KEY_ENFORCED_PRACTICE_ARTIFACTS_BY_STAGE is the live, unexpired,
+  // admin-pushed practice artifacts whose installed copies serve the stage. Zero
+  // means the organisation enforces no practice for the stage.
+  SIGNAL_KEY_ENFORCED_PRACTICE_ARTIFACTS_BY_STAGE = 43;
+  // SIGNAL_KEY_SEAT_HOLDERS_UNDER_ENFORCEMENT_BY_STAGE is the seat-holders the
+  // stage's enforcements target, the L5 total.
+  SIGNAL_KEY_SEAT_HOLDERS_UNDER_ENFORCEMENT_BY_STAGE = 44;
+  // SIGNAL_KEY_SEAT_HOLDERS_USING_ENFORCED_ARTIFACTS_BY_STAGE is the seat-holders in
+  // that total who used an enforced artifact in the window, the L5 count.
+  SIGNAL_KEY_SEAT_HOLDERS_USING_ENFORCED_ARTIFACTS_BY_STAGE = 45;
+  // SIGNAL_KEY_POLICY_COVERED_AI_MERGED_PRS is the AI-authored merged pull requests
+  // whose work type the declared review policy covers, the second total of review
+  // L5 and product spec L5.
+  SIGNAL_KEY_POLICY_COVERED_AI_MERGED_PRS = 46;
+  // SIGNAL_KEY_POLICY_MET_AI_MERGED_PRS is the covered subset whose approvals meet
+  // the declared requirement, the second count.
+  SIGNAL_KEY_POLICY_MET_AI_MERGED_PRS = 47;
+
+  // The Plan stage.
+
+  // SIGNAL_KEY_PLANNING_PHASE_SEAT_HOLDERS is the seat-holders with a planning
+  // phase in the window, Plan L2's count over the roster.
+  SIGNAL_KEY_PLANNING_PHASE_SEAT_HOLDERS = 48;
+  // SIGNAL_KEY_AI_MERGED_PRS is the AI-authored merged pull requests of every work
+  // type, the Plan L3 and Deploy L4 total.
+  SIGNAL_KEY_AI_MERGED_PRS = 49;
+  // SIGNAL_KEY_PLANNED_AI_MERGED_PRS is the AI-authored merged pull requests whose
+  // authoring session had a planning phase.
+  SIGNAL_KEY_PLANNED_AI_MERGED_PRS = 50;
+  // SIGNAL_KEY_PLANNED_AI_MERGED_PRS_HUMAN_REVIEWED is the planned subset a person
+  // other than the author approved, Plan L3's count.
+  SIGNAL_KEY_PLANNED_AI_MERGED_PRS_HUMAN_REVIEWED = 51;
+  // SIGNAL_KEY_UNATTENDED_PLANNED_AI_MERGED_PRS is the planned subset whose planning
+  // ran without a per-step human gate, Plan L4's count.
+  SIGNAL_KEY_UNATTENDED_PLANNED_AI_MERGED_PRS = 52;
+  // SIGNAL_KEY_PM_ISSUES_IN_WINDOW is the tracker issues created in the window,
+  // Plan L3's gate, never a count.
+  SIGNAL_KEY_PM_ISSUES_IN_WINDOW = 53;
+
+  // Deploy over release branches.
+
+  // SIGNAL_KEY_SHIPPED_BRANCH_SEAT_LINKED_PRS_MERGED is the seat-holders' merged
+  // pull requests into a branch whose role is shipped, Deploy L2's total.
+  SIGNAL_KEY_SHIPPED_BRANCH_SEAT_LINKED_PRS_MERGED = 54;
+  // SIGNAL_KEY_AI_ATTRIBUTED_SHIPPED_BRANCH_PRS_MERGED is the AI-authored subset,
+  // Deploy L2's count and Deploy L3's total.
+  SIGNAL_KEY_AI_ATTRIBUTED_SHIPPED_BRANCH_PRS_MERGED = 55;
+  // SIGNAL_KEY_AI_ATTRIBUTED_SHIPPED_BRANCH_PRS_MERGED_AFTER_REVIEW is the
+  // AI-authored shipped-branch merges a person reviewed, Deploy L3's count.
+  SIGNAL_KEY_AI_ATTRIBUTED_SHIPPED_BRANCH_PRS_MERGED_AFTER_REVIEW = 56;
+  // SIGNAL_KEY_AI_ATTRIBUTED_PRODUCTION_BRANCH_PRS_DEPLOYED is the AI-authored
+  // merges into a production branch confirmed deployed, Deploy L4's count. The fold
+  // has no deploy events to read, so every candidate is unread mass.
+  SIGNAL_KEY_AI_ATTRIBUTED_PRODUCTION_BRANCH_PRS_DEPLOYED = 57;
+
+  // Declared commands.
+
+  // SIGNAL_KEY_DECLARED_TEST_COMMAND_SESSIONS is the seated sessions that used
+  // tools, where a declared test command could have run, Test & QA L4's total.
+  SIGNAL_KEY_DECLARED_TEST_COMMAND_SESSIONS = 58;
+  // SIGNAL_KEY_DECLARED_TEST_COMMAND_GREEN_SESSIONS is the sessions in which a
+  // declared test command ran and the next outcome was green, Test & QA L4's count.
+  SIGNAL_KEY_DECLARED_TEST_COMMAND_GREEN_SESSIONS = 59;
+  // SIGNAL_KEY_DECLARED_CI_COMMAND_SESSIONS is the same total for the declared CI
+  // commands, CI/CD L4's total.
+  SIGNAL_KEY_DECLARED_CI_COMMAND_SESSIONS = 60;
+  // SIGNAL_KEY_DECLARED_CI_COMMAND_GREEN_SESSIONS is the sessions in which a
+  // declared CI command ran and the next outcome was green, CI/CD L4's count.
+  SIGNAL_KEY_DECLARED_CI_COMMAND_GREEN_SESSIONS = 61;
+}
+
+// HarnessArtifactType is the kind of an AI-harness artifact a person invoked or an
+// admin enforced. Only SKILL, AGENT and COMMAND are authored practice; the rest are
+// installed configuration and never reach a level.
+enum HarnessArtifactType {
+  // HARNESS_ARTIFACT_TYPE_UNSPECIFIED means the type is unknown.
+  HARNESS_ARTIFACT_TYPE_UNSPECIFIED = 0;
+  // HARNESS_ARTIFACT_TYPE_SKILL is a skill definition.
+  HARNESS_ARTIFACT_TYPE_SKILL = 1;
+  // HARNESS_ARTIFACT_TYPE_HOOK is a lifecycle hook.
+  HARNESS_ARTIFACT_TYPE_HOOK = 2;
+  // HARNESS_ARTIFACT_TYPE_PLUGIN is an installed plugin.
+  HARNESS_ARTIFACT_TYPE_PLUGIN = 3;
+  // HARNESS_ARTIFACT_TYPE_AGENT is a custom agent or subagent definition.
+  HARNESS_ARTIFACT_TYPE_AGENT = 4;
+  // HARNESS_ARTIFACT_TYPE_RULE is a rules file.
+  HARNESS_ARTIFACT_TYPE_RULE = 5;
+  // HARNESS_ARTIFACT_TYPE_CLAUDE_MD is a CLAUDE.md instruction file.
+  HARNESS_ARTIFACT_TYPE_CLAUDE_MD = 6;
+  // HARNESS_ARTIFACT_TYPE_AGENTS_MD is an AGENTS.md instruction file.
+  HARNESS_ARTIFACT_TYPE_AGENTS_MD = 7;
+  // HARNESS_ARTIFACT_TYPE_COMMAND is a slash-command definition.
+  HARNESS_ARTIFACT_TYPE_COMMAND = 8;
+  // HARNESS_ARTIFACT_TYPE_PROMPT_TEMPLATE is a prompt template injected as context.
+  HARNESS_ARTIFACT_TYPE_PROMPT_TEMPLATE = 9;
+  // HARNESS_ARTIFACT_TYPE_PERMISSIONS is a repository's permission set.
+  HARNESS_ARTIFACT_TYPE_PERMISSIONS = 10;
+}
+
+// PRWorkType is what kind of work a pull request delivers. FEATURE and BUGFIX are
+// the delivery population the code and test levels read.
+enum PRWorkType {
+  // PR_WORK_TYPE_UNSPECIFIED means no verdict was read; the pull request counts as
+  // an unknown that widens the code denominator.
+  PR_WORK_TYPE_UNSPECIFIED = 0;
+  // PR_WORK_TYPE_FEATURE means new user-facing or API functionality.
+  PR_WORK_TYPE_FEATURE = 1;
+  // PR_WORK_TYPE_BUGFIX means correcting incorrect behaviour.
+  PR_WORK_TYPE_BUGFIX = 2;
+  // PR_WORK_TYPE_REFACTOR means restructuring without behaviour change.
+  PR_WORK_TYPE_REFACTOR = 3;
+  // PR_WORK_TYPE_CHORE_DEPS means dependency bumps and routine chores.
+  PR_WORK_TYPE_CHORE_DEPS = 4;
+  // PR_WORK_TYPE_TEST means test-only changes.
+  PR_WORK_TYPE_TEST = 5;
+  // PR_WORK_TYPE_DOCS means documentation-only changes.
+  PR_WORK_TYPE_DOCS = 6;
+  // PR_WORK_TYPE_PERFORMANCE means optimisation without functional change.
+  PR_WORK_TYPE_PERFORMANCE = 7;
+  // PR_WORK_TYPE_UNCATEGORISED means a classifier ran and could not resolve a type;
+  // treated as unknown, like UNSPECIFIED.
+  PR_WORK_TYPE_UNCATEGORISED = 8;
+  // PR_WORK_TYPE_OTHER means an identified type outside the buckets above. Known,
+  // and not delivery.
+  PR_WORK_TYPE_OTHER = 9;
+}
+
+// PreconditionCheck is one precondition reading behind a profile's publication.
+message PreconditionCheck {
+  // key names the check.
+  PreconditionKey key = 1;
+  // passed is whether the check held.
+  bool passed = 2;
+  // measured_value is the value the check read.
+  double measured_value = 3;
+  // threshold is the bar measured_value was read against.
+  double threshold = 4;
+  // detail is the plain-language explanation of the check's outcome.
+  string detail = 5;
+}
+
+// CellCheck is one gate the scorer evaluated for a cell: a check, never the share.
+message CellCheck {
+  // key names the signal this check read.
+  SignalKey key = 1;
+  // kind is the check kind: prevalence, people_floor, control, validity,
+  // population, unmeasurable or numerator.
+  string kind = 2;
+  // outcome is the check's result in plain language. The scorer leaves it empty.
+  string outcome = 3;
+  // measured_value is the value the check read.
+  double measured_value = 4;
+  // threshold is the bar measured_value was read against.
+  double threshold = 5;
+  // comparator is how measured_value was compared to threshold, e.g. ">=".
+  string comparator = 6;
+  // coverage qualifies how much of the population the reading saw.
+  SignalCoverage coverage = 7;
+}
+
+// CellEvidence is one measured signal reading behind a cell.
+message CellEvidence {
+  // label is the plain-language signal name.
+  string label = 1;
+  // value is the reading, formatted for display.
+  string value = 2;
+  // coverage qualifies how much of the population this reading saw.
+  SignalCoverage coverage = 3;
+}
+
+// MaturityCell is one of the 45 (stage, level) intersections.
+message MaturityCell {
+  // level is the level this cell answers for; the stage is the parent's.
+  AidlcLevel level = 1;
+  // state is the verdict. Always set.
+  CellState state = 2;
+  // definition is what this level means for this stage.
+  string definition = 3;
+  // terms are the deciding terms the rule evaluated, each stating its outcome, what
+  // was measured and the bar. Display strings, not a parseable expression.
+  repeated string terms = 4;
+  // evidence are the signal readings behind the verdict. Empty when the rule was
+  // not read at all.
+  repeated CellEvidence evidence = 5;
+  // reason is the plain-language why, set when state is NOT_YET_VISIBLE.
+  string reason = 6;
+  // abstain_kind classifies the abstain. Set if and only if state is
+  // NOT_YET_VISIBLE.
+  AbstainKind abstain_kind = 7;
+  // decided_by says what awarded a met cell. Set if and only if state is MET.
+  DecidedBy decided_by = 8;
+}
+
+// MaturityBreadth is how many distinct people a stage's reading rests on, against
+// the organisation's active engineers in the window. A disclosure beside the
+// headline, never a level.
+enum MaturityBreadth {
+  // MATURITY_BREADTH_UNSPECIFIED means the stage's people set is empty, or the
+  // active engineers could not be read: nothing to disclose.
+  MATURITY_BREADTH_UNSPECIFIED = 0;
+  // MATURITY_BREADTH_NOT_REPORTED means fewer than three people account for the
+  // reading, too few to disclose without naming them.
+  MATURITY_BREADTH_NOT_REPORTED = 1;
+  // MATURITY_BREADTH_TEAM means three or more people, under half of the active
+  // engineers.
+  MATURITY_BREADTH_TEAM = 2;
+  // MATURITY_BREADTH_ORG_WIDE means three or more people, half or more of the
+  // active engineers.
+  MATURITY_BREADTH_ORG_WIDE = 3;
+}
+
+// MaturityStage is one row of the map: a stage and its five cells.
+message MaturityStage {
+  // stage identifies the row.
+  AidlcStage stage = 1;
+  // what_this_stage_is is one line on what the stage covers.
+  string what_this_stage_is = 2;
+  // cells are the stage's levels, one per level. Index them by level, not
+  // position.
+  repeated MaturityCell cells = 3;
+  // abstain_reason is one reason standing for the whole row, set when all five
+  // cells abstain.
+  string abstain_reason = 4;
+  // frontier is the row's headline: the highest level whose band is established.
+  // UNSPECIFIED where no level is established, a real state.
+  AidlcLevel frontier = 5;
+  // emerging_edge is the highest level above the frontier whose band is emerging.
+  // UNSPECIFIED when there is none.
+  AidlcLevel emerging_edge = 6;
+  // breadth is how widely this stage's reading is held. A disclosure: it sets
+  // neither frontier nor emerging_edge.
+  MaturityBreadth breadth = 7;
+}
+
+// MaturityConstraintKind names which derivation produced a constraint, so a client
+// branches on the kind rather than parsing the id.
+enum MaturityConstraintKind {
+  // MATURITY_CONSTRAINT_KIND_UNSPECIFIED means the kind was not resolved.
+  MATURITY_CONSTRAINT_KIND_UNSPECIFIED = 0;
+  // MATURITY_CONSTRAINT_KIND_REVIEW_REACH is recorded review reaching too few of
+  // the AI-written pull requests.
+  MATURITY_CONSTRAINT_KIND_REVIEW_REACH = 1;
+  // MATURITY_CONSTRAINT_KIND_ADOPTION_REACH is half or more of the people who merge
+  // work having no AI-written merge.
+  MATURITY_CONSTRAINT_KIND_ADOPTION_REACH = 2;
+  // MATURITY_CONSTRAINT_KIND_LEVEL_FELL_SHORT is the first level of a stage that was
+  // measured and fell short, on a stage that has a met level.
+  MATURITY_CONSTRAINT_KIND_LEVEL_FELL_SHORT = 3;
+  // MATURITY_CONSTRAINT_KIND_STAGE_STALLED is a stage measured end to end with no
+  // level met.
+  MATURITY_CONSTRAINT_KIND_STAGE_STALLED = 4;
+}
+
+// MaturityBottleneck is one thing holding the map where it is. The list order is the
+// ranking, most constraining first.
+message MaturityBottleneck {
+  // id is the stable key recommendations point at, unique within a profile.
+  string id = 1;
+  // title is the one-line statement of the constraint.
+  string title = 2;
+  // body is the paragraph explaining it.
+  string body = 3;
+  // impact is how much this constrains the organisation.
+  Impact impact = 4;
+  // stage is the stage the constraint is about; UNSPECIFIED for adoption reach,
+  // which spans stages.
+  AidlcStage stage = 5;
+  // level is the level the constraint is about; UNSPECIFIED for review reach and
+  // adoption reach.
+  AidlcLevel level = 6;
+  // progress is how far the constraint's share sits from the line that clears it;
+  // unset for a constraint that carries no share.
+  MaturityProgress progress = 7;
+  // kind is which derivation produced the constraint.
+  MaturityConstraintKind kind = 8;
+}
+
+// MaturityProgress is a constraint's share measured against the line that clears
+// it.
+message MaturityProgress {
+  // current_share is the share on the side that rises as the organisation
+  // improves, in [0, 1].
+  double current_share = 1;
+  // target_share is the line the share must rise strictly above, in (0, 1].
+  double target_share = 2;
+  // current is the count behind current_share. Unset for a people share over fewer
+  // than 20 people, whose counts are never shown.
+  optional int64 current = 3;
+  // population is current_share's denominator. Unset under the same rule.
+  optional int64 population = 4;
+  // unobserved is the part of population that could not be read. Unset under the
+  // same rule.
+  optional int64 unobserved = 5;
+  // items_to_target is the smallest number of additional items that lifts the share
+  // strictly above target_share. Unset when no item is needed.
+  optional int64 items_to_target = 6;
+  // current_label is the share as prose prints it, e.g. "16%" or "at least 31%".
+  string current_label = 7;
+  // target_label is the line as prose prints it, e.g. "20%".
+  string target_label = 8;
+}
+
+// MaturityRecommendation is one move answering one bottleneck.
+message MaturityRecommendation {
+  // id is the stable key of this recommendation, unique within a profile.
+  string id = 1;
+  // addresses is the MaturityBottleneck.id this answers.
+  string addresses = 2;
+  // title is the one-line statement of the move.
+  string title = 3;
+  // body is the paragraph explaining it.
+  string body = 4;
+  // impact mirrors the impact of the bottleneck this addresses.
+  Impact impact = 5;
+}
+
+// MaturityCoverageList says which side of the coverage block an item belongs on:
+// ours is what the measurement cannot see yet, theirs is what the organisation would
+// need to do for a reading to exist.
+enum MaturityCoverageList {
+  // MATURITY_COVERAGE_LIST_UNSPECIFIED means no side was assigned.
+  MATURITY_COVERAGE_LIST_UNSPECIFIED = 0;
+  // MATURITY_COVERAGE_LIST_OURS is what the measurement cannot see yet.
+  MATURITY_COVERAGE_LIST_OURS = 1;
+  // MATURITY_COVERAGE_LIST_THEIRS is what the organisation would need to do for a
+  // reading to exist.
+  MATURITY_COVERAGE_LIST_THEIRS = 2;
+}
+
+// MaturityCoverageItem is one line in the coverage block, composed from the cells'
+// abstains and deduplicated.
+message MaturityCoverageItem {
+  // list is which side of the block this renders on.
+  MaturityCoverageList list = 1;
+  // sentence is the one reader-facing line.
+  string sentence = 2;
+  // stages are the stages this item covers.
+  repeated AidlcStage stages = 3;
+  // route is where a client sends the reader for this item. UNSPECIFIED means the
+  // item is read-only prose.
+  MaturityCoverageRoute route = 4;
+}
+
+// MaturityCoverageRoute is where a coverage item's action lives.
+enum MaturityCoverageRoute {
+  // MATURITY_COVERAGE_ROUTE_UNSPECIFIED means no route.
+  MATURITY_COVERAGE_ROUTE_UNSPECIFIED = 0;
+  // MATURITY_COVERAGE_ROUTE_STAGE_ROW routes to the item's stage row on the grid.
+  MATURITY_COVERAGE_ROUTE_STAGE_ROW = 1;
+  reserved 2;
+  reserved "MATURITY_COVERAGE_ROUTE_INTEGRATIONS";
+  // MATURITY_COVERAGE_ROUTE_ORG_SETTINGS routes to where the organisation declares
+  // its review policy and commands.
+  MATURITY_COVERAGE_ROUTE_ORG_SETTINGS = 3;
+}
+
+// MaturityAdoptionState is whether the deployment is onboarding, growing, steady,
+// contracting or lapsed, read from the count of active engineers in the last thirty
+// days of the window against the thirty days before it.
+enum MaturityAdoptionState {
+  // MATURITY_ADOPTION_STATE_UNSPECIFIED means no reading was resolved.
+  MATURITY_ADOPTION_STATE_UNSPECIFIED = 0;
+  // MATURITY_ADOPTION_STATE_ONBOARDING means the organisation is under sixty days
+  // old. Wins over every other value.
+  MATURITY_ADOPTION_STATE_ONBOARDING = 1;
+  // MATURITY_ADOPTION_STATE_GROWING means active engineers in the last thirty days
+  // rose by more than twenty percent over the prior thirty, or the prior thirty had
+  // none.
+  MATURITY_ADOPTION_STATE_GROWING = 2;
+  // MATURITY_ADOPTION_STATE_STEADY means the count changed by twenty percent or
+  // less in either direction.
+  MATURITY_ADOPTION_STATE_STEADY = 3;
+  // MATURITY_ADOPTION_STATE_CONTRACTING means the count fell by more than twenty
+  // percent.
+  MATURITY_ADOPTION_STATE_CONTRACTING = 4;
+  // MATURITY_ADOPTION_STATE_LAPSED means the last thirty days had no active
+  // engineer. Wins over every ratio-based value.
+  MATURITY_ADOPTION_STATE_LAPSED = 5;
+}
+
+// MaturityProfile is one organisation's whole map plus the prose that frames it.
+message MaturityProfile {
+  // window_days is the measurement window the profile was computed over.
+  int32 window_days = 1;
+  // generated_at is when the profile was computed.
+  google.protobuf.Timestamp generated_at = 2;
+  // summary is the short prose read of where the organisation stands.
+  string summary = 3;
+  // stages are the rows, in lifecycle order.
+  repeated MaturityStage stages = 4;
+  // bottlenecks are ranked most constraining first.
+  repeated MaturityBottleneck bottlenecks = 5;
+  // recommendations each name the bottleneck they answer in addresses.
+  repeated MaturityRecommendation recommendations = 6;
+  // coverage_items is the "What we cannot see" block: ours items first, then
+  // theirs.
+  repeated MaturityCoverageItem coverage_items = 7;
+  // adoption_state is whether the deployment is growing, steady or shrinking. The
+  // scorer leaves it unset; ResolveAdoptionState computes it.
+  MaturityAdoptionState adoption_state = 8;
+}
+
+// MaturityMovementKind classifies one point in the movement series.
+enum MaturityMovementKind {
+  // MATURITY_MOVEMENT_KIND_UNSPECIFIED means no kind was resolved.
+  MATURITY_MOVEMENT_KIND_UNSPECIFIED = 0;
+  // MATURITY_MOVEMENT_KIND_MOVED_UP is a promotion: not met to met, or a band
+  // rising, held for two consecutive weeks.
+  MATURITY_MOVEMENT_KIND_MOVED_UP = 1;
+  // MATURITY_MOVEMENT_KIND_MOVED_DOWN is a demotion: met to not reached on measured
+  // evidence, reported the week it is measured.
+  MATURITY_MOVEMENT_KIND_MOVED_DOWN = 2;
+  // MATURITY_MOVEMENT_KIND_STUCK is a constraint present in a trailing run of at
+  // least three consecutive published weeks ending at the range's last week.
+  MATURITY_MOVEMENT_KIND_STUCK = 3;
+  // MATURITY_MOVEMENT_KIND_LOST_SIGHT is a cell that abstains this week and whose
+  // last visible reading was met or not reached. Never a movement.
+  MATURITY_MOVEMENT_KIND_LOST_SIGHT = 4;
+  // MATURITY_MOVEMENT_KIND_COVERAGE_GAINED is a cell whose verdict and band held
+  // while its share bounds narrowed. Never a movement.
+  MATURITY_MOVEMENT_KIND_COVERAGE_GAINED = 5;
+  // MATURITY_MOVEMENT_KIND_HISTORY_STARTS marks that the range's early weeks predate
+  // the history, or the history is too short to read movement over.
+  MATURITY_MOVEMENT_KIND_HISTORY_STARTS = 6;
+}
+
+// MaturityMovementPoint is one entry in the movement series: a cell's change in one
+// calendar week, a stuck constraint, or the series' single start-of-history line.
+message MaturityMovementPoint {
+  // week_start is the ISO week's Monday, an ISO-8601 calendar date.
+  string week_start = 1;
+  // kind classifies this point.
+  MaturityMovementKind kind = 2;
+  // stage identifies the cell's row. On a STUCK point it is the constraint's stage;
+  // UNSPECIFIED on the HISTORY_STARTS point.
+  AidlcStage stage = 3;
+  // level identifies the cell's level. On a STUCK point it is the constraint's
+  // level; UNSPECIFIED on the HISTORY_STARTS point.
+  AidlcLevel level = 4;
+  // weeks_held is the number of consecutive weeks behind a MOVED_UP or STUCK point;
+  // zero on every other kind.
+  int32 weeks_held = 5;
+  // bottleneck_id is the stuck constraint's id, set only on a STUCK point.
+  string bottleneck_id = 6;
+  // history_from is when the history begins, an ISO-8601 calendar date, set only
+  // on a HISTORY_STARTS point caused by a history boundary inside the range.
+  string history_from = 7;
+  // visible_again is set only on a LOST_SIGHT point: true when the same cell is
+  // visible again in the series' last week.
+  bool visible_again = 8;
+}

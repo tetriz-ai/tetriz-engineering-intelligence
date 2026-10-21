@@ -1,0 +1,8 @@
+-- ComputeMeasurement + DeriveDollars (basis-free: cannot withhold) --
+  hours recovered  0.0
+  annual value     $0
+  net gain         $-12000
+  payback          WITHHELD
+-- ComputeSubjectCascade (basis first) --
+  basis            INSUFFICIENT_DATA
+  dollars          not derived (non-numeric basis)

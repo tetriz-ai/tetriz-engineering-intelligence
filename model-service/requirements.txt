@@ -1,0 +1,17 @@
+# Dependencies for the local path: the Python SDK (sdk/), the CSV runner
+# (classify_csv.py), and the bundle builder (build_bundle.py). Pinned to exact
+# versions for reproducibility. The HTTP services have their own list in
+# server/requirements.txt.
+#
+# For a byte-reproducible environment, generate a hash-locked file from this one
+# on the target platform (e.g. `pip freeze > requirements.lock`). sentence-
+# transformers and google-genai are held on the major the code was evaluated
+# against (5.x / 1.x); bumping either major needs an eval pass.
+
+numpy==2.5.3
+sentence-transformers==5.6.0     # the MiniLM model (Layer 1) + bundle building
+
+# Only needed for the optional Layer 2 (LLM) and storage flags:
+google-genai==1.75.0             # --llm with Gemini (needs GEMINI_API_KEY)
+httpx==0.28.1                    # --llm with an OpenAI-compatible endpoint (--base-url/--model)
+psycopg[binary]==3.3.6           # --db, to also save results to Postgres

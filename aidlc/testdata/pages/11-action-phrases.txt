@@ -1,0 +1,145 @@
+Action phrases: every cell a level can fall short on
+====================================================
+
+Constraints and the moves that clear them:
+- Product spec at assisted
+  Constraint: Few requirements get an assistant's help with wording or critique.
+  Move: Have an assistant tighten and critique the requirements your people write.
+- Product spec at conversational
+  Constraint: Few requirements are worked out in conversation with an assistant.
+  Move: Work out requirements in conversation with an assistant, drafting sections together.
+- Product spec at supervised agentic
+  Constraint: Agents draft few specs from a brief for a person to approve.
+  Move: Let agents draft full specs from a brief for approval.
+- Product spec at autonomous
+  Constraint: Agents turn few raw requests into accepted specs without supervision.
+  Move: Let agents turn raw tickets and threads into accepted specs.
+- Product spec at orchestrated (enforced practice)
+  Constraint: Few people draft specs under a practice you enforce.
+  Move: Get your people drafting specs under a practice your admins enforce.
+- Product spec at orchestrated (declared policy)
+  Constraint: Few spec approvals follow your declared review policy.
+  Move: Have spec approvals follow your declared review policy.
+- Tech spec at assisted
+  Constraint: Few designs are written with an assistant answering questions.
+  Move: Have an assistant answer design questions as your people write designs.
+- Tech spec at conversational
+  Constraint: Few design documents are drafted with an assistant, section by section.
+  Move: Draft design documents with an assistant, section by section.
+- Tech spec at supervised agentic
+  Constraint: Agents draft few full design documents for a person to review.
+  Move: Let agents draft full design documents for a person to review.
+- Tech spec at autonomous
+  Constraint: Few agent-produced design documents land with only a final review.
+  Move: Let agents produce design documents that land after a final review.
+- Tech spec at orchestrated
+  Constraint: Few design records are kept in sync with the code by agents.
+  Move: Have coordinated agents keep design records in sync with the code.
+- Plan at assisted
+  Constraint: Few plans get next-step suggestions from an assistant.
+  Move: Ask an assistant for next steps when your people plan.
+- Plan at conversational
+  Constraint: Few tasks are planned with an assistant in plan mode.
+  Move: Plan with an assistant in plan mode, using a todo list.
+- Plan at supervised agentic
+  Constraint: Few work items are planned with an assistant and approved at merge.
+  Move: Plan work in an assistant session and approve it at merge.
+- Plan at autonomous
+  Constraint: Few plans run without a person approving each step.
+  Move: Let agents run a plan without a person approving each step.
+- Plan at orchestrated
+  Constraint: Few people plan under a practice you enforce.
+  Move: Get your people planning under a practice your admins enforce.
+- Code at assisted
+  Constraint: Few changes are written with assistant completions and snippets.
+  Move: Let an assistant fill in completions while your people write changes.
+- Code at conversational
+  Constraint: Few changes come from suggestions applied in chat.
+  Move: Have your people apply changes suggested in chat.
+- Code at supervised agentic
+  Constraint: Agents make few complete changes for a person to review before merge.
+  Move: Let agents make complete multi-file changes for a person to review.
+- Code at autonomous
+  Constraint: Few AI-written pull requests merge with little back-and-forth.
+  Move: Let agents take more pull requests to merge with little back-and-forth.
+- Code at orchestrated
+  Constraint: Few people write code under a practice you enforce.
+  Move: Get your people writing code under a practice your admins enforce.
+- Review at assisted
+  Constraint: Few reviewers ask an assistant to explain a change.
+  Move: Have reviewers ask an assistant to explain the changes they review.
+- Review at conversational
+  Constraint: Few reviews are worked through in conversation with an assistant.
+  Move: Have reviewers work through changes in conversation with an assistant.
+- Review at supervised agentic
+  Constraint: An automated reviewer posts findings on few of your changes.
+  Move: Run an automated reviewer on every change and let people decide.
+- Review at autonomous
+  Constraint: A review bot clears few changes without a person re-reading them.
+  Move: Let your review bot approve low-risk pull requests on its own.
+- Review at orchestrated (enforced practice)
+  Constraint: Few reviewers follow a review practice you enforce.
+  Move: Get reviewers following a review practice your admins enforce.
+- Review at orchestrated (declared policy)
+  Constraint: Few review approvals follow your declared policy.
+  Move: Have review approvals follow your declared review policy.
+- Test & QA at assisted
+  Constraint: Few tests get an assistant's help with a case or assertion.
+  Move: Have an assistant help with test cases and assertions on request.
+- Test & QA at conversational
+  Constraint: Few changes get tests written alongside them with an assistant.
+  Move: Write tests alongside each change in conversation with an assistant.
+- Test & QA at supervised agentic
+  Constraint: Agents write tests with few of the changes they make.
+  Move: Let agents write tests as part of making each change.
+- Test & QA at autonomous
+  Constraint: Agents fix few failing test runs without supervision.
+  Move: Let agents run the test suite and fix failures on their own.
+- Test & QA at orchestrated
+  Constraint: Few people test under a practice you enforce.
+  Move: Get your people testing under a practice your admins enforce.
+- CI/CD at assisted
+  Constraint: Few build errors are investigated with an assistant's help.
+  Move: Have an assistant help your people look into build errors.
+- CI/CD at conversational
+  Constraint: Few pipeline changes are made in conversation with an assistant.
+  Move: Edit pipeline configuration in conversation with an assistant.
+- CI/CD at supervised agentic
+  Constraint: Agents fix few broken builds or pipeline problems for approval.
+  Move: Let agents fix broken builds and change the pipeline for approval.
+- CI/CD at autonomous
+  Constraint: Agents land few fixes for build failures without supervision.
+  Move: Let agents respond to build failures and land fixes on their own.
+- CI/CD at orchestrated
+  Constraint: Few pipeline changes are made by coordinated agents under your policy.
+  Move: Let coordinated agents keep your pipeline healthy under your policy.
+- Deploy at assisted
+  Constraint: Few of your people use an assistant while running releases.
+  Move: Have an assistant answer questions while your people run releases.
+- Deploy at conversational
+  Constraint: Few releases are walked through with an assistant, step by step.
+  Move: Walk through each release with an assistant, step by step.
+- Deploy at supervised agentic
+  Constraint: Agents run few releases from a written procedure with approval.
+  Move: Let agents run releases from a written procedure you approve.
+- Deploy at autonomous
+  Constraint: Agents perform few releases without supervision.
+  Move: Let agents perform approved releases on their own.
+- Deploy at orchestrated
+  Constraint: Few releases are decided and verified by agents under your policy.
+  Move: Let agents decide release, verification and rollback under your policy.
+- Operate at assisted
+  Constraint: Few problems are investigated with an assistant's help on logs.
+  Move: Have an assistant help your people look into logs and stack traces.
+- Operate at conversational
+  Constraint: Few debugging sessions happen in conversation with an assistant.
+  Move: Debug and check system health in conversation with an assistant.
+- Operate at supervised agentic
+  Constraint: Agents investigate few problems and propose fixes for a person.
+  Move: Let agents investigate problems and propose fixes for a person to apply.
+- Operate at autonomous
+  Constraint: Agents fix few problems without supervision.
+  Move: Let agents detect, diagnose and fix problems on their own.
+- Operate at orchestrated
+  Constraint: Agents detect, fix and verify few problems under your policy.
+  Move: Let agents detect, fix and verify problems under your policy.

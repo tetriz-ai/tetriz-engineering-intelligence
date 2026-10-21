@@ -1,0 +1,48 @@
+{
+  "axis": "type",
+  "seed": "pr-work-type-corpus-v2",
+  "splits": {
+    "test": {
+      "file": "type_test.csv",
+      "per_bucket": {
+        "bugfix": 92,
+        "chore-deps": 81,
+        "docs": 90,
+        "feature": 93,
+        "performance": 32,
+        "refactor": 37,
+        "test": 72
+      },
+      "rows": 497,
+      "sha256": "04dba6c42754bfd67730eb5b3bab2ab870749dccf83d53972d3a763e4bf353c3"
+    },
+    "train": {
+      "file": "type_train.csv",
+      "per_bucket": {
+        "bugfix": 422,
+        "chore-deps": 375,
+        "docs": 415,
+        "feature": 430,
+        "performance": 143,
+        "refactor": 165,
+        "test": 331
+      },
+      "rows": 2281,
+      "sha256": "75c1f4feb85c32b9bf5b52f69792030c7bef291a7b5cb1338ecb21482559623b"
+    },
+    "validation": {
+      "file": "type_validation.csv",
+      "per_bucket": {
+        "bugfix": 90,
+        "chore-deps": 80,
+        "docs": 89,
+        "feature": 92,
+        "performance": 30,
+        "refactor": 35,
+        "test": 70
+      },
+      "rows": 486,
+      "sha256": "8766755be695d819e3d824e56695d79ea7af7692a1658fee348933fea8541f7b"
+    }
+  }
+}

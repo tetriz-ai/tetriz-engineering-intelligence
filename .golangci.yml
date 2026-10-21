@@ -1,0 +1,21 @@
+version: "2"
+linters:
+  default: standard
+  enable:
+    - misspell
+    - revive
+  exclusions:
+    rules:
+      # Generated protobuf stubs are not hand-written and not reviewed as such.
+      - path: 'gen/'
+        linters: [revive, staticcheck, unused, misspell]
+      # One package comment per package, not one per file.
+      - path: '_test\.go'
+        linters: [revive]
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  exclusions:
+    paths:
+      - gen/

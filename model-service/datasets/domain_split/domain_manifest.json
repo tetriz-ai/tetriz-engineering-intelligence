@@ -1,0 +1,45 @@
+{
+  "axis": "domain",
+  "seed": "domain-v2",
+  "splits": {
+    "test": {
+      "file": "domain_test.csv",
+      "per_bucket": {
+        "ai-ml": 6,
+        "data-pipeline": 7,
+        "infra-devops": 15,
+        "observability": 15,
+        "security-compliance": 15,
+        "ui-design": 15
+      },
+      "rows": 73,
+      "sha256": "9cf6fb69c5201901c21fd26546d7afbcebf0231fd97f3f176c844b13533625d8"
+    },
+    "train": {
+      "file": "domain_train.csv",
+      "per_bucket": {
+        "ai-ml": 22,
+        "data-pipeline": 29,
+        "infra-devops": 64,
+        "observability": 67,
+        "security-compliance": 67,
+        "ui-design": 67
+      },
+      "rows": 316,
+      "sha256": "d7b7e42dc6cc98f4c9923ab2800dfbffefad001367af8b1bdb68e734c2f4c724"
+    },
+    "validation": {
+      "file": "domain_validation.csv",
+      "per_bucket": {
+        "ai-ml": 4,
+        "data-pipeline": 6,
+        "infra-devops": 13,
+        "observability": 14,
+        "security-compliance": 14,
+        "ui-design": 14
+      },
+      "rows": 65,
+      "sha256": "425d7500936a764943da3207bcd80c2dc3101f14504785619c8473ceff4a8d5f"
+    }
+  }
+}

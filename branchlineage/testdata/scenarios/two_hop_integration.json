@@ -1,0 +1,65 @@
+{
+  "repository": "acme/two-hop-integration",
+  "about": "Feature branches merge into integration, promoted to main twice: a cold start, then a chained window.",
+  "base": "2026-04-02T00:00:00Z",
+  "tracked": [
+    "main"
+  ],
+  "flow": [
+    {
+      "source": "integration",
+      "target": "main"
+    }
+  ],
+  "max_depth": 0,
+  "prs": [
+    {
+      "number": 10,
+      "head": "feature/a",
+      "base": "integration",
+      "merged_hour": 1,
+      "attributed": true
+    },
+    {
+      "number": 11,
+      "head": "feature/b",
+      "base": "integration",
+      "merged_hour": 2,
+      "attributed": true
+    },
+    {
+      "number": 12,
+      "head": "feature/c",
+      "base": "integration",
+      "merged_hour": 3
+    },
+    {
+      "number": 20,
+      "head": "integration",
+      "base": "main",
+      "merged_hour": 4,
+      "first_commit_hour": -24
+    },
+    {
+      "number": 21,
+      "head": "feature/d",
+      "base": "integration",
+      "merged_hour": 5,
+      "attributed": true
+    },
+    {
+      "number": 30,
+      "head": "integration",
+      "base": "main",
+      "merged_hour": 6,
+      "first_commit_hour": 4
+    }
+  ],
+  "expected": {
+    "edges": 4,
+    "attributed_before": 0,
+    "attributed_after": 2,
+    "carried": 4,
+    "depth_cap_hits": 0
+  }
+}

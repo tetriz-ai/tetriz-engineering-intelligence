@@ -1,0 +1,605 @@
+{
+  "public:Lightning-AI/pytorch-lightning": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/Lightning-AI/pytorch-lightning",
+    "copyright": "Copyright 2018-2021 William Falcon",
+    "license_file": "LICENSE-Lightning-AI-pytorch-lightning.txt",
+    "license_sha": "2e66bec2e791c2dfa1f8d9bd205180fc06ffc053",
+    "license_sha256": "a41e2fae9915ae56028f8dbd0bf27995f1907613cbcd2d81a61b010ad34e9fe9",
+    "license_url": "https://github.com/Lightning-AI/pytorch-lightning/blob/master/LICENSE"
+  },
+  "public:PrefectHQ/prefect": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/PrefectHQ/prefect",
+    "copyright": "Copyright 2019- Prefect Technologies, Inc.",
+    "license_file": "LICENSE-PrefectHQ-prefect.txt",
+    "license_sha": "8a8f20eedc6c4c32a671d51b12a46a543e27f1eb",
+    "license_sha256": "302c6c9fca2c024cdfc4a0b8082fdd2dc52453c0d92e4ca2859f261acdc08774",
+    "license_url": "https://github.com/PrefectHQ/prefect/blob/main/LICENSE"
+  },
+  "public:TanStack/query": {
+    "spdx": "MIT",
+    "url": "https://github.com/TanStack/query",
+    "copyright": "Copyright (c) 2021-present Tanner Linsley",
+    "license_file": "LICENSE-TanStack-query.txt",
+    "license_sha": "1869e21fc3c80b3010c3e60c5ab6dda077ce1f22",
+    "license_sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7",
+    "license_url": "https://github.com/TanStack/query/blob/main/LICENSE"
+  },
+  "public:alacritty/alacritty": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/alacritty/alacritty",
+    "copyright": "Copyright 2020 The Alacritty Project",
+    "license_file": "LICENSE-alacritty-alacritty.txt",
+    "license_sha": "9c3147f335e8d80568f5a3e6df2aea17398d7733",
+    "license_sha256": "8884289e3969c089cd556c53fa1d3f51d86b29e52a8c1d660a55ce8292986910",
+    "license_url": "https://github.com/alacritty/alacritty/blob/master/LICENSE-APACHE"
+  },
+  "public:angular/angular": {
+    "spdx": "MIT",
+    "url": "https://github.com/angular/angular",
+    "copyright": "Copyright (c) 2010-2026 Google LLC. https://angular.dev/license",
+    "license_file": "LICENSE-angular-angular.txt",
+    "license_sha": "5ec8e26b9eec0aa26838c4bfd32a260108524ad5",
+    "license_sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7",
+    "license_url": "https://github.com/angular/angular/blob/main/LICENSE"
+  },
+  "public:ant-design/ant-design": {
+    "spdx": "MIT",
+    "url": "https://github.com/ant-design/ant-design",
+    "copyright": "Copyright (c) 2015-present Ant UED, https://xtech.antfin.com/",
+    "license_file": "LICENSE-ant-design-ant-design.txt",
+    "license_sha": "9b563deb0073e49fbbba1067fb2cbdd5ad3453a4",
+    "license_sha256": "3c82654bb472ebbcacc4c1ff00f94aa8c60c4b7ee011b16bafcbacecc3703458",
+    "license_url": "https://github.com/ant-design/ant-design/blob/master/LICENSE"
+  },
+  "public:apache/airflow": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/apache/airflow",
+    "copyright": "",
+    "notice_file": "NOTICE-apache-airflow.txt",
+    "license_file": "LICENSE-apache-airflow.txt",
+    "license_sha": "cda7cffa6aa85bc22615d650bbb52026a8863d21",
+    "license_sha256": "cb0d37346e7916e782a2904dc5b8c8cdb8424eac5effb91ac409329c883619d4",
+    "license_url": "https://github.com/apache/airflow/blob/main/LICENSE"
+  },
+  "public:aquasecurity/trivy": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/aquasecurity/trivy",
+    "copyright": "",
+    "notice_file": "NOTICE-aquasecurity-trivy.txt",
+    "license_file": "LICENSE-aquasecurity-trivy.txt",
+    "license_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_url": "https://github.com/aquasecurity/trivy/blob/main/LICENSE"
+  },
+  "public:argoproj/argo-cd": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/argoproj/argo-cd",
+    "copyright": "Copyright 2017-2018 The Argo Authors",
+    "license_file": "LICENSE-argoproj-argo-cd.txt",
+    "license_sha": "67e99b065bcd6ac93d93c8fe8e0a72c6296a5614",
+    "license_sha256": "c996fc213c94f4a4a838407d355b081226caa7b103a4f239bb87fb8f1d8e3a60",
+    "license_url": "https://github.com/argoproj/argo-cd/blob/master/LICENSE"
+  },
+  "public:authelia/authelia": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/authelia/authelia",
+    "copyright": "Copyright 2026 Authelia",
+    "license_file": "LICENSE-authelia-authelia.txt",
+    "license_sha": "d56870fa24078d9851a63458d8adc66f7c66a774",
+    "license_sha256": "90afa7b9f90fc5ea93257ec4f3b7c90e1e5aa9685a20f0888812828d8b85c3da",
+    "license_url": "https://github.com/authelia/authelia/blob/master/LICENSE"
+  },
+  "public:babel/babel": {
+    "spdx": "MIT",
+    "url": "https://github.com/babel/babel",
+    "copyright": "Copyright (c) 2014-present Sebastian McKenzie and other contributors",
+    "license_file": "LICENSE-babel-babel.txt",
+    "license_sha": "f31575ec773bb199aeb7c0d0f1612cfe1c7038f1",
+    "license_sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+    "license_url": "https://github.com/babel/babel/blob/main/LICENSE"
+  },
+  "public:biomejs/biome": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/biomejs/biome",
+    "copyright": "Copyright (c) 2023 Biome Developers and Contributors.",
+    "license_file": "LICENSE-biomejs-biome.txt",
+    "license_sha": "cd7ef7e8fb62176ffc2d5816059620132f33c580",
+    "license_sha256": "e2746aba8799f7a3378259f36a83a079e811ca7926cbdd248a2eb7ca9cbbac5d",
+    "license_url": "https://github.com/biomejs/biome/blob/main/LICENSE-APACHE"
+  },
+  "public:chakra-ui/chakra-ui": {
+    "spdx": "MIT",
+    "url": "https://github.com/chakra-ui/chakra-ui",
+    "copyright": "Copyright (c) 2019 Chakra Systems Inc.",
+    "license_file": "LICENSE-chakra-ui-chakra-ui.txt",
+    "license_sha": "79c996c1a09caaf2ea65e94e9ab47ecd19b68b03",
+    "license_sha256": "9763e8439364e3663d1c41ac4c2a2bb44af407e3f28d9a079919d7a574d868f8",
+    "license_url": "https://github.com/chakra-ui/chakra-ui/blob/main/LICENSE"
+  },
+  "public:cli/cli": {
+    "spdx": "MIT",
+    "url": "https://github.com/cli/cli",
+    "copyright": "Copyright (c) 2019 GitHub Inc.",
+    "license_file": "LICENSE-cli-cli.txt",
+    "license_sha": "b6a58a9572cbd7e4550f8205a9c4fd199cd442f2",
+    "license_sha256": "6da4adc42392c8485e40b4251c7e332fc3352df1947c9ffade71dd60b14a7a4f",
+    "license_url": "https://github.com/cli/cli/blob/trunk/LICENSE"
+  },
+  "public:containerd/containerd": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/containerd/containerd",
+    "copyright": "Copyright The containerd Authors",
+    "notice_file": "NOTICE-containerd-containerd.txt",
+    "license_file": "LICENSE-containerd-containerd.txt",
+    "license_sha": "584149b6ee28c28d7a4463af9cbd534922533ced",
+    "license_sha256": "4bbe3b885e8cd1907ab4cf9a41e862e74e24b5422297a4f2fe524e6a30ada2b4",
+    "license_url": "https://github.com/containerd/containerd/blob/main/LICENSE"
+  },
+  "public:dagster-io/dagster": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/dagster-io/dagster",
+    "copyright": "Copyright 2025 Dagster Labs, Inc.",
+    "license_file": "LICENSE-dagster-io-dagster.txt",
+    "license_sha": "82b6b68d6ad4d65757310c2e7dab12ccae01de36",
+    "license_sha256": "e25b0c5be442bdf543e3f179ef0ae6a5edef5f5c70524fce00a2a657f5d3ed9d",
+    "license_url": "https://github.com/dagster-io/dagster/blob/master/LICENSE"
+  },
+  "public:dbt-labs/dbt-core": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/dbt-labs/dbt-core",
+    "copyright": "Copyright 2026 dbt Labs, Inc.",
+    "license_file": "LICENSE-dbt-labs-dbt-core.txt",
+    "license_sha": "abfe23575f32409b1bf3897a993df77aa2041733",
+    "license_sha256": "aaec0fc491a8093b76b7301f6168b9ac05b0fd20e8ea717f7d90691b3b7d8772",
+    "license_url": "https://github.com/dbt-labs/dbt/blob/main/LICENSE"
+  },
+  "public:denoland/deno": {
+    "spdx": "MIT",
+    "url": "https://github.com/denoland/deno",
+    "copyright": "Copyright 2018-2026 the Deno authors",
+    "license_file": "LICENSE-denoland-deno.txt",
+    "license_sha": "b641c75c0b04ccfddcb1145d2554ab49b6ca9411",
+    "license_sha256": "f62497fffecc0852960c8d3e6934b9db86d16396e9b604072e923892cae3a588",
+    "license_url": "https://github.com/denoland/deno/blob/main/LICENSE.md"
+  },
+  "public:docker/compose": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/docker/compose",
+    "copyright": "",
+    "notice_file": "NOTICE-docker-compose.txt",
+    "license_file": "LICENSE-docker-compose.txt",
+    "license_sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+    "license_sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "license_url": "https://github.com/docker/compose/blob/main/LICENSE"
+  },
+  "public:duckdb/duckdb": {
+    "spdx": "MIT",
+    "url": "https://github.com/duckdb/duckdb",
+    "copyright": "Copyright 2018-2026 Stichting DuckDB Foundation",
+    "license_file": "LICENSE-duckdb-duckdb.txt",
+    "license_sha": "2719c9a23d2a37c1dfb7402e79f03bd615701e53",
+    "license_sha256": "075c33400ffcb0c586dd106a029d3e733e9da3693f8fcb9cebfc651c8a2f14e3",
+    "license_url": "https://github.com/duckdb/duckdb/blob/main/LICENSE"
+  },
+  "public:eslint/eslint": {
+    "spdx": "MIT",
+    "url": "https://github.com/eslint/eslint",
+    "copyright": "Copyright OpenJS Foundation and other contributors, <www.openjsf.org>",
+    "license_file": "LICENSE-eslint-eslint.txt",
+    "license_sha": "b607bb36e96c33fd8ef50897db0336c585b6137a",
+    "license_sha256": "3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c",
+    "license_url": "https://github.com/eslint/eslint/blob/main/LICENSE"
+  },
+  "public:expressjs/express": {
+    "spdx": "MIT",
+    "url": "https://github.com/expressjs/express",
+    "copyright": "Copyright (c) 2009-2014 TJ Holowaychuk <tj@vision-media.ca>\nCopyright (c) 2013-2014 Roman Shtylman <shtylman+expressjs@gmail.com>\nCopyright (c) 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "license_file": "LICENSE-expressjs-express.txt",
+    "license_sha": "aa927e44e31d486f807634887662efa39256bf84",
+    "license_sha256": "95a5762890e5c1c9808921cef095661fc482c5e1f0bba31446ac85595df6237c",
+    "license_url": "https://github.com/expressjs/express/blob/master/LICENSE"
+  },
+  "public:fastify/fastify": {
+    "spdx": "MIT",
+    "url": "https://github.com/fastify/fastify",
+    "copyright": "Copyright (c) 2016-present The Fastify team <https://github.com/fastify/fastify#team>",
+    "license_file": "LICENSE-fastify-fastify.txt",
+    "license_sha": "266e719722c4d45a9d6282e5ca9e8a77b2b67f8c",
+    "license_sha256": "23c91863859171455a536380991b4160fee4e19e2d8dc353ecf7143cc4e53ca2",
+    "license_url": "https://github.com/fastify/fastify/blob/main/LICENSE"
+  },
+  "public:ggml-org/llama.cpp": {
+    "spdx": "MIT",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "copyright": "Copyright (c) 2023-2026 The ggml authors",
+    "license_file": "LICENSE-ggml-org-llama.cpp.txt",
+    "license_sha": "e7dca554bcb802f98408383a864404e3aa4eacca",
+    "license_sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+    "license_url": "https://github.com/ggml-org/llama.cpp/blob/master/LICENSE"
+  },
+  "public:gin-gonic/gin": {
+    "spdx": "MIT",
+    "url": "https://github.com/gin-gonic/gin",
+    "copyright": "Copyright (c) 2014-present Manuel Martínez-Almeida",
+    "license_file": "LICENSE-gin-gonic-gin.txt",
+    "license_sha": "49770f0c691c81759f6eae748f4ceb4b36997c0d",
+    "license_sha256": "b104efb2c7700691650f27034e8541c5ae0ed9af54d884287f19a7467ca2fe7f",
+    "license_url": "https://github.com/gin-gonic/gin/blob/master/LICENSE"
+  },
+  "public:gohugoio/hugo": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/gohugoio/hugo",
+    "copyright": "",
+    "license_file": "LICENSE-gohugoio-hugo.txt",
+    "license_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_url": "https://github.com/gohugoio/hugo/blob/master/LICENSE"
+  },
+  "public:golang-jwt/jwt": {
+    "spdx": "MIT",
+    "url": "https://github.com/golang-jwt/jwt",
+    "copyright": "Copyright (c) 2012 Dave Grijalva\nCopyright (c) 2021 golang-jwt maintainers",
+    "license_file": "LICENSE-golang-jwt-jwt.txt",
+    "license_sha": "35dbc252041eae41edbf286d56d48371bc670d39",
+    "license_sha256": "fe26ca41577b9b2b4448050a24b25e5753af66b5d5945d5d36094e7790bfcb2f",
+    "license_url": "https://github.com/golang-jwt/jwt/blob/main/LICENSE"
+  },
+  "public:goreleaser/goreleaser": {
+    "spdx": "MIT",
+    "url": "https://github.com/goreleaser/goreleaser",
+    "copyright": "Copyright (c) 2016-2026 Carlos Alexandro Becker",
+    "license_file": "LICENSE-goreleaser-goreleaser.txt",
+    "license_sha": "77cc6f15786b9d06fea285d9e86e75f36f3f6ef6",
+    "license_sha256": "91de1bc95da05585bfbb163614e01a48b002cf9b27266a1f3e930fe454b17edd",
+    "license_url": "https://github.com/goreleaser/goreleaser/blob/main/LICENSE.md"
+  },
+  "public:great-expectations/great_expectations": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/great-expectations/great_expectations",
+    "copyright": "",
+    "license_file": "LICENSE-great-expectations-great_expectations.txt",
+    "license_sha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+    "license_sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "license_url": "https://github.com/fivetran/great_expectations/blob/develop/LICENSE"
+  },
+  "public:grpc/grpc-go": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/grpc/grpc-go",
+    "copyright": "",
+    "notice_file": "NOTICE-grpc-grpc-go.txt",
+    "license_file": "LICENSE-grpc-grpc-go.txt",
+    "license_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_url": "https://github.com/grpc/grpc-go/blob/master/LICENSE"
+  },
+  "public:helm/helm": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/helm/helm",
+    "copyright": "Copyright 2016 The Kubernetes Authors All Rights Reserved",
+    "license_file": "LICENSE-helm-helm.txt",
+    "license_sha": "21c57fae21f7e9ab4112e99ddbf14e74528a0abc",
+    "license_sha256": "881467e52efeb1807406134b0ec04b1c6f52dc9dc49382713ef9ac4e0cae42f8",
+    "license_url": "https://github.com/helm/helm/blob/main/LICENSE"
+  },
+  "public:huggingface/diffusers": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/huggingface/diffusers",
+    "copyright": "",
+    "license_file": "LICENSE-huggingface-diffusers.txt",
+    "license_sha": "038e32f6445e8f265bde482613cf0d2f43d86dbc",
+    "license_sha256": "f9e2070c247517b1ddf65f7b11b393484a18da91a958fd18a97bd0f241c3125c",
+    "license_url": "https://github.com/huggingface/diffusers/blob/main/LICENSE"
+  },
+  "public:huggingface/transformers": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/huggingface/transformers",
+    "copyright": "Copyright 2018- The Hugging Face team. All rights reserved.",
+    "license_file": "LICENSE-huggingface-transformers.txt",
+    "license_sha": "68b7d66c97d66c58de883ed0c451af2b3183e6f3",
+    "license_sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+    "license_url": "https://github.com/huggingface/transformers/blob/main/LICENSE"
+  },
+  "public:jaegertracing/jaeger": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/jaegertracing/jaeger",
+    "copyright": "",
+    "notice_file": "NOTICE-jaegertracing-jaeger.txt",
+    "license_file": "LICENSE-jaegertracing-jaeger.txt",
+    "license_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_url": "https://github.com/jaegertracing/jaeger/blob/main/LICENSE"
+  },
+  "public:keras-team/keras": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/keras-team/keras",
+    "copyright": "",
+    "license_file": "LICENSE-keras-team-keras.txt",
+    "license_sha": "f49a4e16e68b128803cc2dcea614603632b04eac",
+    "license_sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+    "license_url": "https://github.com/keras-team/keras/blob/master/LICENSE"
+  },
+  "public:keycloak/keycloak": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/keycloak/keycloak",
+    "copyright": "",
+    "license_file": "LICENSE-keycloak-keycloak.txt",
+    "license_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_url": "https://github.com/keycloak/keycloak/blob/main/LICENSE.txt"
+  },
+  "public:kubernetes/kubernetes": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/kubernetes/kubernetes",
+    "copyright": "",
+    "license_file": "LICENSE-kubernetes-kubernetes.txt",
+    "license_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_url": "https://github.com/kubernetes/kubernetes/blob/master/LICENSE"
+  },
+  "public:mantinedev/mantine": {
+    "spdx": "MIT",
+    "url": "https://github.com/mantinedev/mantine",
+    "copyright": "Copyright (c) 2021 Vitaly Rtishchev",
+    "license_file": "LICENSE-mantinedev-mantine.txt",
+    "license_sha": "c2b1d20b47003d10e738777879caf8d2771b034a",
+    "license_sha256": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a",
+    "license_url": "https://github.com/mantinedev/mantine/blob/master/LICENSE"
+  },
+  "public:mui/material-ui": {
+    "spdx": "MIT",
+    "url": "https://github.com/mui/material-ui",
+    "copyright": "Copyright (c) 2014 Call-Em-All",
+    "license_file": "LICENSE-mui-material-ui.txt",
+    "license_sha": "eba5d9e7bf7686fc77dadc6d4d347bf49afd934e",
+    "license_sha256": "4c57cedbef546270e5648786682f633b2e6ae62c8862a45797bcb6d0bffda98d",
+    "license_url": "https://github.com/mui/material-ui/blob/master/LICENSE"
+  },
+  "public:nestjs/nest": {
+    "spdx": "MIT",
+    "url": "https://github.com/nestjs/nest",
+    "copyright": "Copyright (c) 2017-present Kamil Mysliwiec <https://kamilmysliwiec.com>",
+    "license_file": "LICENSE-nestjs-nest.txt",
+    "license_sha": "d209764d20a03be35896a1ad8ebf6aba30bc7172",
+    "license_sha256": "56967de93525b12a30717e4446ccef3bbe32fafdbe2350f143c1cc6971b19ed3",
+    "license_url": "https://github.com/nestjs/nest/blob/master/LICENSE"
+  },
+  "public:onnx/onnx": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/onnx/onnx",
+    "copyright": "",
+    "notice_file": "NOTICE-onnx-onnx.txt",
+    "license_file": "LICENSE-onnx-onnx.txt",
+    "license_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_url": "https://github.com/onnx/onnx/blob/main/LICENSE"
+  },
+  "public:open-telemetry/opentelemetry-collector": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/open-telemetry/opentelemetry-collector",
+    "copyright": "",
+    "license_file": "LICENSE-open-telemetry-opentelemetry-collector.txt",
+    "license_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_url": "https://github.com/open-telemetry/opentelemetry-collector/blob/main/LICENSE"
+  },
+  "public:open-telemetry/opentelemetry-go": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/open-telemetry/opentelemetry-go",
+    "copyright": "Copyright 2009 The Go Authors.",
+    "license_file": "LICENSE-open-telemetry-opentelemetry-go.txt",
+    "license_sha": "f1aee0f11001cd9276c67fd2a998cb54f378d461",
+    "license_sha256": "1ae07514be1d7bb33f0698f8d91fb51b8b9fe1463157ec1c72081a49b9bc6f40",
+    "license_url": "https://github.com/open-telemetry/opentelemetry-go/blob/main/LICENSE"
+  },
+  "public:open-telemetry/opentelemetry-python": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/open-telemetry/opentelemetry-python",
+    "copyright": "",
+    "license_file": "LICENSE-open-telemetry-opentelemetry-python.txt",
+    "license_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_url": "https://github.com/open-telemetry/opentelemetry-python/blob/main/LICENSE"
+  },
+  "public:pallets/click": {
+    "spdx": "BSD-3-Clause",
+    "url": "https://github.com/pallets/click",
+    "copyright": "Copyright 2014 Pallets",
+    "license_file": "LICENSE-pallets-click.txt",
+    "license_sha": "d12a849186982399c537c5b9a8fd77bf2edd5eab",
+    "license_sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+    "license_url": "https://github.com/pallets/click/blob/main/LICENSE.txt"
+  },
+  "public:pallets/flask": {
+    "spdx": "BSD-3-Clause",
+    "url": "https://github.com/pallets/flask",
+    "copyright": "Copyright 2010 Pallets",
+    "license_file": "LICENSE-pallets-flask.txt",
+    "license_sha": "9d227a0cc43c3268d15722b763bd94ad298645a1",
+    "license_sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+    "license_url": "https://github.com/pallets/flask/blob/main/LICENSE.txt"
+  },
+  "public:prettier/prettier": {
+    "spdx": "MIT",
+    "url": "https://github.com/prettier/prettier",
+    "copyright": "Copyright © James Long and contributors",
+    "license_file": "LICENSE-prettier-prettier.txt",
+    "license_sha": "5767e34d30ab78796220f9492726dd2f677d4166",
+    "license_sha256": "b0f2417199889f1c0d28ec4e0244eacf1a15de5819d61f641dd7d8f45153ac9c",
+    "license_url": "https://github.com/prettier/prettier/blob/main/LICENSE"
+  },
+  "public:prometheus/prometheus": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/prometheus/prometheus",
+    "copyright": "",
+    "notice_file": "NOTICE-prometheus-prometheus.txt",
+    "license_file": "LICENSE-prometheus-prometheus.txt",
+    "license_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_url": "https://github.com/prometheus/prometheus/blob/main/LICENSE"
+  },
+  "public:psf/black": {
+    "spdx": "MIT",
+    "url": "https://github.com/psf/black",
+    "copyright": "Copyright (c) 2018 Łukasz Langa",
+    "license_file": "LICENSE-psf-black.txt",
+    "license_sha": "7a9b891f713e1d0a522f042a28f28ba0c5f390d4",
+    "license_sha256": "9c0428f0c3b4779850cf5bd96e11aaa8afc72d4a86d4a36223d7aba2e58d6e00",
+    "license_url": "https://github.com/psf/black/blob/main/LICENSE"
+  },
+  "public:psf/requests": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/psf/requests",
+    "copyright": "",
+    "notice_file": "NOTICE-psf-requests.txt",
+    "license_file": "LICENSE-psf-requests.txt",
+    "license_sha": "67db8588217f266eb561f75fae738656325deac9",
+    "license_sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "license_url": "https://github.com/psf/requests/blob/main/LICENSE"
+  },
+  "public:pyca/pyopenssl": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/pyca/pyopenssl",
+    "copyright": "",
+    "license_file": "LICENSE-pyca-pyopenssl.txt",
+    "license_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_url": "https://github.com/pyca/pyopenssl/blob/main/LICENSE"
+  },
+  "public:pydantic/pydantic": {
+    "spdx": "MIT",
+    "url": "https://github.com/pydantic/pydantic",
+    "copyright": "Copyright (c) 2017 to present Pydantic Services Inc. and individual contributors.",
+    "license_file": "LICENSE-pydantic-pydantic.txt",
+    "license_sha": "488c6260c10f2e88fa1fae58a63fccec8d600cd1",
+    "license_sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+    "license_url": "https://github.com/pydantic/pydantic/blob/main/LICENSE"
+  },
+  "public:python-poetry/poetry": {
+    "spdx": "MIT",
+    "url": "https://github.com/python-poetry/poetry",
+    "copyright": "Copyright (c) 2018-present Sébastien Eustace",
+    "license_file": "LICENSE-python-poetry-poetry.txt",
+    "license_sha": "81a8e1e4739866071bf412c851e60ef0660f76a1",
+    "license_sha256": "1786f071a510648a24695f295117f02bae0bbf0fb7c6730aafe9c93a3e4bf7ee",
+    "license_url": "https://github.com/python-poetry/poetry/blob/main/LICENSE"
+  },
+  "public:radix-ui/primitives": {
+    "spdx": "MIT",
+    "url": "https://github.com/radix-ui/primitives",
+    "copyright": "Copyright (c) 2022 WorkOS",
+    "license_file": "LICENSE-radix-ui-primitives.txt",
+    "license_sha": "a18858fb7b014098cba85703e66609be66a26ef5",
+    "license_sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+    "license_url": "https://github.com/radix-ui/primitives/blob/main/LICENSE"
+  },
+  "public:remix-run/react-router": {
+    "spdx": "MIT",
+    "url": "https://github.com/remix-run/react-router",
+    "copyright": "Copyright (c) React Training LLC 2015-2019\nCopyright (c) Remix Software Inc. 2020-2021\nCopyright (c) Shopify Inc. 2022-2023",
+    "license_file": "LICENSE-remix-run-react-router.txt",
+    "license_sha": "7d0a32c385b04289862dd6e927d69c9cd7c88bd2",
+    "license_sha256": "77c9ee6a9c5d5782fb0c50b50d101189116314c14f7df0a1b0d385fc96a7ba49",
+    "license_url": "https://github.com/remix-run/react-router/blob/main/LICENSE.md"
+  },
+  "public:scikit-learn/scikit-learn": {
+    "spdx": "BSD-3-Clause",
+    "url": "https://github.com/scikit-learn/scikit-learn",
+    "copyright": "Copyright (c) 2007-2026 The scikit-learn developers.",
+    "license_file": "LICENSE-scikit-learn-scikit-learn.txt",
+    "license_sha": "3d7ee432c15b685eaa654b6abe8f8e3ea8126a8d",
+    "license_sha256": "50d6a9d340f19ab355609917993114daf5f47e3161067bcf34955bbd05cd9cb0",
+    "license_url": "https://github.com/scikit-learn/scikit-learn/blob/main/COPYING"
+  },
+  "public:spf13/cobra": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/spf13/cobra",
+    "copyright": "",
+    "license_file": "LICENSE-spf13-cobra.txt",
+    "license_sha": "298f0e2665e512a7d5053faf2ce4793c281efe6a",
+    "license_sha256": "5e3400b93bbb099e83e52bab885e7441750673c21f97988ca3f1240639b63283",
+    "license_url": "https://github.com/spf13/cobra/blob/main/LICENSE.txt"
+  },
+  "public:starship/starship": {
+    "spdx": "ISC",
+    "url": "https://github.com/starship/starship",
+    "copyright": "Copyright (c) 2019-2022, Starship Contributors",
+    "license_file": "LICENSE-starship-starship.txt",
+    "license_sha": "fdc37f4678715460a326ed238044612b3ab21d9b",
+    "license_sha256": "2587580d0ec4ddc43d1534745a19ffeec0b63186497c2ed4bc36832da91b13e2",
+    "license_url": "https://github.com/starship/starship/blob/main/LICENSE"
+  },
+  "public:storybookjs/storybook": {
+    "spdx": "MIT",
+    "url": "https://github.com/storybookjs/storybook",
+    "copyright": "Copyright (c) 2024 Storybook",
+    "license_file": "LICENSE-storybookjs-storybook.txt",
+    "license_sha": "c471193f579c9932de81221ec10008b5c68b2260",
+    "license_sha256": "bc90586179d44dcb313a9a289d687a2f26226303b2066bd21dbefd2378e894e5",
+    "license_url": "https://github.com/storybookjs/storybook/blob/next/LICENSE"
+  },
+  "public:sveltejs/svelte": {
+    "spdx": "MIT",
+    "url": "https://github.com/sveltejs/svelte",
+    "copyright": "Copyright (c) 2016-2025 [Svelte Contributors](https://github.com/sveltejs/svelte/graphs/contributors)",
+    "license_file": "LICENSE-sveltejs-svelte.txt",
+    "license_sha": "f872adf738de278e2345516eb1cea30d5451914e",
+    "license_sha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3",
+    "license_url": "https://github.com/sveltejs/svelte/blob/main/LICENSE.md"
+  },
+  "public:swc-project/swc": {
+    "spdx": "Apache-2.0",
+    "url": "https://github.com/swc-project/swc",
+    "copyright": "Copyright 2024 SWC contributors.",
+    "license_file": "LICENSE-swc-project-swc.txt",
+    "license_sha": "6a08504909fe063aedf79b9113c240dec13858d5",
+    "license_sha256": "d96eba1f1881334d50ffc144276dfa98e147a415e7c591ecdfcb81680361dc91",
+    "license_url": "https://github.com/swc-project/swc/blob/main/LICENSE"
+  },
+  "public:tiangolo/fastapi": {
+    "spdx": "MIT",
+    "url": "https://github.com/tiangolo/fastapi",
+    "copyright": "Copyright (c) 2018 Sebastián Ramírez",
+    "license_file": "LICENSE-tiangolo-fastapi.txt",
+    "license_sha": "3e92463e6bd522a2a21e5f0a80d8089d6c4be20d",
+    "license_sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
+    "license_url": "https://github.com/fastapi/fastapi/blob/master/LICENSE"
+  },
+  "public:tokio-rs/tokio": {
+    "spdx": "MIT",
+    "url": "https://github.com/tokio-rs/tokio",
+    "copyright": "Copyright (c) Tokio Contributors",
+    "license_file": "LICENSE-tokio-rs-tokio.txt",
+    "license_sha": "f0dbcf4b45d6acca6f7f5d88dc86683c6f360d76",
+    "license_sha256": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552",
+    "license_url": "https://github.com/tokio-rs/tokio/blob/master/LICENSE"
+  },
+  "public:uber-go/zap": {
+    "spdx": "MIT",
+    "url": "https://github.com/uber-go/zap",
+    "copyright": "Copyright (c) 2016-2024 Uber Technologies, Inc.",
+    "license_file": "LICENSE-uber-go-zap.txt",
+    "license_sha": "3883b9a7eab61471c6121f42ea412d4085564cbd",
+    "license_sha256": "c2b97b3281be272711909076c8402499b4b5a3216196af47a25b1d3674d86152",
+    "license_url": "https://github.com/uber-go/zap/blob/master/LICENSE"
+  },
+  "public:vitejs/vite": {
+    "spdx": "MIT",
+    "url": "https://github.com/vitejs/vite",
+    "copyright": "Copyright (c) 2019-present, VoidZero Inc. and Vite contributors",
+    "license_file": "LICENSE-vitejs-vite.txt",
+    "license_sha": "b7e97ecb6aa4dd70b3e3a637afa2ae16feb7cd12",
+    "license_sha256": "692057af3d664cbb79ac38293eb50aa3c4987f8182e2a440136e59e08f1b4a54",
+    "license_url": "https://github.com/vitejs/vite/blob/main/LICENSE"
+  },
+  "public:vuejs/core": {
+    "spdx": "MIT",
+    "url": "https://github.com/vuejs/core",
+    "copyright": "Copyright (c) 2018-present, Yuxi (Evan) You and Vue contributors",
+    "license_file": "LICENSE-vuejs-core.txt",
+    "license_sha": "8fd17290c81906dc34d5a12c41609fcb9f810e62",
+    "license_sha256": "49190d1f742dd61e47fe816df4963e5186a2a62100d9122f9883a60ea32973ac",
+    "license_url": "https://github.com/vuejs/core/blob/main/LICENSE"
+  }
+}

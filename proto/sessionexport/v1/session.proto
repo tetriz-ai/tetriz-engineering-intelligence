@@ -1,0 +1,68 @@
+// Copyright 2026 Workloom Solutions Private Limited
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+// The session payload the localsession adapter decodes, reduced to the fields
+// attribution reads. Decoding is by JSON field name, and any other field is
+// ignored.
+package sessionexport.v1;
+
+import "attribution/v1/evidence.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/tetriz-ai/tetriz-engineering-intelligence/internal/exportpb;exportpb";
+
+// IdeType names the editor a session came from.
+enum IdeType {
+  IDE_TYPE_UNSPECIFIED = 0;
+  IDE_TYPE_CLAUDE_CODE = 1;
+  IDE_TYPE_CURSOR = 2;
+  IDE_TYPE_COPILOT = 3;
+  IDE_TYPE_ANTIGRAVITY = 4;
+  IDE_TYPE_CODEX = 5;
+  IDE_TYPE_KIRO = 6;
+}
+
+// Conversation is one session.
+message Conversation {
+  IdeType ide_type = 1;
+  string session_id = 2;
+  string project_name = 3;
+  repeated Prompt prompts = 4;
+  google.protobuf.Timestamp conversation_started_at = 5;
+  google.protobuf.Timestamp last_updated_at = 6;
+  SessionMeta session_meta = 7;
+  AiAttribution ai_attribution = 8;
+}
+
+// Prompt is one message of a session.
+message Prompt {
+  google.protobuf.Timestamp timestamp = 1;
+  PromptMetadata metadata = 2;
+}
+
+// PromptMetadata is one message's metadata.
+message PromptMetadata {
+  repeated string relevant_files = 1;
+}
+
+// SessionMeta is the session-level detail the extractor records.
+message SessionMeta {
+  double duration_minutes = 1;
+  string pr_url = 2;
+  int32 pr_number = 3;
+  string pr_repository = 4;
+  string git_branch = 5;
+  repeated string tracked_file_paths = 6;
+  repeated string files_edited = 7;
+  repeated attribution.v1.PRReference pr_references = 8;
+  repeated string git_branches = 9;
+  repeated attribution.v1.BranchSignal branch_signals = 10;
+}
+
+// AiAttribution is the editor's measure of AI-written code.
+message AiAttribution {
+  double ai_code_percent = 1;
+  double ai_code_percent_v2 = 2;
+}

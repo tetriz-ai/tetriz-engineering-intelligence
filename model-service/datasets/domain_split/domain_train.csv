@@ -1,0 +1,317 @@
+source,source_url,license,bucket,title,branch
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/13700,mit,infra-devops,Add new docs publish CI,vp/docs-ci
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/15724,mit,infra-devops,📝 Update FastAPI Cloud deployment instructions,update-docs
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35296,mit,infra-devops,CI: Resolve to Babel 7 due to react-docgen,sidnioulz/resolve-babel-7
+public:TanStack/query,https://github.com/TanStack/query/pull/11583,mit,infra-devops,ci: update to changesets v3,changesets-v3
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35301,mit,infra-devops,CI: Restore bugfixes for Babel 7 sandbox,sidnioulz/babel-7-bugfixes
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/13063,mit,infra-devops,Use `simulation` mode in Codspeed CI,vp/codspeed-simulation
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22899,mit,infra-devops,docs(static-deploy): update xmit guide URL,docs/fix-xmit-vite-blog-url
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6297,mit,infra-devops,ci(deps): bump the actions group with 8 updates,dependabot/github_actions/actions-19e1ad6cad
+public:babel/babel,https://github.com/babel/babel/pull/17807,mit,infra-devops,refactor: simplify hack pipeline tokenizer state,simplify-hack-pipeline-tokenizer-state
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35316,mit,infra-devops,CI: Add Claude Code GitHub Workflow,add-claude-github-actions-1782720634305
+public:angular/angular,https://github.com/angular/angular/pull/70341,mit,infra-devops,fix(docs-infra): give duplicated headings their own anchor ids,fix-duplicate-heading-anchors
+public:angular/angular,https://github.com/angular/angular/pull/70339,mit,infra-devops,ci: pass required inputs for adev preview artifact upload,ci/adev-deploy
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8425,mit,infra-devops,Merge CI fixes from tokio-1.51.x to master,merge-1.51-to-master
+public:babel/babel,https://github.com/babel/babel/pull/17751,mit,infra-devops,Add CI check to make sure packages exist on npm,ensure-packages-exist
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/12510,mit,infra-devops,Use `UV_NO_PROGRESS` in CI,uv-no-progress-ci
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/12847,mit,infra-devops,Fix CI release job,vp/fix-release-ci-2
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20860,mit,infra-devops,ci: ensure auto-created PRs run CI,ci/ensure-auto-created-prs-run-ci
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19179,apache-2.0,infra-devops,Add automation to let triagers approve PR workflows,approve-workflows
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6342,mit,infra-devops,feat(dockers_v2): warn user if it seems like they're rebuilding binaries,warn-build-docker
+public:swc-project/swc,https://github.com/swc-project/swc/pull/12147,apache-2.0,infra-devops,ci: Gate jobs with detected changes,kdy1/ci-detect-changes
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/16090,mit,infra-devops,✅ Test PR regressions against base code,ci-test-pr-regressions-on-base
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11605,apache-2.0,infra-devops,chore(ci): bump cargo-mono to 0.5.0,kdy1/chore-bump-cargo-mono-0-5-0
+public:angular/angular,https://github.com/angular/angular/pull/70492,mit,infra-devops,ci: remove shared primitives pullapprove group,pullapprove-primitives
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6636,mit,infra-devops,ci(deps): bump the actions group with 5 updates,dependabot/github_actions/actions-9ed3538f3e
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6589,mit,infra-devops,chore(deps): bump the docker group across 1 directory with 2 updates,dependabot/docker/docker-d6c0d98a13
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/13805,mit,infra-devops,Fix PyEmscripten CI job,vp/pyodide-ci
+public:starship/starship,https://github.com/starship/starship/pull/6537,isc,infra-devops,build(deps): update crate-ci/typos action to v1.29.5,renovate/crate-ci-typos-1.x
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8058,mit,infra-devops,ci: update `trybuild` to expect output from rustc 1.95.0,eliza/trybuild-1.95
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35479,mit,infra-devops,CI: Overlap the node_modules workspace pack with compile in build--linux,valentin/ci-overlap-pack
+public:angular/angular,https://github.com/angular/angular/pull/70360,mit,infra-devops,refactor(docs-infra): drop exclude patterns for examples that no longer exist,prune-stale-example-excludes
+public:psf/black,https://github.com/psf/black/pull/5156,mit,infra-devops,Bump docker/login-action from 4.1.0 to 4.2.0,dependabot/github_actions/docker/login-action-4.2.0
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/16046,mit,infra-devops,👷 Add CI memory benchmark,benchmem
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35347,mit,infra-devops,CI: Parallel Playwright workers for sandbox E2E,valentin/ci-playwright-workers
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/9756,mit,infra-devops,[1.8] python 3.13 in workflows (#9523),backport-9523
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/7518,mit,infra-devops,ci: pin the rust version for wasm tests,pin_rust_version_for_wasm_tests
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20220,mit,infra-devops,ci: add Node.js 25 to `ci.yml`,lumirlumir-patch-1
+public:swc-project/swc,https://github.com/swc-project/swc/pull/12021,apache-2.0,infra-devops,ci: update rust-toolchain action pin,kdy1/fix-main-ci
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19404,apache-2.0,infra-devops,discovery/kubernetes: populate loadbalancer IP from status.ingress,k8s-lb-ingress
+public:babel/babel,https://github.com/babel/babel/pull/18244,mit,infra-devops,[7.x] Fix failing CI,fix-failing-ci-7.x
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6408,mit,infra-devops,chore(deps): bump squidfunk/mkdocs-material from `3bba0a9` to `1c30983` in /www in the docker group across 1 directory,dependabot/docker/www/docker-d45122a057
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/7117,mit,infra-devops,test(docker): fix flake,flake
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6838,mit,infra-devops,test: stop spawning docker to watch it fail slowly,test/no-slow-docker-failures
+public:psf/black,https://github.com/psf/black/pull/4911,mit,infra-devops,CI: add a zizmor workflow,ww/zizmor
+public:babel/babel,https://github.com/babel/babel/pull/17757,mit,infra-devops,Fix ensure-packages-exist ci command,fix-epe-ci
+public:vuejs/core,https://github.com/vuejs/core/pull/15557,mit,infra-devops,ci(issues): remove automatic issue closing workflow,edison/ci/remove-auto-close-issues
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6767,mit,infra-devops,chore(deps): bump the docker group across 1 directory with 2 updates,dependabot/docker/docker-8cb15e3f73
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21159,mit,infra-devops,ci: bump actions/labeler from 6 to 7,dependabot/github_actions/actions/labeler-7
+public:angular/angular,https://github.com/angular/angular/pull/70433,mit,infra-devops,fix(docs-infra): point the tutorial .gitignore at live GitHub docs,fix-dead-gitignore-link-adev
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20862,mit,infra-devops,ci: bump pnpm/action-setup from 6.0.5 to 6.0.7,dependabot/github_actions/pnpm/action-setup-6.0.7
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6828,mit,infra-devops,ci: fetch the nix formatters as release binaries,nix-formatters
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19074,apache-2.0,infra-devops,ci: run version upgrade test as a per-LTS matrix,roidelapluie/lts-split
+public:angular/angular,https://github.com/angular/angular/pull/70224,mit,infra-devops,feat(docs-infra): add Angie to the roadmap illustration,angie-in-roadmap
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/7848,mit,infra-devops,ci: fix ambiguity issue during tokio releases,fix-release-ambiguity-issue
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6320,mit,infra-devops,ci(deps): bump the actions group with 3 updates,dependabot/github_actions/actions-0ec4a2fa27
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19083,apache-2.0,infra-devops,ci: don't delete repo-sync branch when force-updating open PR,roidelapluie/reposync-no-delete-branch
+public:psf/black,https://github.com/psf/black/pull/4741,mit,infra-devops,ci: Run diff-shades on unstable instead of preview,diff-shades-unstable
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15148,mit,infra-devops,Drop dev branch from workflows/docs,brophdawg11/codex-drop-dev-branch-refs
+public:cli/cli,https://github.com/cli/cli/pull/14141,mit,infra-devops,Upgrade gh-aw workflows to v0.85.4,tidy-dev-upgrade-gh-aw-v0-85-4
+public:pallets/click,https://github.com/pallets/click/pull/2508,bsd-3-clause,infra-devops,Update dependencies using pip-compile-multi,fix_py312_ci_fail
+public:starship/starship,https://github.com/starship/starship/pull/6605,isc,infra-devops,build(deps): update crate-ci/typos action to v1.30.1,renovate/crate-ci-typos-1.x
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21199,mit,infra-devops,ci: bump github/codeql-action from 4.37.4 to 4.37.6,dependabot/github_actions/github/codeql-action-4.37.6
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35937,mit,infra-devops,CI: Fix staged npm publish retries on latest-release,backport-publish-409-fix
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/16252,mit,infra-devops,⬆️ Bump Typer min version to 0.26.1,fix-tests-in-ci-with-lowest-direct-resolution
+public:psf/black,https://github.com/psf/black/pull/4697,mit,infra-devops,CI: Replace unsupported windows-2019 with window-2025,bump-windows
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23265,mit,ui-design,fix(css): keep newline-separated srcset candidates intact,fix/srcset-newline-separator
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22718,mit,ui-design,fix(css): preserve dollar signs in external `@import` urls with lightningcss,shulaoda/06-19-fix_css_preserve_dollar_signs_in_external_import_urls_with_lightningcss
+public:starship/starship,https://github.com/starship/starship/pull/6771,isc,ui-design,style: pedantic refactoring,clippy.pedantic
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11662,apache-2.0,ui-design,perf: reuse token text and CSS property names,dbezrukov/rowan-token-text-slices
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11572,apache-2.0,ui-design,perf(css_parser): add SCSS parser benchmarks,codex/scss-parser-benchmarks
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/16102,mit,ui-design,"✨ Add `app.frontend(check_dir=""auto"")`, to make local development more convenient with `fastapi dev`",agent/frontend-check-dir-auto
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11673,apache-2.0,ui-design,test(css_formatter): add SCSS benchmarks,dbezrukov/scss-formatter-benchmarks
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19276,apache-2.0,ui-design,Update Go and UI deps,p314
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11714,apache-2.0,ui-design,fix(css_parser): allow final semicolon omission in SCSS at-rules,dbezrukov/scss-final-at-rule-semicolons
+public:prettier/prettier,https://github.com/prettier/prettier/pull/19555,mit,ui-design,Update dependency html-ua-styles to v0.5.0,renovate/html-ua-styles-0.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/18976,apache-2.0,ui-design,ui: fix check-package version read under pnpm,krajo/fix-ui-release-check-package
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11365,apache-2.0,ui-design,fix(lint/css): treat math as a generic font family,fix/use-generic-font-names-math
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36225,mit,ui-design,UI: Reset the mobile about overlay when the menu drawer closes,claude/mobile-nav-focus-modal-bugs-t88egk-2-about-reset
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36219,mit,ui-design,UI: Polish shared primitives ahead of the sidebar rework,chore/ui-primitives-sidebar-prep
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36224,mit,ui-design,"UI: Fix focus trap, indicators and tab order in the mobile about overlay",claude/mobile-nav-focus-modal-bugs-t88egk-1-about-focus-trap
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11378,apache-2.0,ui-design,chore: missing rule sources,chore/css-rule-sources
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22983,mit,ui-design,fix(css): rewrite urls in OnceExit-injected content,fix-15410
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20227,mit,ui-design,feat!: replace `chalk` with `styleText` and add `color` to `ResultsMeta`,refactor-replace-chalk-with-nodejs-native-styletext
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19009,apache-2.0,ui-design,ui: do not tag pre-release npm packages as latest,roidelapluie/npm-dist-tag
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11582,apache-2.0,ui-design,fix(css/parse): legacy filters,fix/css-parser-ie8-things
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19326,apache-2.0,ui-design,UI: Remove extraneous tick mark in native histogram chart,fix-native-histogram-chart-tick
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35998,mit,ui-design,Angular: Resolve builder `styles` the way the Angular builders do,valentin/angular-vite-package-specifier-styles
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35465,mit,ui-design,TanStack: Support pathless layout routes (id-only) in story routing,fix/tanstack-react-pathless-layout-routes
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36226,mit,ui-design,UI: Make settings pages scrollable in mobile layout,claude/mobile-nav-focus-modal-bugs-t88egk-3-mobile-pages-scroll
+public:starship/starship,https://github.com/starship/starship/pull/7236,isc,ui-design,"docs: add missing ""style"" option on ""Enviroment Variable""",add_style_on_envars_docs
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11621,apache-2.0,ui-design,feat(css): model numeric SCSS identifier parts,codex/scss-numeric-selector-continuations
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/15058,mit,ui-design,💄 Update styles for internal and external links in new tab,style-external-links
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11856,apache-2.0,ui-design,chore(useSortedClasses): update the Tailwind v4 preset to tailwindcss 4.3.3,chore/tailwind-preset-4.3.3
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35398,mit,ui-design,Review: Fix accessibility/UX issues in the review UI,sidnioulz/agentic-review-a11y
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/15804,mit,ui-design,"🐛 Fix failing test, update format for raised errors",frontend-path
+public:pallets/click,https://github.com/pallets/click/pull/2607,bsd-3-clause,ui-design,Fix colored output on Windows (#2606),fix-forcing-color-output-on-windows
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14557,apache-2.0,ui-design,commands: Update link to highlighting style examples,hugo-cli-fix-14556
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22841,mit,ui-design,fix: strip pure CSS chunk imports when chunkImportMap is enabled,fix/strip-pure-css-chunk-imports-chunk-import-map
+public:starship/starship,https://github.com/starship/starship/pull/6974,isc,ui-design,docs(xmake): correct style color from blue to green,patch-1
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11784,apache-2.0,ui-design,fix(css): avoid repeated custom property dependency traversal,dyc3/fix-11782-css-property-traversal
+public:vuejs/core,https://github.com/vuejs/core/pull/15548,mit,ui-design,fix(compiler-sfc): ignore comment delimiters inside strings and url() when parsing css vars,edison/fix/cssVarsUrl
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15156,apache-2.0,ui-design,Add importContext to css.Build e.g. options,feat/copyimportcontext-15103
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11764,apache-2.0,ui-design,fix(css): preserve Sass function call boundaries,dbezrukov/scss-function-adjacency
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/14875,mit,ui-design,Fix typegen for pathless layouts with only nested layout children,fix-typegen-empty-page
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11507,apache-2.0,ui-design,feat(analyze/vue): track embedded references in v-bind css,dyc3/vue-v-bind-usage
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11518,apache-2.0,ui-design,fix(formatter): print declare before accessibility modifiers,fix/declare-modifier-order-11500
+public:cli/cli,https://github.com/cli/cli/pull/12567,mit,ui-design,"`gh pr edit`: Add support for Copilot as reviewer with search capability, performance and accessibility improvements",kw/multi-select-with-search-and-ccr
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22439,mit,ui-design,fix(css): keep deprecated `name`/`originalFileName` in synthetic `assetFileNames` call,fix-css-url-relative-base-subfolder
+public:prettier/prettier,https://github.com/prettier/prettier/pull/20030,mit,ui-design,Handlebars: Fix invalid output for `<style>` containing mustaches,fix-glimmer-style-mustache
+public:alacritty/alacritty,https://github.com/alacritty/alacritty/pull/7144,apache-2.0,ui-design,Fix spelling of decorations_theme_variant in the manual,decorations-typo
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10587,mit,ui-design,fix error of removing packages if nested groups (include-group) are used in pep735 style,fix/cmd-remove-handle-include-groups
+public:psf/black,https://github.com/psf/black/pull/4987,mit,ui-design,Docs: Expand preview style features documentation with examples,docs/issue-4429-preview-features
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22717,mit,ui-design,fix(css): inject inlined CSS after the shebang line,shulaoda/06-19-fix_css_inject_inlined_css_after_the_shebang_line
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19025,apache-2.0,ui-design,ui: render delete series form on tsdb status page if `--web.enable-admin-api` flag is enabled,
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22792,mit,ui-design,feat(css): export PostCSS config type for type-safe configs,feat/postcss-user-config-type
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8815,apache-2.0,ui-design,wrr: use new-style atomic APIs,wrr_atomic_idx
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11103,apache-2.0,ui-design,feat(css_syntax): allow SCSS variables in rule lists,db/scss-var-media
+public:psf/black,https://github.com/psf/black/pull/4561,mit,ui-design,Move `wrap_long_dict_values_in_parens` to the preview style,preview-wrap_long_dict_values_in_parens
+public:vuejs/core,https://github.com/vuejs/core/pull/15505,mit,ui-design,fix(vapor): apply css vars through vapor root children,edison/fix/cssvars-vapor-root
+public:angular/angular,https://github.com/angular/angular/pull/70059,mit,ui-design,refactor(common): modernize directive tests to rely on whenStable,refactor/ngclass-style-img
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19628,apache-2.0,ui-design,ui: enforce three-day dependency release age,arve/ui-minimum-release-age
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11621,apache-2.0,ui-design,test: expand swc_es_parser snapshot suites (ecma-style),kdy1/es-parser-tsc-snapshot-extension
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1684,apache-2.0,ui-design,"style(bash): out is not an array variable, do not refer to it as such",style/bash-v1-out
+public:psf/black,https://github.com/psf/black/pull/5102,mit,ui-design,Fix typo in current_style.md,patch-1
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11609,apache-2.0,ui-design,perf(css_parser): short-circuit SCSS unary operator detection,dbezrukov/scss-unary-operator-perf
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14621,apache-2.0,ui-design,tpl/css: Make default loader resolution for CSS @import and url() always behave the same,fix/defaultloadercssstatic-14619
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22615,mit,ui-design,test(css): sass prefix import on Windows,test/css-sass-prefix-import-on-windows
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/15063,mit,ui-design,🔨 Add JS and CSS handling for automatic `target=_blank` for links in docs,target-blank-js
+public:psf/black,https://github.com/psf/black/pull/4318,mit,ui-design,Add support to style function definitions with newlines before function stubs,peterkra_harvinmumick_empty_line_stub_bug
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10135,mit,ui-design,feat(cli): default new command to src layout,feat/new-use-src
+public:denoland/deno,https://github.com/denoland/deno/pull/35762,mit,ui-design,fix(install): resolve lifecycle script dependency bins against the hoisted layout,fix-hoisted-lifecycle-dep-bins
+public:denoland/deno,https://github.com/denoland/deno/pull/36649,mit,ui-design,"feat(desktop): support checked, icon, and tooltip on menu items",feat/desktop-menu-checked-icon-tooltip
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19410,apache-2.0,observability,Add more spans to tracing,tracing
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36297,mit,observability,Explore: unified SVG trace layer for the sidebar tree (Design 3),design-3-unified-trace-layer
+public:starship/starship,https://github.com/starship/starship/pull/7535,isc,observability,build(deps): update rust crate log to 0.4.33,renovate/log-0.x
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9180,apache-2.0,observability,xds/extproc: adds ClientInterceptor and ClientStream implementation for observability mode for gRFC A93,observability_mode
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8807,apache-2.0,observability,xds/internal/client: Add async gauge metrics for Connected and Resources (A78),a78-xds-gauge-metrics-with-tests
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9419,apache-2.0,observability,roundrobin: standardize and V(2)-gate log messages,roundrobin-standardize-logs
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6738,mit,observability,fix: do not panic decoding a commit whose message contains a log marker,fix/changelog-decode-markers
+public:cli/cli,https://github.com/cli/cli/pull/13353,mit,observability,fix(telemetry): prevent tzutil console flash on Windows,fix/telemetry-windows-console-flash
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19760,apache-2.0,observability,fix(deps): update github.com/prometheus/client_golang/exp digest to 9bf26f7,deps-update/github.com-prometheus-client_golang-exp-digest
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36158,mit,observability,Telemetry: Read the package manager node linker from its config file,kasper/telemetry-node-linker-from-config
+public:cli/cli,https://github.com/cli/cli/pull/14390,mit,observability,Finalize telemetry at invocation completion,williammartin-wm-invocation-telemetry
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19354,apache-2.0,observability,chore(deps): update prometheus/promci-setup action to v0.2.2,deps-update/prometheus-promci-setup-0.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19553,apache-2.0,observability,scrape: test JSON log target formatting,scrape-json-log-target-test
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/18843,apache-2.0,observability,cmd/prometheus: add --auto-gomemlimit.refresh-interval flag,auto-gomemlimit-refresh-interval
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9008,apache-2.0,observability,grpc/stats: Add support for custom labels in per call metrics (A108),a108-custom-label-changes
+public:angular/angular,https://github.com/angular/angular/pull/70315,mit,observability,refactor(devtools): use a custom logger and error,devtools/logging-and-errors
+public:starship/starship,https://github.com/starship/starship/pull/7720,isc,observability,feat: add `jj_metrics` module,ab/modules-jj-metrics-add-rendering-tests
+public:angular/angular,https://github.com/angular/angular/pull/70596,mit,observability,docs: render the unsupported version range as an alert,IMPORTANT-Angular-versions-v2-to-v19
+public:starship/starship,https://github.com/starship/starship/pull/6653,isc,observability,build(deps): update rust crate log to 0.4.27,renovate/log-0.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/18881,apache-2.0,observability,fix(deps): update module github.com/prometheus/prometheus to v0.312.0,deps-update/github.com-prometheus-prometheus-0.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19511,apache-2.0,observability,config: make log level reloadable,config/reloadable-log-level-10352
+public:alacritty/alacritty,https://github.com/alacritty/alacritty/pull/6898,apache-2.0,observability,Add `ALACRITTY_EXTRA_LOG_TARGETS` env variable,extra-logging
+public:cli/cli,https://github.com/cli/cli/pull/14337,mit,observability,Disable telemetry for unauthenticated GHES `gh api` requests using absolute hostnames,williammartin-ghes-api-telemetry
+public:pallets/flask,https://github.com/pallets/flask/pull/5024,bsd-3-clause,observability,remove broken link,docs-sentry
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19752,apache-2.0,observability,storage/remote: fix typo in NHCB drop log message,fix/nhcb-drop-log-typo
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19634,apache-2.0,observability,fix(deps): update github.com/prometheus/client_golang/exp digest to 57bb367,deps-update/github.com-prometheus-client_golang-exp-digest
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19249,apache-2.0,observability,storage/remote: add failed_request_logging config for remote write v2,add_failed_request_logging_debug
+public:psf/black,https://github.com/psf/black/pull/4346,mit,observability,Convert PR numbers in docs/change_log to clickable links,docs-changelog-clickable-pr-numbers
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19444,apache-2.0,observability,Fix label mismatches in HA group alerts,fix/ha-group-alerts-label-bugs-b88f
+public:starship/starship,https://github.com/starship/starship/pull/7530,isc,observability,fix(sudo): Avoid creating system error logs on every unsuccessful invocation,
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8428,mit,observability,tracing: serialize `tracing_task` tests,fix-tracing-task-tests
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15029,mit,observability,feat(@react-router/dev): log future flag warnings for upcoming v8 flags,agents/react-router-v7-flag-deprecation-logging
+public:cli/cli,https://github.com/cli/cli/pull/14327,mit,observability,Record attachment counts in telemetry,bagtoad/attach-flag-metrics
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8573,apache-2.0,observability,transport: Increment metrics only when the stream is active,fix-unneccesary-metric-emits
+public:starship/starship,https://github.com/starship/starship/pull/6947,isc,observability,build(deps): update rust crate log to 0.4.28,renovate/log-0.x
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8637,apache-2.0,observability,stats/opentelemetry: Add support for optional label `grpc.lb.backend_service` in per-call metrics,a89-backend-service-label
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8808,apache-2.0,observability,rls: update rls cache metrics to use async gauge framework,move-rls-cache-metrics-to-async-framework
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19361,apache-2.0,observability,chore(deps): update prometheus/promci action to v0.9.0,deps-update/prometheus-promci-0.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/18984,apache-2.0,observability,chore(deps): update prometheus/promci action to v0.8.4,deps-update/prometheus-promci-0.x
+public:starship/starship,https://github.com/starship/starship/pull/6495,isc,observability,fix: Change to a non-yanked version of the log crate,log
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36025,mit,observability,Build: Surface the Storybook log tail when the eval MCP startup fails,kasper/eval-mcp-startup-diagnostics
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9215,apache-2.0,observability,balancer: remove grpc.lb.pick_first.* metrics,
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/18957,apache-2.0,observability,OTLP: surface attribute-name collision warnings and add a translation-warnings metric,arve/annotate-collisions
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8824,apache-2.0,observability,wrr: improve log messages,wrr_logging_improvements
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6532,mit,observability,fix: remove duplicate WithField in gitea client push logging,copilot/fix-duplicate-withfield-gitea-client-push-logging
+public:psf/black,https://github.com/psf/black/pull/4824,mit,observability,feat: add output-file input for clean Black logging,feat/output-file-support
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36110,mit,observability,Eval: Add agentic-reference framework and baseline metrics,claude/mcp-agentic-eval-storybook-migrate-5enntm
+public:cli/cli,https://github.com/cli/cli/pull/13204,mit,observability,Add skills specific telemetry,wm/skills-telemetry
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8008,mit,observability,metrics: fix `worker_local_schedule_count` test,worker_local_schedule_count
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8737,apache-2.0,observability,stats/otel: Add grpc.lb.backend_service label to wrr metrics (A89),a89-adding-backend-service-label-wrr
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19593,apache-2.0,observability,fix(deps): update github.com/prometheus/client_golang/exp digest to 9775124,deps-update/github.com-prometheus-client_golang-exp-digest
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19340,apache-2.0,observability,cmd/prometheus: OS agnostic tests,osagnostictests-01
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8978,apache-2.0,observability,binarylog: replace testServer with StubServer in binarylog_end2end_test.go,7291-use-stubserver-binary-log
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35345,mit,observability,Telemetry: Prevent pnpm paths from leaking into framework.name,claude/slack-session-xxvkl9
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9261,apache-2.0,observability,resolver: log resolver state updates at verbosity 2,resolver-channelz-trace-verbosity
+public:cli/cli,https://github.com/cli/cli/pull/13255,mit,observability,Log when there is no telemetry,wm/log-no-events
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22945,mit,observability,fix(module-runner): don't crash stack-trace source mapping when globalThis.Buffer is absent,fix/module-runner-bufferless-realm
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8871,apache-2.0,observability,examples: Poll for expected server logs in test,fix-flaky-graceful-stop
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11562,apache-2.0,observability,fix(cli): pass log level to the daemon,fix/daemon-cli-logs
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19572,apache-2.0,observability,logging: fix rule and block fields in JSON logs,fix-json-log-rule-block-fields
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19599,apache-2.0,observability,fix(deps): update module github.com/prometheus/client_model to v0.6.3,deps-update/github.com-prometheus-client_model-0.x
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36416,mit,observability,Open-service: Test why the Log window keeps entries young or among the newest 256,jeppe/sb-2119-pr-8-log-window-keeps-entries-younger-than-15-s-and-within
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11945,apache-2.0,observability,refactor: Remove production tracing hooks,kdy1/remove-production-tracing
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23138,mit,observability,test: reduce logs,test/reduce-logs
+public:cli/cli,https://github.com/cli/cli/pull/12679,mit,observability,Respect `--exit-status` with `--log` and `--log-failed` in `run view`,wm-run-view-exit-status-not-respected
+public:cli/cli,https://github.com/cli/cli/pull/13254,mit,observability,Enable telemetry without env var,wm/enable-telemetry
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19289,apache-2.0,observability,promql: avoid SIGBUS by explicitly allocating active query log file (#19092),krajo/backport-19092-query-logger-sigbus
+public:denoland/deno,https://github.com/denoland/deno/pull/36441,mit,security-compliance,fix(ext/crypto): preserve RSA-OAEP label bytes,agent/rsa-oaep-label-bytes
+public:babel/babel,https://github.com/babel/babel/pull/17696,mit,security-compliance,Update webpack to 5.94.0 to remove CVE-2024-43788,fix/CVE-2024-43788
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17382,mit,security-compliance,fix(deps): update dependency @fastify/static to v10 [security],renovate/npm-fastify-static-vulnerability
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20319,mit,security-compliance,chore: update dependency js-yaml to v4 [security],renovate/npm-js-yaml-vulnerability
+public:denoland/deno,https://github.com/denoland/deno/pull/36529,mit,security-compliance,fix(net): check permissions for multicast membership,fix/multicast-membership-permissions
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10088,mit,security-compliance,feat(auth): allow passwords with empty usernames,fix/allow-empty-passwords
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21306,mit,security-compliance,chore: disable npm audit in ecosystem tests,fix-ecosystem-tests
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15341,apache-2.0,security-compliance,config/security: Add an integration test,fix/secoverri
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9092,apache-2.0,security-compliance,xds/rbac: handle errors returned from matcher evaluation,rbac
+public:denoland/deno,https://github.com/denoland/deno/pull/36753,mit,security-compliance,fix(cli): accept all valid sys permission descriptors,fix/allow-sys-inspector-cli-parser
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20519,mit,security-compliance,fix: update `minimatch` to `10.2.1` to address security vulnerabilities,fix/update-minimatch-to-10.2.1-to-resolve-security-vulnerabilities
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8919,apache-2.0,security-compliance,credentials/alts: Pool write buffers,alts-buffer-pool
+public:cli/cli,https://github.com/cli/cli/pull/13960,mit,security-compliance,Add macos keyring security doc,wm-doc-keyring
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15353,mit,security-compliance,Backport RSC CSRF hardening to v7,backport-rsc-csrf-v7
+public:denoland/deno,https://github.com/denoland/deno/pull/35661,mit,security-compliance,fix(permissions): split comma-separated paths in --ignore-read,fix/ignore-read-comma-split
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8908,apache-2.0,security-compliance,xds/rbac: replace legacy net to netip,replace-to-netip
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20549,mit,security-compliance,fix: minimatch security vulnerability patch for v9.x,fix/minimatch-eslint9
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9258,apache-2.0,security-compliance,xds/rbac: apply header matcher checks to nested and/or/not rules,rbac-nested-header-matchers
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15311,mit,security-compliance,harden RSC CSRF codepaths,rsc_csrf
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35988,mit,security-compliance,Core: Add security token to instance registry record,jeppe-cursor/attach-token-instance-registry-900b
+public:angular/angular,https://github.com/angular/angular/pull/70686,mit,security-compliance,docs: import bootstrapApplication from platform-browser in the CSP example,docs-security-csp-nonce-import
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9268,apache-2.0,security-compliance,credentials/alts: support max frame size negotiation via env var,alts-default-frame-size-64kb
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10748,mit,security-compliance,fix: pass auth via Request constructor instead of calling HTTPBasicAuth on unprepared Request,fix/authenticator-basic-auth-request-preparation
+public:denoland/deno,https://github.com/denoland/deno/pull/35941,mit,security-compliance,fix(ext/net): require --allow-sys for node:dns.getServers(),fix/dns-getservers-permission
+public:vuejs/core,https://github.com/vuejs/core/pull/15266,mit,security-compliance,fix(server-renderer): reject CR in attribute names,edison/fix-ssr-cr-attr-xss
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9197,apache-2.0,security-compliance,credentials/alts: fix alts record ensures the frame size is bigger than the message type field size,fix-alts-record-parsing
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8660,apache-2.0,security-compliance,credentials/tls: Remove environment variable for disabling ALPN,remove-alpn-env-var
+public:cli/cli,https://github.com/cli/cli/pull/13420,mit,security-compliance,chore(deps): bump golang.org/x/crypto from 0.50.0 to 0.51.0,dependabot/go_modules/golang.org/x/crypto-0.51.0
+public:pallets/flask,https://github.com/pallets/flask/pull/4301,bsd-3-clause,security-compliance,use secrets module for SECRET_KEY generation in docs,secret_key_via_secrets
+public:cli/cli,https://github.com/cli/cli/pull/13119,mit,security-compliance,Document dependency CVE policy in SECURITY.md,kw/security-md-dep-cve-policy
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9292,apache-2.0,security-compliance,security: Allow passing `CurvePreferences` in advancedtls,key_exchange_group
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9111,apache-2.0,security-compliance,xds/rbac: enforce strict presence-based short-circuit in authenticatedMatcher,fix/xds-rbac-auth-bypass
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9119,apache-2.0,security-compliance,xds/gcp_authn: implement GCP Authentication filter (gRFC A83).,http-authn-filter
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/16166,mit,security-compliance,👷 Use GitHub CLI for Git authentication,agent/use-gh-auth-setup-git
+public:denoland/deno,https://github.com/denoland/deno/pull/36347,mit,security-compliance,fix(ext/node_crypto): use named group exponent sizes,fix/node-dh-group-exponent-size
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8270,mit,security-compliance,net: use getpeereid for QNX peer credentials,fix/qnx-peer-credentials
+public:denoland/deno,https://github.com/denoland/deno/pull/36728,mit,security-compliance,fix(audit): honor configured CA stores,fix/36726-audit-ca-store
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17482,mit,security-compliance,fix(deps): update dependency @nestjs/core to v11.1.18 [security],renovate/npm-nestjs-core-vulnerability
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9222,apache-2.0,security-compliance,security/advancedtls: add SkipServerAuthEKU option to bypass server EKU verification,skip-server-auth-eku
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8941,apache-2.0,security-compliance,xdsresource: add SNI related fields in security config of CDS update for A101,add_field_in_cds_update
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/14946,mit,security-compliance,✏️ Fix typo for `client_secret` in OAuth2 form docstrings,fix/client-password-typo-oauth2
+public:cli/cli,https://github.com/cli/cli/pull/12659,mit,security-compliance,chore(deps): bump golang.org/x/crypto from 0.47.0 to 0.48.0,dependabot/go_modules/golang.org/x/crypto-0.48.0
+public:denoland/deno,https://github.com/denoland/deno/pull/36079,mit,security-compliance,chore: use standard executable permissions for promoted binaries,fix/release-archive-permissions
+public:cli/cli,https://github.com/cli/cli/pull/14443,mit,security-compliance,chore(deps): bump golang.org/x/crypto from 0.56.0 to 0.57.0,dependabot/go_modules/golang.org/x/crypto-0.57.0
+public:cli/cli,https://github.com/cli/cli/pull/14331,mit,security-compliance,chore: bump golang.org/x/crypto to 0.56.0,babakks/bump-crypto
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10630,mit,security-compliance,Add warning about `~/.netrc` for Poetry credential configuration,patch-1
+public:denoland/deno,https://github.com/denoland/deno/pull/36486,mit,security-compliance,fix(permissions): check resolved IP against import deny list,fix/deny-import-resolved-ip
+public:cli/cli,https://github.com/cli/cli/pull/13046,mit,security-compliance,Ensure `api` and `auth` commands record agentic invocations,wm/gh-api-agent
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11413,apache-2.0,security-compliance,chore: replace cargo-audit with cargo-deny,chore/cargo-audit
+public:cli/cli,https://github.com/cli/cli/pull/13867,mit,security-compliance,chore(deps): bump golang.org/x/crypto from 0.53.0 to 0.54.0,dependabot/go_modules/golang.org/x/crypto-0.54.0
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9148,apache-2.0,security-compliance,xds: ensure full-string matching for RBAC Filter rules,fix_rbac
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10959,mit,security-compliance,perf: avoid redundant keyring lookups for repositories without credentials,perf/keyring
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/11074,mit,security-compliance,authenticator: match host when looking up git credentials,auth-git
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10116,mit,security-compliance,chore(doc): add a heading for git credentials,docs/add-git-cred-heading
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6395,mit,security-compliance,docs: secure fund,func
+public:denoland/deno,https://github.com/denoland/deno/pull/36062,mit,security-compliance,fix(tls): resolve sni requests concurrently,fix/tls-sni-concurrent-resolution
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8717,apache-2.0,security-compliance,build(deps): bump golang.org/x/crypto from 0.43.0 to 0.45.0 in /security/advancedtls/examples,dependabot/go_modules/security/advancedtls/examples/golang.org/x/crypto-0.45.0
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9091,apache-2.0,security-compliance,credentials/alts: fix the leaked context and close handshaker properly,fix_context_leak
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14793,apache-2.0,security-compliance,"config/security: Add ""! "" negation to Whitelist, harden default http.urls",fix/issue-14792
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/13518,mit,security-compliance,Use constant-time comparison for `SecretStr` and `SecretBytes` types,vp/secret-constant-time
+public:prettier/prettier,https://github.com/prettier/prettier/pull/19357,mit,security-compliance,Update dependency @angular/compiler to v22.0.1 [SECURITY],renovate/npm-angular-compiler-vulnerability
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8589,apache-2.0,security-compliance,credentials: Remove TODO from public godoc,credentials-godoc
+public:pallets/flask,https://github.com/pallets/flask/pull/4304,bsd-3-clause,security-compliance,Fix example `SECRET_KEY` generation code in documentation,patch-1
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1153,apache-2.0,security-compliance,Closes #1152 by upgrading yaml.v2 to v2.3.0,1152-yaml-vulnerability
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9044,apache-2.0,security-compliance,xds: implement cluster metadata parsing for GCP Authentication filter (gRFC A83),metadata
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14508,apache-2.0,security-compliance,commands: Skip chmod for files without owner-write permission,cache-file-perms-14507
+public:cli/cli,https://github.com/cli/cli/pull/13641,mit,security-compliance,chore(deps): bump golang.org/x/crypto from 0.52.0 to 0.53.0,dependabot/go_modules/golang.org/x/crypto-0.53.0
+public:TanStack/query,https://github.com/TanStack/query/pull/11580,mit,data-pipeline,docs(vue-query): fix 'loosing' typo in the v5 migration guide,docs/fix-loosing-typo-vue-v5-guide
+public:alacritty/alacritty,https://github.com/alacritty/alacritty/pull/8246,apache-2.0,data-pipeline,Remove `dbg!` in Migration Command,remove-dbg
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36258,mit,data-pipeline,Docs: Update migration guides for v11,docs-11-migration-guide
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36008,mit,data-pipeline,Angular: Decide the migration's zone.js import from the dependency tree,valentin/angular-vite-zonejs-signal
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20540,mit,data-pipeline,docs: update v9 migration guide for `@eslint/js` usage,eslint-js-migration-guide
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22633,mit,data-pipeline,docs(migration): update Oxc Minifier assumptions link,patch-1
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22833,mit,data-pipeline,docs(migration): fix grammar,fix/docs
+public:TanStack/query,https://github.com/TanStack/query/pull/11379,mit,data-pipeline,docs: redirect flat reference URLs broken by the TypeDoc migration,docs/redirect-flat-reference-urls
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20577,mit,data-pipeline,docs: add v10 migration guide link to Use docs index,docs/migrate-to-10x-link
+public:angular/angular,https://github.com/angular/angular/pull/70327,mit,data-pipeline,fix(migrations): preserve registerLocaleData calls in standalone bootstrap migration,standalone-migration-register-locale-data
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20534,mit,data-pipeline,docs: update migration guide per Program range change,patch-2
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/9830,mit,data-pipeline,feat(cli): add option to migrate outdated configs,config-migration
+public:denoland/deno,https://github.com/denoland/deno/pull/35563,mit,data-pipeline,build(deps): upgrade opentelemetry crates to 0.32,fix/opentelemetry-0.32-migration
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22255,mit,data-pipeline,docs: mention minor comment differences in migration guide,docs/mention-minor-comment-differences-in-migration-guide
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36354,mit,data-pipeline,Docs: Clarify Node.js prerelease support,docs/sto-359-migration-prereleases
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9094,apache-2.0,data-pipeline,balancergroup: merge whitebox tests into blackbox test,balancegroup-test-migration
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36062,mit,data-pipeline,Docs: Fix dead storyshots migration guide link in README,fix-storyshots-guide-link
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/14895,mit,data-pipeline,wip - esm migration,esm_migration
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36291,mit,data-pipeline,Docs: Improve links in migration guide,docs-11-migration-guide-tweaks
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20238,mit,data-pipeline,docs: update CLI flags migration instructions,update-cli-flags-migration
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10884,mit,data-pipeline,test: assert config migration results,codex/assert-config-migration-tests
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/8918,apache-2.0,data-pipeline,grpclb: replace net.IP with netip.Addr,fix/issue-8884-netip-migration
+public:cli/cli,https://github.com/cli/cli/pull/14430,mit,data-pipeline,Retire multi-account migration,williammartin-fix-keyring-user-lookup
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/9996,mit,data-pipeline,doc(faq): add entry for PEP 621 migration,docs/add-migration-faq
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20299,mit,data-pipeline,docs: fix incorrect anchor link in v10 migration guide,migrate-v10-jiti-anchor
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23188,mit,data-pipeline,docs(migration): import swc in the decorator workaround,patch-2
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20328,mit,data-pipeline,"docs: consistently use ""v10.0.0"" in migration guide",docs/standardize-v10-version-labels
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35404,mit,data-pipeline,CLI: Fix angular-to-angular-vite migration failing to configure addon-vitest,valentin/fix-automigrate-angular-vite-skipcache
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36261,mit,data-pipeline,Docs: Update addon migration guide for SB 11,sb11-addon-migration-guide
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11664,apache-2.0,ai-ml,perf(useRegexpExec): check member name before receiver inference,dyc3/use-regexp-exec-prefilter
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11780,apache-2.0,ai-ml,fix(inference): indexed access types,fix/improve-indexed-access-type
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11451,apache-2.0,ai-ml,feat: enable YAML and Markdown embedding,feat/enable-yaml
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11757,apache-2.0,ai-ml,"feat(type_inference): handle built in global types with class members, lower WeakMap instance members",dyc3/lower-class-members
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11733,apache-2.0,ai-ml,fix(analyzer): infer types for for-of bindings,dyc3/fix-loop-variable-inference
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11159,apache-2.0,ai-ml,fix(inference): collapse instance wrappers around unions,analyzer/fix-no-floating-promises-await
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11618,apache-2.0,ai-ml,fix(type-inference): infer callback parameter types from call signatures,fix/GH-11605
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11244,apache-2.0,ai-ml,feat(cli): add profiler for type inference,feat/profiler-inference
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11515,apache-2.0,ai-ml,perf(type_inference): collect declaration only class methods as class members,dyc3/fix-11390-regressions
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11347,apache-2.0,ai-ml,fix(inference): skip return arguments lookup,fix/promise-classification-projection
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11891,apache-2.0,ai-ml,feat(type-inference): lower Intl namespace declarations,dyc3/lower-intl
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11035,apache-2.0,ai-ml,fix(linter): inference regression,fix/regression-inference
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11814,apache-2.0,ai-ml,fix(type_inference): skip non-generic references in substitutions,average-warthog
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11501,apache-2.0,ai-ml,perf(analyzer): fast-path for useArraySortCompare via syntax before type inference,sort-array-perf
+public:TanStack/query,https://github.com/TanStack/query/pull/11483,mit,ai-ml,test(query-core/streamedQuery): add type tests for 'streamedQuery' parameters and inference,test/query-core-streamed-query-type-tests
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11443,apache-2.0,ai-ml,fix(inference): use local inference for constructor dependent members,fix/inference-regression
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11240,apache-2.0,ai-ml,fix(inference): query local types before global,fix/regression-promise-resolutino
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17600,mit,ai-ml,"fix(core): treat null as invalid in isCustomClass, isCustomFactory, isCustomUseExisting",fix/provider-classifier-null-check
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11620,apache-2.0,ai-ml,perf(type_inference): avoid eager generic declaration inference,fix/generic-qualifier-inference-performance
+public:vuejs/core,https://github.com/vuejs/core/pull/15097,mit,ai-ml,fix(types): preserve defineModel inference with factory defaults,edison/fix/15096
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11631,apache-2.0,ai-ml,fix(inference): reduce unnecessary type inference,fix/inference-namespace
+public:TanStack/query,https://github.com/TanStack/query/pull/11497,mit,ai-ml,"test(query-core/queryClient): add type tests for every client method, its config and the tagged key inference",test/query-core-query-client-type-tests

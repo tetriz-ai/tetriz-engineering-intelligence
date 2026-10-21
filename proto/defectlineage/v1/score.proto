@@ -1,0 +1,91 @@
+// Copyright 2026 Workloom Solutions Private Limited
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+package defectlineage.v1;
+
+import "defectlineage/v1/enums.proto";
+
+option go_package = "github.com/tetriz-ai/tetriz-engineering-intelligence/gen/defectlineage/v1;defectlineagev1";
+
+// DefectScoreEvidence is the derivation behind a candidate's confidence score,
+// kept so the score is explainable and re-derivable without re-blaming or
+// re-fetching. It records each of the five component values, each in [0,1], and
+// the inputs that produced them.
+message DefectScoreEvidence {
+  // lineage_strength (L) is how directly blame reached the candidate — the rung
+  // its evidence type earns.
+  double lineage_strength = 1;
+  // code_context (C) is how close the candidate's change sits to the fix's in the
+  // AST. The structural pass measures the match rung; scoring maps that rung to a
+  // value.
+  double code_context = 2;
+  // deployment (D) is the deployment-compatibility factor. It is identical for
+  // every candidate of a fix, so it shifts the score but never reorders the
+  // candidates.
+  double deployment = 3;
+  // recency (R) is the fit over the candidate-commit-to-fix-merge gap, decaying
+  // as the gap widens. Zero when the candidate has no commit date, since there is
+  // no gap to measure.
+  double recency = 4;
+  // corroboration (E) is the corroborating-signal score: signals naming this
+  // candidate dominate, while defect-level signals only confirm a real defect and
+  // are equal across candidates.
+  double corroboration = 5;
+
+  // Derivation of the values above.
+  // ast_match_level is the candidate-vs-fix match rung that set C.
+  string ast_match_level = 6;
+  // ast_node_type is the type of the AST node the candidate changed.
+  string ast_node_type = 7;
+  // ast_enclosing_node is the node enclosing the one the candidate changed.
+  string ast_enclosing_node = 8;
+  // directness_tier snapshots the blame evidence type that set L. It is a copy of
+  // the row's evidence type at scoring time on purpose: the drain can re-drive
+  // evidence type independently, so the score keeps the tier it actually used.
+  // Typed as the enum so a bad label cannot slip in.
+  DefectLineageEvidenceType directness_tier = 9;
+  // recency_days is the gap, in days, from the candidate's commit to the fix's
+  // merge that produced R.
+  double recency_days = 10;
+
+  // corroboration_flags is the per-signal breakdown behind E.
+  DefectCorroborationFlags corroboration_flags = 11;
+  // degraded is true when C is coverage rather than a measured proximity — the
+  // AST could not be used (unsupported grammar, unlocatable region), so
+  // code_context is a same-file fallback, not a real rung. Kept so a reader never
+  // mistakes a degraded fallback for a confident same-file match.
+  bool degraded = 12;
+}
+
+// DefectCorroborationFlags is the per-signal breakdown of the E score, split into
+// the candidate-specific signals, which rank a fix's candidates, and the
+// defect-level signals, which only confirm a real defect and are identical across
+// them.
+message DefectCorroborationFlags {
+  // Candidate-specific. All false when the candidate pull request is unresolved,
+  // because the bucket is then skipped.
+  // explicit_candidate_reference: the fix body names the candidate by its pull
+  // request number or commit-hash prefix.
+  bool explicit_candidate_reference = 1;
+  // title_overlap: the fix and candidate pull-request titles share a meaningful
+  // token.
+  bool title_overlap = 2;
+  // branch_overlap: the fix and candidate branch names share a meaningful token.
+  bool branch_overlap = 3;
+  // same_author: the fix and the culprit commit share an author. No scorer in
+  // this package sets it, because mapping a commit author to a person is the
+  // caller's concern; it reads false unless a caller's own scorer sets it.
+  bool same_author = 4;
+  // Defect-level. Identical across a fix's candidates, so they confirm a real
+  // defect but cannot rank.
+  // linked_defect_issue: the fix pull request links a defect tracker issue.
+  bool linked_defect_issue = 5;
+  // regression_test_changed: the fix touched a test file. No scorer in this
+  // package sets it; it reads false unless a caller's own scorer does.
+  bool regression_test_changed = 6;
+  // incident_or_rollback: the fix is tied to an incident or rollback. No scorer
+  // in this package sets it; it reads false unless a caller's own scorer does.
+  bool incident_or_rollback = 7;
+}

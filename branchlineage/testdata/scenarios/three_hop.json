@@ -1,0 +1,94 @@
+{
+  "repository": "acme/three-hop",
+  "about": "develop promotes to release and to main; release promotes to main.",
+  "base": "2026-04-02T00:00:00Z",
+  "tracked": [
+    "main"
+  ],
+  "flow": [
+    {
+      "source": "develop",
+      "target": "release"
+    },
+    {
+      "source": "release",
+      "target": "main"
+    },
+    {
+      "source": "develop",
+      "target": "main"
+    }
+  ],
+  "max_depth": 0,
+  "prs": [
+    {
+      "number": 1,
+      "head": "feature/l1",
+      "base": "develop",
+      "merged_hour": 1,
+      "attributed": true
+    },
+    {
+      "number": 2,
+      "head": "feature/l2",
+      "base": "develop",
+      "merged_hour": 2,
+      "attributed": true
+    },
+    {
+      "number": 3,
+      "head": "feature/l3",
+      "base": "develop",
+      "merged_hour": 3,
+      "attributed": true
+    },
+    {
+      "number": 4,
+      "head": "feature/l4",
+      "base": "develop",
+      "merged_hour": 4
+    },
+    {
+      "number": 5,
+      "head": "feature/l5",
+      "base": "main",
+      "merged_hour": 5,
+      "attributed": true
+    },
+    {
+      "number": 6,
+      "head": "feature/l6",
+      "base": "main",
+      "merged_hour": 6
+    },
+    {
+      "number": 10,
+      "head": "develop",
+      "base": "release",
+      "merged_hour": 7,
+      "first_commit_hour": -24
+    },
+    {
+      "number": 11,
+      "head": "release",
+      "base": "main",
+      "merged_hour": 8,
+      "first_commit_hour": -24
+    },
+    {
+      "number": 12,
+      "head": "develop",
+      "base": "main",
+      "merged_hour": 9,
+      "first_commit_hour": 7
+    }
+  ],
+  "expected": {
+    "edges": 5,
+    "attributed_before": 1,
+    "attributed_after": 2,
+    "carried": 4,
+    "depth_cap_hits": 0
+  },
+  "note": "attributed_after is 2: the develop->main promotion's window opens at its first commit, the develop->release merge, after every develop leaf merged, so it carries nothing and only the release chain is credited."
+}

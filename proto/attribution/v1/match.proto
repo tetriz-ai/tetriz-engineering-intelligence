@@ -1,0 +1,143 @@
+// Copyright 2026 Workloom Solutions Private Limited
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+package attribution.v1;
+
+option go_package = "github.com/tetriz-ai/tetriz-engineering-intelligence/gen/attribution/v1;attributionv1";
+
+// PRAttribution is the result of matching one AI coding session to pull requests.
+message PRAttribution {
+  // Every pull request this session contributes to. Empty when unmatched.
+  //
+  // One session can work on several pull requests — a long session whose output
+  // is split across a feature branch and a separate fix. Each distinct pull
+  // request appears once, carrying the highest-tier signal that linked it.
+  repeated PRMatch matches = 1;
+
+  // Populated only when matches is empty. Carries the reason and retry metadata.
+  PRUnmatched unmatched = 2;
+
+  // The re-attribution request these matches were computed against. While the
+  // session's own SessionEvidence.reattribution_seq exceeds this, the engine owes
+  // the session another pass, so matches may be incomplete — never wrong. Zero
+  // when no request has ever been raised.
+  //
+  // An opaque change marker, not a count: compare it, never sum it.
+  int32 serviced_reattribution_seq = 3;
+}
+
+// PRMatch records one session-to-pull-request link.
+message PRMatch {
+  // Which signal produced the match.
+  SessionToPRMatchMethod method = 1;
+  // Match score in [0.0, 1.0] after time-decay adjustment.
+  double confidence = 2;
+  // The candidate's pr_key, returned verbatim so a caller can join back.
+  string pr_key = 3;
+  int32 pr_number = 4;
+  string pr_repository = 5;
+  // Files appearing in both the session's edits and the pull request's changes.
+  repeated string matched_files = 6;
+  int64 lines_added = 7;
+  int64 lines_removed = 8;
+  // Signals evaluated before the match was found, in order. Useful for
+  // explaining why an earlier, higher-tier signal did not fire.
+  repeated string signals_evaluated = 9;
+  // Confidence bucket, derived at scoring time from the method, the session's
+  // editor and the producer's own confidence band. Stored on the match so a
+  // consumer filters on one field instead of rejoining the session.
+  PRMatchConfidenceTier confidence_tier = 10;
+  // Whether the session's owner authored or reviewed this pull request.
+  SessionParticipationKind participation_kind = 11;
+  // What made this match specific to THIS pull request, as distinct from how the
+  // pull request was found (method, field 1). A branch match whose evidence is
+  // file overlap is the ordinary author-side shape, and both stay readable.
+  //
+  // A branch is a container: every session run in that workspace carries it, so
+  // it can narrow which pull requests are candidates but cannot say which session
+  // did the work. This field records the thing that could.
+  //
+  // UNSPECIFIED means "no evidence recorded", never "checked and found absent".
+  // A consumer must not treat it as grounds to withdraw a match on its own.
+  SessionToPRMatchEvidence evidence = 12;
+}
+
+// PRMatchConfidenceTier is the confidence bucket for a match. HIGH and MEDIUM
+// are the populated tiers; UNSPECIFIED is the zero value, which the reducer
+// ranks below MEDIUM, so a match without a tier never beats a scored one.
+enum PRMatchConfidenceTier {
+  PR_MATCH_CONFIDENCE_TIER_UNSPECIFIED = 0;
+  PR_MATCH_CONFIDENCE_TIER_MEDIUM = 1;
+  PR_MATCH_CONFIDENCE_TIER_HIGH = 2;
+}
+
+// SessionParticipationKind discriminates how the session's owner took part in
+// the pull request. A consumer must not infer participation from UNSPECIFIED.
+//
+// Further kinds (COMMENTED, MERGED_BY, REVIEW_REQUESTED, CO_AUTHORED) drop in as
+// new values without a schema change.
+enum SessionParticipationKind {
+  SESSION_PARTICIPATION_KIND_UNSPECIFIED = 0;
+  SESSION_PARTICIPATION_KIND_AUTHORED = 1;
+  SESSION_PARTICIPATION_KIND_REVIEWED = 2;
+}
+
+// PRUnmatched records why a session could not be linked to any pull request.
+message PRUnmatched {
+  SessionToPRUnmatchedReason reason = 1;
+  // RFC3339 timestamp of the last attempt. The retry cooldown is measured from it.
+  string last_attempted_at = 2;
+  repeated string signals_evaluated = 3;
+}
+
+// SessionToPRMatchEvidence classifies what made a match specific to one pull
+// request.
+enum SessionToPRMatchEvidence {
+  // A match attributing on its method alone. Never "checked and found absent".
+  SESSION_TO_PR_MATCH_EVIDENCE_UNSPECIFIED = 0;
+  // The session's own edits land in this pull request's diff, clearing the same
+  // bar the file-overlap signal applies — not merely a non-empty intersection,
+  // which one coincidental shared file would satisfy.
+  SESSION_TO_PR_MATCH_EVIDENCE_FILE_OVERLAP = 1;
+  // The session named this pull request through a reference it produced itself.
+  // A reference found near the session rather than produced by it does not qualify.
+  SESSION_TO_PR_MATCH_EVIDENCE_PR_REFERENCE = 2;
+  // The session's own account of its work put it on this pull request's head
+  // branch — one it created, pushed or narrated, not one the workspace merely
+  // held. This corroborates the branch on its own, without file overlap: a
+  // session that pushed the exact head branch has proven its involvement even
+  // when its edits touch few of the pull request's files.
+  SESSION_TO_PR_MATCH_EVIDENCE_BRANCH_PROVENANCE = 3;
+}
+
+// SessionToPRMatchMethod identifies which signal matched a session to a pull
+// request. Signals are evaluated in descending tier order and the first to claim
+// a pull request wins; later signals that also match are recorded in
+// PRMatch.signals_evaluated.
+enum SessionToPRMatchMethod {
+  SESSION_TO_PR_MATCH_METHOD_UNSPECIFIED = 0;
+  SESSION_TO_PR_MATCH_METHOD_DIRECT_PR_REF = 1;
+  SESSION_TO_PR_MATCH_METHOD_BRANCH_MATCH = 2;
+  SESSION_TO_PR_MATCH_METHOD_FILE_OVERLAP = 3;
+  // Never emitted by the engine: reserved for a caller that attributes a pull
+  // request from a signature scan of its body.
+  SESSION_TO_PR_MATCH_METHOD_AI_SIGNATURE = 4;
+}
+
+// SessionToPRUnmatchedReason identifies why a session could not be matched.
+enum SessionToPRUnmatchedReason {
+  SESSION_TO_PR_UNMATCHED_REASON_UNSPECIFIED = 0;
+  // The person has no linked vendor account. Retried on the cooldown until one
+  // appears.
+  SESSION_TO_PR_UNMATCHED_REASON_VCS_NOT_LINKED = 1;
+  // Identity resolved but no pull request matched any signal. Retried on the
+  // cooldown until max_retry_days after the session's last observed activity,
+  // then permanent unless a re-attribution request reopens it.
+  SESSION_TO_PR_UNMATCHED_REASON_NO_MATCHING_PR = 2;
+  // Identity resolution itself failed, so candidates could not be fetched.
+  // Distinct from VCS_NOT_LINKED, where resolution succeeded and found nothing.
+  // Transient — retried on the cooldown.
+  SESSION_TO_PR_UNMATCHED_REASON_IDENTITY_ERROR = 3;
+}

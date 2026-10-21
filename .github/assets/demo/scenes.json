@@ -1,0 +1,207 @@
+{
+  "brand": "TETRIZ ENGINEERING INTELLIGENCE",
+  "accent": "#4653b7",
+  "scenes": [
+    {
+      "title": "What did AI change in engineering?",
+      "subtitle": "Join the evidence. Describe the work. Measure outcomes and adoption.",
+      "label": "Engineering intelligence",
+      "metric": "5 questions",
+      "unit": "one library collection",
+      "description": "Ten packages help turn sessions, PRs, issues and team facts into evidence-backed answers.",
+      "panel_label": "What you can learn",
+      "rows": [
+        "Contribution \u2014 what work involved AI?",
+        "Work \u2014 what changed, and how complex was it?",
+        "Quality \u2014 where did a bug originate?",
+        "Value \u2014 what time and cost might be recovered?",
+        "Maturity \u2014 where is AI helping, and what is next?"
+      ],
+      "evidence": [],
+      "footer": "Actual example outputs \u00b7 synthetic fixtures \u00b7 separate capabilities, not a bundled dashboard"
+    },
+    {
+      "title": "Connect AI activity to delivered work",
+      "subtitle": "Link sessions, pull requests and issues; retain the evidence and coverage.",
+      "label": "Contribution",
+      "metric": "1 of 2",
+      "unit": "linked issues AI-assisted",
+      "description": "In this issue example, only half of all completed issues have usable PR links. Missing links stay visible.",
+      "panel_label": "Separate runnable examples",
+      "rows": [
+        "SESSION \u2192 PR\ns1 produced PR-7; PR-8 carried it to main.",
+        "PR \u2192 ISSUE\nPR-21 fixes ENG-1; a context-only mention is excluded.",
+        "COVERAGE\n2 of 4 issues linked \u00b7 low coverage"
+      ],
+      "evidence": [
+        {
+          "file": "promotions.txt",
+          "excerpt": "attribution: session s1 produced acme/shop#PR-7#merged"
+        },
+        {
+          "file": "promotions.txt",
+          "excerpt": "with lineage: 1"
+        },
+        {
+          "file": "contribution.txt",
+          "excerpt": "AI-assisted: 1 of 2 linked issues, coverage 50%, low=true"
+        }
+      ],
+      "footer": "Actual example outputs \u00b7 synthetic fixtures \u00b7 separate capabilities, not a bundled dashboard"
+    },
+    {
+      "title": "Describe the work behind a pull request",
+      "subtitle": "Separate effective code from documentation and excluded files.",
+      "label": "Work delivered",
+      "metric": "2.9 / 10",
+      "unit": "relative complexity (CNCS)",
+      "description": "Score this example diff against a stored repository baseline. Scores describe relative change size, not developer skill.",
+      "panel_label": "Diff example output",
+      "rows": [
+        "Go: 22 source lines in 2 files",
+        "TypeScript: 5 source lines in 1 file",
+        "2 documentation lines counted separately",
+        "yarn.lock excluded",
+        "Also available: type/domain labels through model-service."
+      ],
+      "evidence": [
+        {
+          "file": "work.txt",
+          "excerpt": "Go          22 SLOC in 2 files"
+        },
+        {
+          "file": "work.txt",
+          "excerpt": "TypeScript   5 SLOC in 1 files"
+        },
+        {
+          "file": "work.txt",
+          "excerpt": "cncs: 2.9 (scoreable: true)"
+        }
+      ],
+      "footer": "Actual example outputs \u00b7 synthetic fixtures \u00b7 separate capabilities, not a bundled dashboard"
+    },
+    {
+      "title": "Trace a fix past a misleading last writer",
+      "subtitle": "A formatting commit touched the line; an earlier change introduced its behavior.",
+      "label": "Quality",
+      "metric": "0.531",
+      "unit": "candidate confidence",
+      "description": "The walk passes the reformat and ranks CULPRIT. This example uses file-level context, so its result is explicitly degraded.",
+      "panel_label": "Bug-fix example",
+      "rows": [
+        "FIX pr-42",
+        "\u2193 blame walk skips REFORMAT",
+        "CULPRIT ranked as an introducing candidate",
+        "Method: BLAME_AFTER_HOPS",
+        "Context: same_file \u00b7 degraded=true"
+      ],
+      "evidence": [
+        {
+          "file": "quality.txt",
+          "excerpt": "confidence:  0.531"
+        },
+        {
+          "file": "quality.txt",
+          "excerpt": "reached by:  BLAME_AFTER_HOPS"
+        },
+        {
+          "file": "quality.txt",
+          "excerpt": "context:     same_file (degraded: true)"
+        }
+      ],
+      "footer": "Actual example outputs \u00b7 synthetic fixtures \u00b7 separate capabilities, not a bundled dashboard"
+    },
+    {
+      "title": "Estimate value from comparable cohorts",
+      "subtitle": "Compare work classes before deriving recovered hours and dollars.",
+      "label": "Value",
+      "metric": "203.0 h",
+      "unit": "estimated recovered time / 30 days",
+      "description": "Synthetic feature and bugfix cohorts illustrate the calculation. These estimates do not establish that AI caused the difference.",
+      "panel_label": "ROI example assumptions and output",
+      "rows": [
+        "Feature median: 40h baseline \u2192 24h AI",
+        "Bugfix median: 12h baseline \u2192 9h AI",
+        "AI adoption share: 40.8%",
+        "Assumptions: $75/hour; $12k annual tools",
+        "Estimated annual value: $185,238"
+      ],
+      "evidence": [
+        {
+          "file": "value.txt",
+          "excerpt": "Hours recovered   : 203.0 (window 30d)"
+        },
+        {
+          "file": "value.txt",
+          "excerpt": "feature  baseline 40.0h  ai 24.0h"
+        },
+        {
+          "file": "value.txt",
+          "excerpt": "annual value $185238"
+        }
+      ],
+      "footer": "Actual example outputs \u00b7 synthetic fixtures \u00b7 separate capabilities, not a bundled dashboard"
+    },
+    {
+      "title": "See where AI helps across the lifecycle",
+      "subtitle": "Fold team facts into a maturity profile, then surface a concrete next move.",
+      "label": "Maturity",
+      "metric": "9 \u00d7 5",
+      "unit": "stages \u00d7 autonomy levels",
+      "description": "This team example has different levels in Code, Review and Test & QA. Unmeasured stages stay unknown.",
+      "panel_label": "Team-facts example",
+      "rows": [
+        "Code: L3 established \u00b7 emerging L4",
+        "Review: L1 established \u00b7 emerging L3",
+        "Test & QA: L2 established",
+        "Bottleneck: few tasks planned with an assistant",
+        "Next move: plan mode with a todo list"
+      ],
+      "evidence": [
+        {
+          "file": "maturity.txt",
+          "excerpt": "code          frontier L3                emerging L4"
+        },
+        {
+          "file": "maturity.txt",
+          "excerpt": "review        frontier L1"
+        },
+        {
+          "file": "maturity.txt",
+          "excerpt": "test_qa       frontier L2"
+        },
+        {
+          "file": "maturity.txt",
+          "excerpt": "move: Plan with an assistant in plan mode, using a todo list."
+        }
+      ],
+      "footer": "Actual example outputs \u00b7 synthetic fixtures \u00b7 separate capabilities, not a bundled dashboard"
+    },
+    {
+      "title": "Insufficient evidence is an answer, too",
+      "subtitle": "Coverage, confidence and abstentions travel with the results.",
+      "label": "Trust the limits",
+      "metric": "Withheld",
+      "unit": "when data cannot support a number",
+      "description": "The ROI basis cascade reports insufficient data for a thin cohort. A missing measurement is not zero benefit.",
+      "panel_label": "Thin-window example output",
+      "rows": [
+        "basis: INSUFFICIENT_DATA",
+        "dollars: not derived (non-numeric basis)",
+        "Bring your own records and identity mappings.",
+        "Explore runnable examples for each package."
+      ],
+      "evidence": [
+        {
+          "file": "insufficient.txt",
+          "excerpt": "basis            INSUFFICIENT_DATA"
+        },
+        {
+          "file": "insufficient.txt",
+          "excerpt": "dollars          not derived (non-numeric basis)"
+        }
+      ],
+      "footer": "Actual example outputs \u00b7 synthetic fixtures \u00b7 separate capabilities, not a bundled dashboard"
+    }
+  ]
+}

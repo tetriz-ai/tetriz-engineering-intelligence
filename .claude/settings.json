@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go build:*)",
+      "Bash(go test:*)",
+      "Bash(go vet:*)",
+      "Bash(GOTOOLCHAIN=go1.27.3 go run github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.14.0 run:*)",
+      "Bash(GOTOOLCHAIN=go1.27.3 go run golang.org/x/vuln/cmd/govulncheck@v1.8.0:*)",
+      "Bash(scripts/run-examples.sh:*)",
+      "Bash(go run ./examples/score-held-out-prs/gencorpus:*)"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "repository": "acme/conduit",
+  "about": "One promotion carries two leaves from different authors: the carrier is credited whoever opened it.",
+  "base": "2026-04-02T00:00:00Z",
+  "tracked": [
+    "main"
+  ],
+  "flow": [
+    {
+      "source": "integration",
+      "target": "main"
+    }
+  ],
+  "max_depth": 0,
+  "prs": [
+    {
+      "number": 1,
+      "head": "feature/x",
+      "base": "integration",
+      "merged_hour": 1,
+      "attributed": true
+    },
+    {
+      "number": 2,
+      "head": "feature/y",
+      "base": "integration",
+      "merged_hour": 2,
+      "attributed": true
+    },
+    {
+      "number": 10,
+      "head": "integration",
+      "base": "main",
+      "merged_hour": 3,
+      "first_commit_hour": -24
+    }
+  ],
+  "expected": {
+    "edges": 2,
+    "attributed_before": 0,
+    "attributed_after": 1,
+    "carried": 2,
+    "depth_cap_hits": 0
+  },
+  "note": "attributed_after is 1: the promotion is credited whoever opened it. Allocating the credit to people, and excluding a bot, is the caller's."
+}

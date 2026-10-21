@@ -1,0 +1,167 @@
+// Copyright 2026 Workloom Solutions Private Limited
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+package defectlineage.v1;
+
+import "defectlineage/v1/enums.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/tetriz-ai/tetriz-engineering-intelligence/gen/defectlineage/v1;defectlineagev1";
+
+// The defect-lineage work list. The pipeline owns the queue and the tables; a
+// per-provider walk claims a batch of bug fixes, blames each fix's anchors
+// against its provider, and submits the culprits. Everything a walk needs
+// travels in the claim, so no step round-trips for one blame lookup.
+
+// LineageBlameAnchor is one location the walk blames: a range the fix removed or
+// replaced, addressed at the OLD path and OLD line numbers because blame reads
+// the history before the change. Only blameable anchors travel here —
+// added-guard-only hunks are filtered out when anchors are built.
+message LineageBlameAnchor {
+  // path is the file's path BEFORE the fix. Blame runs against the pre-fix revision.
+  string path = 1;
+  // start_line is the first removed line, in the old file's numbering (1-based).
+  int32 start_line = 2;
+  // end_line is the last removed line (inclusive), in the old file's numbering.
+  int32 end_line = 3;
+  // removed_text is the removed lines verbatim, so the walk verifies a match by
+  // content rather than trusting a line number blame may have skipped commits
+  // past. Whitespace is preserved — a whitespace-only difference is exactly the
+  // reformat hop the walk detects.
+  repeated string removed_text = 4;
+}
+
+// PendingLineageBlame is one claimed fix and everything its walk needs without a
+// round trip.
+message PendingLineageBlame {
+  // bug_fix_pr_id is the fix whose walk this is; the submit echoes it back.
+  string bug_fix_pr_id = 1;
+  // platform_repo_id is the provider's stable repository id.
+  string platform_repo_id = 2;
+  // repo_full_name is owner/name, the form the provider's blame query addresses.
+  string repo_full_name = 3;
+  // fix_commit_sha is the commit that LANDED the fix (merge, squash, or last
+  // replayed). The walk resolves its FIRST PARENT as step zero — that parent is
+  // the revision blame runs against. The claim cannot carry the parent directly:
+  // providers report a parent count, not the hashes.
+  string fix_commit_sha = 4;
+  // location_anchors are the fix's blameable ranges. An empty list is never
+  // claimed — such a fix is settled ANCHORS_EMPTY without a provider call.
+  repeated LineageBlameAnchor location_anchors = 5;
+}
+
+// LineageBlameAuthor is the culprit commit's author, from the provider's blame.
+// It is the AUTHOR, not the committer — those diverge on rebase, cherry-pick and
+// squash. The culprit is resolved to a person by email, the one detail every
+// provider supplies.
+message LineageBlameAuthor {
+  // name is the author's display name as the provider records it, kept for
+  // display and as a signal when the email resolves to no person.
+  string name = 1;
+  // email is the author's commit email: the cross-provider key the culprit's
+  // person is resolved by. Empty when the commit carries none, in which case no
+  // person is resolved.
+  string email = 2;
+  // 3 was a provider handle. A culprit resolves by email, which every provider
+  // supplies, so a provider-specific handle has no reader.
+  reserved 3;
+  reserved "login";
+}
+
+// LineageBlameResult is one candidate: a culprit commit reached for one anchor.
+// It is the unit a submit persists as a candidate row.
+message LineageBlameResult {
+  // path identifies the anchor this candidate came from (the old path).
+  string path = 1;
+  // start_line is that anchor's first removed line (old numbering), pairing with path.
+  int32 start_line = 2;
+  // culprit_sha is the commit that materially wrote the removed line.
+  string culprit_sha = 3;
+  // committed_at is the culprit's commit time, which the window verdict is derived from.
+  google.protobuf.Timestamp committed_at = 4;
+  // hops_walked is how many non-material commits the walk passed to reach the
+  // culprit. It rides the wire and is not persisted; its only reader is the
+  // saturation metric.
+  int32 hops_walked = 5;
+  // evidence_type is how the culprit was reached, which lets a score be
+  // recomputed without re-blaming. A candidate always records a real mechanism.
+  DefectLineageEvidenceType evidence_type = 6;
+  // author is the culprit's author, trusted from the provider's blame when
+  // present. Unset only when the provider supplied none and none could be resolved.
+  LineageBlameAuthor author = 7;
+  // culprit_path is the changed file's path in the CULPRIT's own revision, stored
+  // so the structural scorer can locate the candidate-side node without
+  // re-blaming. It equals the anchor path for a provider whose blame fails closed
+  // across renames; a rename-aware reconstruction can resolve a different path.
+  // Empty when the walk cannot supply it.
+  string culprit_path = 8;
+  // culprit_line is the 1-based line of the changed region in the culprit's
+  // revision — the coordinate the structural scorer needs, paired with
+  // culprit_sha, to pick the candidate node. It is 0 when the provider's blame
+  // reports only the queried-revision position, which drifts: the scorer then
+  // derives the line from the culprit's own diff, or degrades to same-file
+  // coverage. A reconstruction supplies it exactly.
+  int32 culprit_line = 9;
+  // candidate_pr_number is the provider pull request that introduced the culprit
+  // commit, resolved by the walk from the provider's commit-to-pull-request
+  // endpoint. It closes the gap for a squash-merged culprit whose commit carries
+  // no stored pull-request link. The culprit shares the fix's repository (the
+  // walk is single-repo), so no separate repository travels here. It is 0 when
+  // the walk resolved none — no associated pull request, no such endpoint on the
+  // provider, or a failed best-effort lookup — and the caller then falls back to
+  // the commit's own stored link.
+  int32 candidate_pr_number = 10;
+}
+
+// LineageBlameOutcome reports one fix's terminal state and any culprit candidates.
+message LineageBlameOutcome {
+  // organization_id scopes the write.
+  string organization_id = 1;
+  // bug_fix_pr_id is the fix this outcome is for (echoed from the claim).
+  string bug_fix_pr_id = 2;
+  // status is the fix's terminal state: RESOLVED when results is non-empty,
+  // UNATTRIBUTED when the walk produced nothing, or a provider-failure state. A
+  // submitted outcome always carries a real terminal state.
+  DefectLineageState status = 3;
+  // results are the candidates the walk found. Empty for every non-RESOLVED status.
+  repeated LineageBlameResult results = 4;
+}
+
+// PendingStructuralCandidate is one unscored candidate: the culprit commit and
+// the location it changed, so the scorer can fetch the culprit file and locate
+// the changed node.
+message PendingStructuralCandidate {
+  // candidate_lineage_id is the candidate row's id; the verdict echoes it back.
+  string candidate_lineage_id = 1;
+  // candidate_commit_sha is the culprit commit whose file the comparison parses.
+  string candidate_commit_sha = 2;
+  // candidate_path is the culprit's changed file path in its own revision. Empty
+  // when unknown.
+  string candidate_path = 3;
+  // candidate_line is the 1-based changed line in the culprit's revision, or 0
+  // when the provider could not supply it; the scorer then derives it from the
+  // culprit's diff.
+  int32 candidate_line = 4;
+}
+
+// PendingStructuralScoring groups one fix's unscored candidates with the fix's
+// anchors, so the scorer reads each fix's anchors once and compares every
+// candidate against them.
+message PendingStructuralScoring {
+  // platform_repo_id is the provider's stable repository id.
+  string platform_repo_id = 1;
+  // repo_full_name is owner/name, the form the provider's file fetch addresses.
+  string repo_full_name = 2;
+  // fix_commit_sha is the commit that landed the fix. Its FIRST PARENT is the
+  // revision the fix anchors are addressed in, since the removed lines exist
+  // only before the fix.
+  string fix_commit_sha = 3;
+  // fix_anchors are the fix's changed ranges (old path and old line range),
+  // against which each candidate's node is compared. The highest match level
+  // across anchors is the verdict.
+  repeated LineageBlameAnchor fix_anchors = 4;
+  // candidates are the fix's unscored candidates.
+  repeated PendingStructuralCandidate candidates = 5;
+}

@@ -1,0 +1,77 @@
+Happy path: a normally-rendering organisation
+=============================================
+
+Summary: In Review, an agent produces a complete piece of work and a person checks and approves it. In Product spec, Tech spec and CI/CD, a person does the work and an assistant helps on request. Code has nothing established yet and is moving toward a way of working where an agent produces a complete piece of work and a person checks and approves it. Nothing could be measured in Plan, Test & QA and Operate.
+
+Stages:
+- Product spec (established: assisted; emerging: none)
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- Tech spec (established: assisted; emerging: none)
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: design documents are not compared with the code they describe.
+- Plan (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: your tools cannot show this level, so it stays open.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- Code (established: none; emerging: supervised agentic)
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- Review (established: supervised agentic; emerging: none)
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- Test & QA (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: your tools cannot show this level, so it stays open.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- CI/CD (established: assisted; emerging: none)
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: whether checks and builds passed is not read, so this level cannot be read.
+- Deploy (established: none; emerging: none)
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: deploy and rollback events are not read.
+- Operate (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: one of the numbers this level needs was not supplied.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: incident and alert events are not read.
+    orchestrated: Ours: incident and alert events are not read.
+
+What we cannot see:
+- (ours) Some of the numbers behind parts of the map could not be read.
+- (ours) Design documents are not compared with the code they describe.
+- (ours) Whether a check or build passed is not read.
+- (ours) Deploy and rollback events are not read.
+- (ours) Incident and alert events are not read.
+- (ours) Whether agents coordinate this organisation's work under its own policies, the highest level on the map, is not read.
+
+Constraints and the moves that clear them:
+- Recorded review reaches under half of AI-written pull requests.
+  Recorded review reaches 22% of AI-written pull requests (40 of 180 merged in the last 90 days). Review done before a pull request opens is never recorded, so treat this as a floor.
+  Move: Make recorded review the gate for AI-written pull requests.
+  Once more than half of your AI-written pull requests carry a recorded review, review becomes the usual gate for AI-written code. That is about 101 more reviewed pull requests at today's volume, since each one also adds to the total.
+- Few AI-written pull requests merge with little back-and-forth.
+  Of the 180 AI-written pull requests merged in the last 90 days, 35 needed little back-and-forth before merging.
+  Move: Let agents take more pull requests to merge with little back-and-forth.
+  Once more than one in five of these pull requests work this way, your map counts it as a practice your team is adopting. That is about 2 more such pull requests at today's volume.
+- A review bot clears few changes without a person re-reading them.
+  Your review bot looked at 1,507 merged pull requests. 210 of them merged on the bot's review alone.
+  Move: Let your review bot approve low-risk pull requests on its own.
+  Once more than one in five of these pull requests work this way, your map counts it as a practice your team is adopting. That is about 115 more bot-cleared pull requests at today's volume.
+- Few of your people use an assistant while running releases.
+  Across your deployment work, this practice is still rare: a person runs the release and asks the assistant about it. In the last 90 days, 1 of 20 people followed it.
+  Move: Have an assistant answer questions while your people run releases.
+  Once more than one in five of these people work this way, your map counts it as a practice your team is adopting. That is about 4 more people.

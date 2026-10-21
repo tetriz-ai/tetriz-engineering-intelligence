@@ -1,0 +1,178 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    name: Test (Go ${{ matrix.go }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # The go.mod floor plus the two newest minors.
+        go: ["1.25.2", "1.26", "1.27"]
+    env:
+      # Test the toolchain the matrix names, never a newer one Go downloads.
+      GOTOOLCHAIN: local
+      # Without this the defectlineage store tests skip, and the conformance
+      # suite would only ever run against the in-memory store here.
+      DEFECTLINEAGE_TEST_DSN: "host=127.0.0.1 port=5432 user=postgres password=ci-only dbname=defectlineage sslmode=disable"
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_PASSWORD: ci-only
+          POSTGRES_DB: defectlineage
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d defectlineage"
+          --health-interval 2s --health-timeout 3s --health-retries 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: ${{ matrix.go }}
+      - run: go build ./... && go vet ./... && go test -race -count=1 ./...
+      - name: Prove the offline path too
+        # The packages must also build and pass with no C toolchain and no
+        # service, which is how most adopters will first run them.
+        env:
+          CGO_ENABLED: "0"
+          DEFECTLINEAGE_TEST_DSN: ""
+        run: go build ./... && go test -count=1 ./...
+  wiring:
+    name: Wiring module
+    runs-on: ubuntu-latest
+    env:
+      GOTOOLCHAIN: local
+      # The tetriz-connectors revision the wiring module's go.sum was tidied
+      # against. Move it and re-run `go mod tidy` in defectlineage/wiring together.
+      CONNECTORS_REF: 9fd2fa79b46ff13c4ca2806dc732f88a7301cd40
+      CONNECTORS_REPOSITORY: ${{ github.repository_owner }}/tetriz-connectors
+      # Without this the host-contract test skips.
+      DEFECTLINEAGE_TEST_DSN: "host=127.0.0.1 port=5432 user=postgres password=ci-only dbname=defectlineage sslmode=disable"
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_PASSWORD: ci-only
+          POSTGRES_DB: defectlineage
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d defectlineage"
+          --health-interval 2s --health-timeout 3s --health-retries 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: tetriz-engineering-intelligence
+      # The wiring module resolves the connector contract from a sibling clone,
+      # so the gate needs that repository beside this one, at CONNECTORS_REF:
+      # a newer one moves shared dependencies and stops the build with
+      # "updates to go.mod needed". A failed checkout fails the job: it never
+      # reports a pass for a module it could not build.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        id: sibling
+        continue-on-error: true
+        with:
+          repository: ${{ env.CONNECTORS_REPOSITORY }}
+          ref: ${{ env.CONNECTORS_REF }}
+          path: tetriz-connectors
+      # The wiring module's own floor, which tetriz-connectors sets.
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: "1.26.0"
+      - name: Build and test
+        run: |
+          if [ ! -f tetriz-connectors/go.mod ]; then
+            # Name the cause: a stale pin and a missing repository need
+            # different fixes.
+            if GIT_TERMINAL_PROMPT=0 git ls-remote https://github.com/${{ env.CONNECTORS_REPOSITORY }} >/dev/null 2>&1; then
+              echo "${{ env.CONNECTORS_REPOSITORY }} is reachable but has no commit"
+              echo "${{ env.CONNECTORS_REF }}. Move CONNECTORS_REF to a commit it"
+              echo "has and run 'go mod tidy' in defectlineage/wiring against it."
+            else
+              echo "${{ env.CONNECTORS_REPOSITORY }} is not reachable (unpublished, private"
+              echo "to this job, or a network error), so the wiring module's replace"
+              echo "directive cannot resolve. Re-run after a network error; otherwise"
+              echo "make the repository readable to this job."
+            fi
+            exit 1
+          fi
+          cd tetriz-engineering-intelligence/defectlineage/wiring
+          go build ./... && go vet ./...
+          # The host-contract test asserts a measured rung, which is opt-in.
+          go test -tags astcompare -race -count=1 ./...
+
+  # The two build-tagged packages. They are skipped by the default build, so
+  # without this job nothing would compile them; neither needs a
+  # tetriz-connectors clone, so both gate on every run.
+  tagged-packages:
+    name: Tagged packages
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - tag: astcompare
+            dir: defectlineage/astcompare
+          - tag: defectlineagequeue
+            dir: defectlineage/queue
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: "1.25.2"
+      - name: Build and test
+        run: |
+          go build -tags ${{ matrix.tag }} ./...
+          go vet -tags ${{ matrix.tag }} ./${{ matrix.dir }}/...
+          go test -tags ${{ matrix.tag }} -race -count=1 ./${{ matrix.dir }}/...
+
+  # golangci-lint's and govulncheck's versions are pinned in the run line below. No
+  # Dependabot ecosystem covers that form, so they are bumped by hand, here and in
+  # CONTRIBUTING.md, which documents the same two commands.
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: "1.27"
+      - run: GOTOOLCHAIN=go1.27.3 go run github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.14.0 run ./...
+  vulncheck:
+    name: Vulnerability check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: "1.27"
+      - run: GOTOOLCHAIN=go1.27.3 go run golang.org/x/vuln/cmd/govulncheck@v1.8.0 ./...
+  examples:
+    name: Examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: "1.27"
+      - run: scripts/run-examples.sh
+  python:
+    name: Python (model-service)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # The HTTP-layer and pure-SDK tests need no model, so install only the light
+      # deps (not torch/sentence-transformers) in a venv — fast and PEP 668-safe.
+      # google-genai (pinned as in server/requirements.txt) is for the Gemini provider's
+      # config tests, which stub the network call.
+      - name: Test model-service (service + SDK layer)
+        working-directory: model-service
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install --quiet --disable-pip-version-check fastapi pydantic httpx pytest numpy google-genai==1.75.0
+          PYTHONPATH=. .venv/bin/python -m pytest tests/ -q

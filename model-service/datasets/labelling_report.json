@@ -1,0 +1,39 @@
+{
+  "candidates": 14000,
+  "cap_applied": 615,
+  "license_distribution": {
+    "apache-2.0": 3500,
+    "bsd-3-clause": 1000,
+    "isc": 500,
+    "mit": 9000
+  },
+  "repos": 30,
+  "split_rows": {
+    "test": 497,
+    "train": 2281,
+    "validation": 486
+  },
+  "tag": "v2",
+  "type_abstained_to_llm": 7545,
+  "type_distribution_balanced": {
+    "bugfix": 615,
+    "chore-deps": 615,
+    "docs": 615,
+    "feature": 615,
+    "performance": 205,
+    "refactor": 237,
+    "test": 474
+  },
+  "type_distribution_raw": {
+    "bugfix": 3330,
+    "chore-deps": 716,
+    "docs": 844,
+    "feature": 649,
+    "performance": 205,
+    "refactor": 237,
+    "test": 474
+  },
+  "type_rows_balanced": 3376,
+  "type_rule_labelled_raw": 6455,
+  "weak_yield_pct": 46.1
+}

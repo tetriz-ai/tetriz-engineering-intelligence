@@ -1,0 +1,102 @@
+// Copyright 2026 Workloom Solutions Private Limited
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+package defectlineage.v1;
+
+option go_package = "github.com/tetriz-ai/tetriz-engineering-intelligence/gen/defectlineage/v1;defectlineagev1";
+
+// DefectLineageEvidenceType classifies how a candidate's culprit commit was
+// reached. It is what lets a score be recomputed without re-running blame.
+enum DefectLineageEvidenceType {
+  // Evidence type unset. Never persisted on a candidate row; a candidate always
+  // records the mechanism that found it.
+  DEFECT_LINEAGE_EVIDENCE_TYPE_UNSPECIFIED = 0;
+  // The removed line blamed straight to this commit at the anchor revision.
+  DEFECT_LINEAGE_EVIDENCE_TYPE_BLAME_DIRECT = 1;
+  // Reached by walking back past commits that did not materially change the line.
+  DEFECT_LINEAGE_EVIDENCE_TYPE_BLAME_AFTER_HOPS = 2;
+  // The provider offers no blame, so the commit was found by walking the file's
+  // history and reading each candidate's diff.
+  DEFECT_LINEAGE_EVIDENCE_TYPE_PATH_RECONSTRUCTION = 3;
+  // The fix removed no line, so the commit was inferred from the enclosing region
+  // rather than blamed. The weakest evidence this design produces.
+  DEFECT_LINEAGE_EVIDENCE_TYPE_GUARD_PROXIMITY = 4;
+}
+
+// DefectLineageState is the terminal status a walk reports when it submits a
+// fix's outcome. The pipeline's own lifecycle is tracked separately by
+// DefectLineageStage; this enum is the contract by which a walk declares how a
+// fix resolved.
+enum DefectLineageState {
+  // Lifecycle unset. A submitted outcome always carries a real state.
+  DEFECT_LINEAGE_STATE_UNSPECIFIED = 0;
+  // Queued for tracing; no provider call has been made for this fix yet.
+  DEFECT_LINEAGE_STATE_PENDING = 1;
+  // Claimed by a drain tick. The claim lapses when the lease expires and the fix
+  // is offered again.
+  DEFECT_LINEAGE_STATE_IN_PROGRESS = 2;
+  // At least one candidate was persisted for this fix.
+  DEFECT_LINEAGE_STATE_RESOLVED = 3;
+  // The fix was blamed and no candidate survived. A real answer, not a failure.
+  DEFECT_LINEAGE_STATE_UNATTRIBUTED = 4;
+  // No blameable hunk: added guards only, configuration only, or a diff the
+  // provider refused to render.
+  DEFECT_LINEAGE_STATE_ANCHORS_EMPTY = 5;
+  // Above the changed-file ceiling, so tracing was skipped before any provider
+  // call. A fix this large is a mislabelled refactor.
+  DEFECT_LINEAGE_STATE_SKIPPED_OVERSIZED = 6;
+  // The anchor revision no longer exists — history was rewritten or force-pushed.
+  // Terminal; retrying cannot recover it.
+  DEFECT_LINEAGE_STATE_ANCHOR_UNREACHABLE = 7;
+  // The provider's blame path failed terminally for this fix.
+  DEFECT_LINEAGE_STATE_BLAME_UNAVAILABLE = 8;
+}
+
+// DefectLineageStage is one bug fix's position in the tracing pipeline, carried
+// on its pipeline-state row (one row per fix). It is the lifecycle axis the
+// drain claims and advances; the specific way a fix ended lives in
+// DefectLineageTerminalOutcome once the stage reaches RESOLVED.
+enum DefectLineageStage {
+  // Stage unset. A pipeline-state row always carries a real stage from the moment
+  // it is written.
+  DEFECT_LINEAGE_STAGE_UNSPECIFIED = 0;
+  // Enqueued for tracing; not yet claimed by a drain tick.
+  DEFECT_LINEAGE_STAGE_PENDING = 1;
+  // The fix's blame input (landing commit + anchors) was built and handed to the
+  // walk. Re-offered when the claim lease lapses.
+  DEFECT_LINEAGE_STAGE_PREPARED = 2;
+  // A walk that started and has no candidates yet. No writer rests a fix here,
+  // because a walk returns its whole result in one submit; a drain claims the
+  // stage so a fix left here by a caller that does split its walk is picked up
+  // rather than stranded.
+  DEFECT_LINEAGE_STAGE_BLAMED = 3;
+  // The walk found culprit candidates and persisted them; the fix now awaits scoring.
+  DEFECT_LINEAGE_STAGE_CANDIDATES_FOUND = 4;
+  // 5 is reserved: scoring completion advances a fix straight from
+  // CANDIDATES_FOUND to RESOLVED, so there is no separate scored-but-not-finalised
+  // stage to name.
+  reserved 5;
+  reserved "DEFECT_LINEAGE_STAGE_SCORED";
+  // Terminal. The fix reached an end state; DefectLineageTerminalOutcome says which.
+  DEFECT_LINEAGE_STAGE_RESOLVED = 6;
+}
+
+// DefectLineageTerminalOutcome records how a RESOLVED fix ended — the axis an
+// operator alerts on. Unset until the stage reaches RESOLVED.
+enum DefectLineageTerminalOutcome {
+  // Outcome unset — the fix is not terminal yet.
+  DEFECT_LINEAGE_TERMINAL_OUTCOME_UNSPECIFIED = 0;
+  // At least one candidate was persisted and every candidate was scored.
+  DEFECT_LINEAGE_TERMINAL_OUTCOME_SCORED_OK = 1;
+  // The fix was blamed and no candidate survived. A real answer, not a failure.
+  DEFECT_LINEAGE_TERMINAL_OUTCOME_UNATTRIBUTED = 2;
+  // No blameable hunk: added guards only, configuration only, or a diff the provider
+  // refused to render.
+  DEFECT_LINEAGE_TERMINAL_OUTCOME_ANCHORS_EMPTY = 3;
+  // Above the changed-file ceiling, so tracing was skipped before any provider call.
+  DEFECT_LINEAGE_TERMINAL_OUTCOME_SKIPPED_OVERSIZED = 4;
+  // The provider's blame path failed terminally for this fix.
+  DEFECT_LINEAGE_TERMINAL_OUTCOME_BLAME_UNAVAILABLE = 5;
+}

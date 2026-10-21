@@ -1,0 +1,30 @@
+// Copyright 2026 Workloom Solutions Private Limited
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+package defectlineage.v1;
+
+option go_package = "github.com/tetriz-ai/tetriz-engineering-intelligence/gen/defectlineage/v1;defectlineagev1";
+
+// BugfixClassifiedEvent asks the pipeline to trace one merged bug fix.
+//
+// It carries identity only, and deliberately no verdict. The event reaches the
+// pipeline through a topic that fans out every classified pull request, and the
+// subscription filters that fan-out down to merged bug fixes by message
+// attribute — work_type BUGFIX and state MERGED. Filtering at the subscription
+// rather than in the handler is what lets the handler enqueue everything it
+// receives: a verdict re-read in the handler would be a second source of truth
+// that can disagree with the one that routed the message.
+//
+// Enqueueing is insert-if-absent, so a re-delivered event is harmless.
+message BugfixClassifiedEvent {
+  // organization_id scopes the write.
+  string organization_id = 1;
+  // connector_id names the provider whose walk can blame this fix.
+  string connector_id = 2;
+  // platform_repo_id is the provider's stable repository id.
+  string platform_repo_id = 3;
+  // bug_fix_pr_id is the fix to trace.
+  string bug_fix_pr_id = 4;
+}

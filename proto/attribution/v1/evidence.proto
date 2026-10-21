@@ -1,0 +1,168 @@
+// Copyright 2026 Workloom Solutions Private Limited
+// SPDX-License-Identifier: MIT
+
+syntax = "proto3";
+
+package attribution.v1;
+
+import "attribution/v1/match.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/tetriz-ai/tetriz-engineering-intelligence/gen/attribution/v1;attributionv1";
+
+// SignalSource records how a piece of session evidence was obtained. It governs
+// whether that evidence may support an attribution on its own or may only narrow
+// the candidate set: evidence the session produced may attribute, evidence merely
+// found near the session may not.
+enum SignalSource {
+  // The producer recorded no source. Two standings, and they differ by role:
+  // as a SCOPE it is admissible (a branch carrying it still narrows a search),
+  // and as SUPPORT it never is, because absence cannot be told from an ambient
+  // scrape.
+  SIGNAL_SOURCE_UNSPECIFIED = 0;
+  // A command the session ran, and whose output was captured — a pull-request
+  // creation receipt, a successful push.
+  SIGNAL_SOURCE_SESSION_COMMAND = 1;
+  // A field the editor itself recorded against this message or session.
+  SIGNAL_SOURCE_VENDOR_FIELD = 2;
+  // The agent's own turn-final narration. Session-produced, but it can quote a
+  // pull request the session merely read about, so a reference from prose is
+  // repository-gated.
+  SIGNAL_SOURCE_SESSION_PROSE = 3;
+  // Read from local git, bounded to the session's own time window. Found near
+  // the session rather than produced by it, so it may scope a search and may
+  // never support an attribution.
+  SIGNAL_SOURCE_LOCAL_GIT_WINDOWED = 4;
+}
+
+// BranchSignal is a branch the session was on, travelling with how it was
+// obtained so no downstream set, dedupe or sort can separate the two.
+message BranchSignal {
+  // Short branch name, as a pull request's head branch carries it — never
+  // "refs/heads/x", "origin/x", or a detached "HEAD".
+  string name = 1;
+  // How this branch was obtained. Absent when the producer records no source.
+  SignalSource source = 2;
+}
+
+// PRReference is a pull request the session named.
+message PRReference {
+  string pr_url = 1;
+  int32 pr_number = 2;
+  string pr_repository = 3;
+  // Governs whether this reference may attribute on its own: a session-produced
+  // reference may, an ambient one may only scope.
+  SignalSource source = 4;
+}
+
+// SessionEvidence is one AI coding session, reduced to the fields attribution
+// reads. A producer that cannot fill a field leaves it unset; the engine treats
+// an unset field as unobserved, never as observed-and-empty.
+message SessionEvidence {
+  // Stable identifier for this session, unique within org_id.
+  string session_id = 1;
+  // The person who ran the session. Resolved to vendor accounts by an
+  // IdentityResolver.
+  string person_id = 2;
+  // Tenant of the session. The engine scopes its reads to the org passed to
+  // Attribute and does not compare this field with it.
+  string org_id = 3;
+
+  // Editor or agent that produced the session, by enum name, such as
+  // "IDE_TYPE_KIRO" or "IDE_TYPE_CLAUDE_CODE". Selects per-editor rules: the
+  // stricter branch rules apply to "IDE_TYPE_KIRO", in any case, and to no
+  // other spelling.
+  string ide_type = 4;
+  // Workspace or project directory name, as the editor recorded it. Carried
+  // for the caller; the engine does not read it.
+  string project_name = 5;
+  // Repository the session believed it was working in.
+  string repo_name = 6;
+  // Repository-relative or absolute paths the session edited. The file-overlap
+  // signal scores containment of this set in a pull request's changed files.
+  repeated string files_edited = 7;
+
+  // Branch evidence. These three MERGE by branch name — none supersedes another
+  // as a set — so a producer may fill any combination. Prefer branch_signals:
+  // it is the only one carrying provenance, and a branch with no provenance can
+  // narrow candidates but cannot corroborate a match.
+  string git_branch = 8;
+  repeated string git_branches = 9;
+  repeated BranchSignal branch_signals = 10;
+
+  // Pull requests the session named. Prefer pr_references; the two scalars are
+  // the single-reference form and carry no provenance.
+  int32 pr_number = 11;
+  string pr_repository = 12;
+  repeated PRReference pr_references = 13;
+
+  // Producer's own confidence that this session's work was AI-authored, as a
+  // lowercase band ("high", "medium", "low"). Raises a match's tier when "high".
+  string ai_attribution_confidence = 14;
+  // Wall-clock span of the session. Extends the match window forward from the
+  // session's start; clamped by max_session_span_days.
+  int64 session_duration_seconds = 15;
+
+  // UTC calendar date the session started, at midnight. Every match window opens
+  // here. Frozen at first observation — never advanced as the session continues.
+  google.protobuf.Timestamp start_date = 16;
+  // Full-precision start instant. Optional; start_date is the fallback. Present
+  // so the anchor is measured from the real instant rather than a truncated day.
+  google.protobuf.Timestamp started_at = 17;
+  // Last observed activity, as the producer recorded it. Carried for the
+  // caller; the engine derives last activity from start_date plus
+  // session_duration_seconds instead.
+  google.protobuf.Timestamp last_activity_at = 18;
+
+  // What kind of work the session was doing, as the producer classified it
+  // ("code-review", "feature", "bug-fix", …). Only one value changes a decision:
+  // "code-review" routes a session on the author's own pull request to REVIEWED
+  // rather than AUTHORED, because engineers run an agent over their own pull
+  // request as a pre-merge review pass and that is a review.
+  string task_type = 21;
+
+  // Re-attribution request marker. Rises whenever the session's attribution
+  // inputs change; while it exceeds PRAttribution.serviced_reattribution_seq the
+  // engine owes this session another pass. An opaque change marker — compare it,
+  // never sum it or read an attempt count from it.
+  int32 reattribution_seq = 19;
+
+  // The attribution stored from a previous pass, if any. The reducer merges the
+  // fresh result into it adds-only; supplying nothing makes every pass a first pass.
+  PRAttribution stored_attribution = 20;
+}
+
+// PRCandidate is one pull request the session might have contributed to,
+// supplied by the caller from its own VCS data.
+message PRCandidate {
+  // Stable identifier, unique within org_id. Returned verbatim on every match as
+  // PRMatch.pr_key, so a caller can join a match back to its own record.
+  string pr_key = 1;
+  // Repository path the pull request belongs to, "owner/name".
+  string pr_repository = 2;
+  int32 pr_number = 3;
+  // Source branch. Matched against the session's branch evidence.
+  string head_branch = 4;
+  // Repository-relative paths the pull request changed.
+  repeated string files_changed = 5;
+  int64 lines_added = 6;
+  int64 lines_removed = 7;
+  // Description body. The engine does not read it; it travels with the
+  // candidate for a caller's own scan (the signature package).
+  string body = 8;
+
+  // When the pull request was opened, and when it merged. The file-overlap
+  // window admits a candidate whose opened OR merged date lands in range, so a
+  // pull request raised near the session but merged after a slow review is still
+  // scored. Either may be unset.
+  google.protobuf.Timestamp opened_at = 9;
+  google.protobuf.Timestamp merged_at = 10;
+
+  // How the session's owner relates to this pull request. The caller stamps it
+  // at fetch time: candidates fetched because the person authored them are
+  // AUTHORED, candidates fetched because the person was a reviewer are REVIEWED.
+  // File overlap is evaluated only on AUTHORED candidates — reviewers read
+  // rather than edit, so overlap on a reviewed pull request is usually unrelated
+  // parallel work.
+  SessionParticipationKind participation_kind = 11;
+}

@@ -1,0 +1,60 @@
+{
+  "repository": "acme/sync-backmerge",
+  "about": "A back-merge of main into integration sits inside the promotion's window and after it; a fork merges into main.",
+  "base": "2026-04-02T00:00:00Z",
+  "tracked": [
+    "main"
+  ],
+  "flow": [
+    {
+      "source": "integration",
+      "target": "main"
+    }
+  ],
+  "max_depth": 0,
+  "prs": [
+    {
+      "number": 10,
+      "head": "feature/x",
+      "base": "integration",
+      "merged_hour": 1,
+      "attributed": true
+    },
+    {
+      "number": 15,
+      "head": "main",
+      "base": "integration",
+      "merged_hour": 2,
+      "first_commit_hour": -24
+    },
+    {
+      "number": 20,
+      "head": "integration",
+      "base": "main",
+      "merged_hour": 3,
+      "first_commit_hour": -24
+    },
+    {
+      "number": 30,
+      "head": "main",
+      "base": "integration",
+      "merged_hour": 4,
+      "first_commit_hour": 2
+    },
+    {
+      "number": 40,
+      "head": "fork/head",
+      "base": "main",
+      "merged_hour": 5,
+      "first_commit_hour": -24,
+      "cross_repository": true
+    }
+  ],
+  "expected": {
+    "edges": 1,
+    "attributed_before": 0,
+    "attributed_after": 1,
+    "carried": 1,
+    "depth_cap_hits": 0
+  }
+}

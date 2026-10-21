@@ -1,0 +1,73 @@
+{
+  "repository": "acme/depth-cap",
+  "about": "A four-hop chain walked with a depth cap of 3: the attributed leaf is out of reach and the truncation is reported.",
+  "base": "2026-04-02T00:00:00Z",
+  "tracked": [
+    "main"
+  ],
+  "flow": [
+    {
+      "source": "b1",
+      "target": "b2"
+    },
+    {
+      "source": "b2",
+      "target": "b3"
+    },
+    {
+      "source": "b3",
+      "target": "b4"
+    },
+    {
+      "source": "b4",
+      "target": "main"
+    }
+  ],
+  "max_depth": 3,
+  "prs": [
+    {
+      "number": 1,
+      "head": "feature/z",
+      "base": "b1",
+      "merged_hour": 1,
+      "attributed": true
+    },
+    {
+      "number": 10,
+      "head": "b1",
+      "base": "b2",
+      "merged_hour": 2,
+      "first_commit_hour": -24
+    },
+    {
+      "number": 11,
+      "head": "b2",
+      "base": "b3",
+      "merged_hour": 3,
+      "first_commit_hour": -24
+    },
+    {
+      "number": 12,
+      "head": "b3",
+      "base": "b4",
+      "merged_hour": 4,
+      "first_commit_hour": -24
+    },
+    {
+      "number": 13,
+      "head": "b4",
+      "base": "main",
+      "merged_hour": 5,
+      "first_commit_hour": -24
+    }
+  ],
+  "expected": {
+    "edges": 4,
+    "attributed_before": 0,
+    "attributed_after": 0,
+    "carried": 0,
+    "unresolvable": 1,
+    "depth_cap_hits": 1
+  },
+  "note": "The walk stops one hop short of the leaf, so the deepest promotion it reached is counted unresolvable, never as carried work."
+}

@@ -1,0 +1,22 @@
+# Build and test output
+*.test
+*.out
+coverage.*
+/bin/
+
+# SQLite files the examples or tests may leave
+*.db
+*.db-journal
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Per-machine review-cadence marker, not shared state
+.claude/review-cadence/

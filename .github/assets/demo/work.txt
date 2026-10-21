@@ -1,0 +1,6 @@
+excluded: [web/yarn.lock]
+docs lines: 2
+Go          22 SLOC in 2 files (code: true)
+TypeScript   5 SLOC in 1 files (code: true)
+cncs: 2.9 (scoreable: true)
+ratio: 2.8 (scoreable: true)

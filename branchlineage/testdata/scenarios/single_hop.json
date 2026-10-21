@@ -1,0 +1,39 @@
+{
+  "repository": "acme/single-hop",
+  "about": "Feature branches merge straight into the tracked branch: no promotion, no carrier.",
+  "base": "2026-04-02T00:00:00Z",
+  "tracked": [
+    "main"
+  ],
+  "flow": [],
+  "max_depth": 0,
+  "prs": [
+    {
+      "number": 10,
+      "head": "feature/a",
+      "base": "main",
+      "merged_hour": 1,
+      "attributed": true
+    },
+    {
+      "number": 11,
+      "head": "feature/b",
+      "base": "main",
+      "merged_hour": 2
+    },
+    {
+      "number": 12,
+      "head": "feature/c",
+      "base": "main",
+      "merged_hour": 3,
+      "attributed": true
+    }
+  ],
+  "expected": {
+    "edges": 0,
+    "attributed_before": 2,
+    "attributed_after": 2,
+    "carried": 0,
+    "depth_cap_hits": 0
+  }
+}

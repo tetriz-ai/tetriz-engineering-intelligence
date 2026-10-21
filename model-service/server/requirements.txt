@@ -1,0 +1,19 @@
+# Dependencies for the HTTP services (server/model_server.py, server/orchestrator.py),
+# pinned to exact versions so a rebuilt image is deterministic.
+#
+# For a byte-reproducible image, generate a fully hash-locked file on the target
+# platform in CI (python:3.13-slim), e.g. `pip install -r requirements.txt &&
+# pip freeze > requirements.lock`, and install from that in the Dockerfile.
+#
+# sentence-transformers and google-genai are held on the major the code was
+# written and evaluated against (5.x / 1.x). Bumping either major needs an eval
+# pass — the model/LLM behaviour can change across majors.
+
+fastapi==0.142.4
+uvicorn[standard]==0.54.0
+httpx==0.28.1
+pydantic==2.13.5
+numpy==2.5.3
+sentence-transformers==5.6.0
+google-genai==1.75.0
+psycopg[binary]==3.3.6

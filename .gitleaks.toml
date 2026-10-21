@@ -1,0 +1,30 @@
+title = "tetriz-engineering-intelligence"
+
+[extend]
+useDefault = true
+
+# The committed datasets under model-service/datasets/ are a frozen third-party
+# corpus of PUBLIC pull-request titles and branch names (see NOTICE), not source
+# code. gitleaks' heuristic `generic-api-key` rule cannot tell a branch name that
+# sits next to the words "key"/"API" in a PR title from a real secret, so it
+# false-positives on this prose.
+#
+# These four are confirmed branch names from public PRs — not credentials:
+#   domain_clean.csv:1924    46272-oid4vci-proofs    keycloak/keycloak#52637
+#   type_combined.csv:5539   brophdawg11/stabilize   remix-run/react-router#14999
+#   type_combined.csv:5667   brophdawg11/instrument  remix-run/react-router#14412
+#   type_combined.csv:10786  dulwich-0.24            python-poetry/poetry#10492
+#
+# Allowlisted by the exact matched string (not by path), so every file — these
+# datasets included — is still fully scanned and every other rule (AWS, GCP,
+# private keys, provider tokens, …) stays active. Only these four known-public
+# branch names are suppressed.
+[allowlist]
+description = "Public PR branch names in the datasets, misflagged by generic-api-key"
+regexTarget = "match"
+regexes = [
+  '''\b46272-oid4vci-proofs\b''',
+  '''\bbrophdawg11/stabilize\b''',
+  '''\bbrophdawg11/instrument\b''',
+  '''\bdulwich-0\.24\b''',
+]

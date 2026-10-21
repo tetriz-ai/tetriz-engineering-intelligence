@@ -1,0 +1,8 @@
+AI adoption share : 40.8%
+Net lift          : 0.333  (gross 0.333, tax 1.00)
+Hours recovered   : 203.0 (window 30d)
+Per-class:
+  bugfix   baseline 12.0h  ai 9.0h  matched_n=18  excluded=false
+  feature  baseline 40.0h  ai 24.0h  matched_n=22  excluded=false
+Dollars (FTE $75/h, $12k tool spend):
+  annual value $185238  net gain $173238  ROI ×15.4  payback 0.8 mo

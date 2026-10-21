@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/tetriz-ai/tetriz-engineering-intelligence/security/advisories/new
+    about: Report it privately, not as an issue.

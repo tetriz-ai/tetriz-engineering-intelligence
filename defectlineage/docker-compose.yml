@@ -1,0 +1,59 @@
+# Copyright 2026 Workloom Solutions Private Limited
+# SPDX-License-Identifier: MIT
+
+# The local stack for defect lineage: PostgreSQL with the schema loaded, and a
+# local AWS stand-in carrying the topic and queue the enqueue path runs on.
+#
+# The pipeline itself runs from your own Go process against these two, the way
+# you would embed it. Nothing here runs the engine.
+#
+# The passwords are local-only values; never reuse them anywhere else.
+services:
+  postgres:
+    image: docker.io/library/postgres:18-alpine
+    environment:
+      POSTGRES_USER: defectlineage
+      POSTGRES_PASSWORD: defectlineage-local-only
+      POSTGRES_DB: defectlineage
+    ports:
+      - "127.0.0.1:${DEFECTLINEAGE_PG_PORT:-55433}:5432"
+    volumes:
+      # Loaded once, on first initialisation of an empty data directory.
+      - ./store/postgres/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U defectlineage -d defectlineage"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  localstack:
+    image: docker.io/localstack/localstack:4
+    environment:
+      SERVICES: sns,sqs
+      # Any value works locally; the stand-in does not check them, and a real
+      # deployment uses its own credentials.
+      AWS_DEFAULT_REGION: us-east-1
+    ports:
+      - "127.0.0.1:${DEFECTLINEAGE_AWS_PORT:-4566}:4566"
+    healthcheck:
+      test: ["CMD-SHELL", "awslocal sns list-topics && awslocal sqs list-queues"]
+      interval: 3s
+      timeout: 5s
+      retries: 40
+
+  # Creates the topic, the queue and the filtered subscription, then exits. It
+  # waits for the stand-in to answer first, so a fresh `up` provisions in one
+  # step rather than racing it.
+  provision:
+    image: docker.io/amazon/aws-cli:latest
+    entrypoint: ["/bin/sh", "/provision.sh"]
+    environment:
+      AWS_ENDPOINT_URL: http://localstack:4566
+      AWS_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: local-only
+      AWS_SECRET_ACCESS_KEY: local-only
+    volumes:
+      - ./provision.sh:/provision.sh:ro
+    depends_on:
+      localstack:
+        condition: service_healthy

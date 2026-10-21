@@ -1,0 +1,4 @@
+attribution: session s1 produced acme/shop#PR-7#merged
+branchlineage: acme/shop#PR-8#merged carried it to main: [acme/shop#PR-8#merged acme/shop#PR-7#merged]
+aidlc: AI pull requests shipped to main, direct only: 0
+aidlc: AI pull requests shipped to main, with lineage: 1

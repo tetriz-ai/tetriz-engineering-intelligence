@@ -1,0 +1,487 @@
+source,source_url,license,bucket,title,branch
+public:TanStack/query,https://github.com/TanStack/query/pull/11369,mit,docs,docs(solid-query): add JSDoc and generate reference docs with TypeDoc,docs/solid-query-add-jsdoc
+public:pallets/flask,https://github.com/pallets/flask/pull/4637,bsd-3-clause,docs,rewrite deployment docs,docs-deploy
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36236,mit,docs,Docs: Remove Yarn PnP documentation,remove/yarn-pnp-docs
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15448,mit,docs,docs: explain shouldRevalidate and call-site revalidation opt-out,docs/should-revalidate-opt-out
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/12864,mit,docs,Fix duplicated words in internal schema comments,docs/fix-duplicate-word-json-schema
+public:TanStack/query,https://github.com/TanStack/query/pull/11445,mit,docs,docs(angular-query-experimental): add 'readonly' and use descriptive names for class fields in guide examples,docs/angular-guides-readonly-class-fields
+public:TanStack/query,https://github.com/TanStack/query/pull/11551,mit,docs,docs(query-core): add JSDoc for 'initialPageParam',docs/initial-page-param-jsdoc
+public:TanStack/query,https://github.com/TanStack/query/pull/11624,mit,docs,docs(svelte-query/useMutationState): align the JSDoc description with the other adapters,docs/svelte-query-hook-to-function
+public:denoland/deno,https://github.com/denoland/deno/pull/35841,mit,docs,docs(desktop): document Deno.autoUpdate and AutoUpdateOptions,docs/document-desktop-auto-update
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23248,mit,docs,docs(server-options): update sourcemapIgnoreList Rolldown references,docs-sourcemap-ignore-list-rolldown
+public:TanStack/query,https://github.com/TanStack/query/pull/11579,mit,docs,"docs({react,preact,solid,vue}-query/useQuery): add 'initialDataUpdatedAt' to the seeding example",docs/seeding-example-initial-data-updated-at
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11567,apache-2.0,docs,docs(agents): add per-crate fixture test guides,kdy1/agents-fixture-guides
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23006,mit,docs,docs: remove `@experimental` from `resolve.tsconfigPaths` JSDoc,docs/remove-experimental-tag-from-resolve-tsconfigpaths
+public:spf13/cobra,https://github.com/spf13/cobra/pull/408,apache-2.0,docs,doc: Fix govet complaints,examples
+public:prettier/prettier,https://github.com/prettier/prettier/pull/19984,mit,docs,Add `prettier-plugin-markdown-compact-tables` to Community Plugins,docs/add-prettier-plugin-markdown-compact-tables
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6605,mit,docs,docs: add slack to users list,patch-2
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22773,mit,docs,docs: add TypeScript tip for WASM ESM integration type errors,docs/esm-integration-type
+public:pallets/flask,https://github.com/pallets/flask/pull/4801,bsd-3-clause,docs,Add missing .dev to version,docs-links-patch
+public:TanStack/query,https://github.com/TanStack/query/pull/11290,mit,docs,"docs(preact-query): backtick bare code-symbol references in JSDoc ('QueryClient', 'suspense', 'throwOnError')",docs/preact-query-backtick-queryclient
+public:starship/starship,https://github.com/starship/starship/pull/6456,isc,docs,docs(preset/nerd-fonts): Add CMake symbol to Nerd Fonts preset,
+public:TanStack/query,https://github.com/TanStack/query/pull/11431,mit,docs,docs(solid-query/useMutation): add JSDoc examples for optimistic update rollback and parallel 'mutateAsync' calls,docs/solid-query-usemutation-add-jsdoc-examples
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11598,apache-2.0,docs,docs(swc_es_ast): add typescript-eslint AST compatibility note,kdy1/docs-swc-es-ast-typescript-eslint-compat
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21106,mit,docs,docs: fix broken Specify Parser Options anchor link,parser-options
+public:TanStack/query,https://github.com/TanStack/query/pull/10854,mit,docs,docs(framework/vue/devtools): correct 'your React app' typo to 'your Vue app' in the Embedded Mode section,docs/framework-vue-devtools-embedded-mode-typo
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15125,mit,docs,docs(dev): fix future flag warning link,202605302136-fix-future-link
+public:cli/cli,https://github.com/cli/cli/pull/14340,mit,docs,docs: announce Linux PGP key rotation,babakks/hint-at-pgp-key-rotation
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20472,mit,docs,docs: Remove deprecated eslintrc documentation files,copilot/remove-deprecated-docs
+public:TanStack/query,https://github.com/TanStack/query/pull/11343,mit,docs,docs(preact-query): add 'select' example to 'useQuery',docs/preact-query-usequery-select-example
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10445,mit,docs,docs: update unspecified version docs for `add`,unspecversionadd
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23056,mit,docs,docs: update code references in CONTRIBUTING.md to latest tag,docs/fix-contributing-urls
+public:TanStack/query,https://github.com/TanStack/query/pull/11298,mit,docs,docs(preact-query): document request-waterfall avoidance across 'useSuspenseQuery' and 'useSuspenseQueries',docs/preact-query-suspense-query-waterfall-remarks
+public:denoland/deno,https://github.com/denoland/deno/pull/35652,mit,docs,docs: add desktop runtime internals doc,docs/desktop-architecture
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20361,mit,docs,docs: Add messages property to rule meta documentation,issue20311
+public:babel/babel,https://github.com/babel/babel/pull/17975,mit,docs,docs(preset-env): update CONTRIBUTING.md,update-preset-env-contributing-docs
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/9875,mit,docs,"docs: several updates, cleanups and improvements to the docs",docs/pep621
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6387,mit,docs,docs: document how to disable manifests in dockers_v2,docker-single-plat
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11882,apache-2.0,docs,docs: clarify untrusted input security model,kdy1/docs-untrusted-input-security-model
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22862,mit,docs,docs(features): fix subject-verb agreement,patch-2
+public:psf/black,https://github.com/psf/black/pull/5280,mit,docs,docs: fix typo in visit_stmt docstring,docs-visit-stmt-typo
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20249,mit,docs,docs: add TS options and examples for `nofunc` in `no-use-before-define`,update-rule-doc
+public:prettier/prettier,https://github.com/prettier/prettier/pull/19974,mit,docs,docs: update prettier-plugin-nginx repository owner,docs/prettier-plugin-nginx-owner
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10133,mit,docs,doc(scripts): multiple improvements on configuring scripts,doc/ref-script-type
+public:TanStack/query,https://github.com/TanStack/query/pull/11299,mit,docs,docs(preact-query): rename 'results' to 'postQueries' in 'useSuspenseQueries' example,docs/preact-query-suspense-queries-rename-results
+public:vuejs/core,https://github.com/vuejs/core/pull/14918,mit,docs,docs: update Vite documentation links,docs-update-vite-links
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10843,mit,docs,docs: fix SHA wording in git backend comment,docs/fix-its-sha-comment-20260415
+public:TanStack/query,https://github.com/TanStack/query/pull/11136,mit,docs,docs: use the dynamic README header endpoint,readme-header-endpoint
+public:psf/black,https://github.com/psf/black/pull/5294,mit,docs,"docs: fix typos in docstrings, and remove some unused code",docstring-typos
+public:angular/angular,https://github.com/angular/angular/pull/70769,mit,docs,docs: add missing const needed for template (form metadata),patch-3
+public:psf/black,https://github.com/psf/black/pull/5313,mit,docs,DOC: fix typo in docs/faq.md,docfix-aggregated-preposition
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35471,mit,docs,Docs: Fix changelog formatting,sidnioulz/fix-105-changelog
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22663,mit,docs,docs: update team page,docs/update-team-page
+public:TanStack/query,https://github.com/TanStack/query/pull/10984,mit,docs,docs: document the `select` typing caveat for parallel-queries hooks,docs/queries-select-typing
+public:cli/cli,https://github.com/cli/cli/pull/13273,mit,docs,docs: correct typo in Linux Homebrew copy,patch-1
+public:psf/black,https://github.com/psf/black/pull/5316,mit,docs,docs: fix PyCharm File Watchers help link,docs/fix-pycharm-file-watchers-link
+public:angular/angular,https://github.com/angular/angular/pull/70736,mit,docs,docs: close the heading tag in the ng-template output example,docs-ng-template-close-heading
+public:tiangolo/fastapi,https://github.com/fastapi/fastapi/pull/14900,mit,docs,📝 Update source examples and docs from Python 3.9 to 3.10,docs-py310
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19274,apache-2.0,docs,docs: document NaN behaviour of clamp_max() and clamp_min(),docs/clamp-nan-behaviour
+public:cli/cli,https://github.com/cli/cli/pull/13518,mit,docs,docs: note immutable releases starting v2.93.0,kw/immutable-releases-readme
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20885,mit,docs,docs: clarify semver strings in rule deprecation objects,docs-rule-deprecation-semver
+public:alacritty/alacritty,https://github.com/alacritty/alacritty/pull/8939,apache-2.0,docs,Remove dependencies for Clear Linux,docs/clear_linux
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/13415,mit,docs,Remove duplicated `schema_generator` and `mode` entries in `TypeAdapter.json_schema` docstring,docs-typeadapter-json-schema-dupe-args
+public:TanStack/query,https://github.com/TanStack/query/pull/11387,mit,docs,"docs(solid-query): remove 'The Query Options API' link, solid's queryOptions API differs from react's",docs/solid-query-remove-tkdodo-link
+public:prettier/prettier,https://github.com/prettier/prettier/pull/19794,mit,docs,docs: stop mentioning Stylelint on the install page,docs/clarify-stylelint-install-16905
+public:starship/starship,https://github.com/starship/starship/pull/6797,isc,docs,docs(preset/no-runtime-versions): Add missing modules,no-runtime-versions
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22431,mit,docs,docs(create-vite): add more flags to help output,docs-create-vite-help
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23525,mit,docs,docs: fix typo builtin -> built-in in plugins guide,docs-fix-builtin-typo
+public:angular/angular,https://github.com/angular/angular/pull/70864,mit,docs,docs: fix the phase label line break in the lifecycle summary table,docs-lifecycle-table-line-break
+public:starship/starship,https://github.com/starship/starship/pull/6768,isc,docs,docs: add Fedora installation instructions using COPR,patch-1
+public:pallets/flask,https://github.com/pallets/flask/pull/5701,bsd-3-clause,docs,add endpoint name in favicon example,docs-favicon
+public:TanStack/query,https://github.com/TanStack/query/pull/11558,mit,docs,docs(solid-query): call the adapter's APIs functions instead of hooks,docs/solid-query-terminology
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/13178,mit,docs,Fix duplicated word in wasm preview README,docs/fix-duplicated-at-in-wasm-readme
+public:psf/black,https://github.com/psf/black/pull/5281,mit,docs,docs: fix typo in prev_siblings_are docstring,docs-prev-siblings-are-typo
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19208,apache-2.0,docs,docs: prefer extending table-driven tests in AGENTS.md,docs/prefer-extending-tests
+public:starship/starship,https://github.com/starship/starship/pull/7755,isc,docs,docs: update sponsors and remove branch rename notice,docs/remove-sponsor-notice
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10166,mit,docs,docs: add docs about `include-groups`,docs-nested-groups
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22529,mit,docs,docs: fix sponsor link in README,sapphi-red-patch-1
+public:TanStack/query,https://github.com/TanStack/query/pull/10971,mit,docs,docs: add Deno to installation instructions,add-deno-install
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15322,mit,docs,docs: fix useLinkClickHandler defaultShouldRevalidate default description,docs/uselinkclickhandler-revalidate-default
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15267,mit,docs,docs: improve useMatches conceptual explanation and examples (#15205),docs/improve-usematches
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/11064,mit,docs,docs: document the --license option of poetry init and poetry new,docs/init-new-license-option
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22325,mit,docs,docs: explain mergeConfig skips null/undefined,docs/issue-18943-mergeconfig-skip-nil
+public:angular/angular,https://github.com/angular/angular/pull/70500,mit,docs,docs: fix global target event listener example,docs-fix-global-target-event-listener
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21036,mit,docs,docs: correct `**/.js` glob to `**/*.js` in config files guide,docs/fix-files-glob
+public:TanStack/query,https://github.com/TanStack/query/pull/11409,mit,docs,docs(solid-query): correct devtools development-mode explanation,docs/solid-devtools-development
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36056,mit,docs,Docs: Remove duplicate addonDocs import used in autodocs documentation,patch-2
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22605,mit,docs,docs: add override banner,docs/banner
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10116,mit,docs,chore(doc): add a heading for git credentials,docs/add-git-cred-heading
+public:angular/angular,https://github.com/angular/angular/pull/70838,mit,docs,docs: correct the adev writing guide skill,docs-fix-adev-writing-guide-skill
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20363,mit,docs,docs: [no-await-in-loop] Expand inapplicability,no-await-in-loop-more-counterexamples
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9413,apache-2.0,bugfix,authz: prevent cache poisoning on file watcher reload failures,bug-3
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15364,apache-2.0,bugfix,Expand and consolidate BOM trimming,fix/bom-15355
+public:angular/angular,https://github.com/angular/angular/pull/70542,mit,bugfix,fix(platform-server): preserve WHATWG URL semantics for server xhr,fix/platform-server-unicode-url-ssrf
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11591,apache-2.0,bugfix,fix(noDuplicateProperties): handle function named,fix/no-duplicate-properties
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15368,apache-2.0,bugfix,hugofs: Allow symlinked mount roots in the main project,fix/symlink-15367
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6273,mit,bugfix,fix(dockers/v2): check docker driver on healthcheck,hc-docker-buildx
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6800,mit,bugfix,fix(dockers/v2): annotation scopes,fix/dockers-v2-annotation-scopes
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17752,mit,bugfix,fix(deps): update dependency ansis to v4.4.0,renovate/ansis-4.x
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11972,apache-2.0,bugfix,fix(es/minifier): Check last case,
+public:swc-project/swc,https://github.com/swc-project/swc/pull/12048,apache-2.0,bugfix,fix(es/minifier): use numeric literals for non-finite values,fix/non-finite-number-minifier
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22797,mit,bugfix,fix(bundled-dev): avoid stack overflow on `import.meta.hot.invalidate()`,06-28-fix_bundled-dev_avoid_stack_overflow_on_import.meta.hot.invalidate_
+public:denoland/deno,https://github.com/denoland/deno/pull/36067,mit,bugfix,fix(ext/web): handle failed webtransport datagram setup,fix/webtransport-datagram-setup
+public:psf/black,https://github.com/psf/black/pull/4394,mit,bugfix,Fix wheel build,fix-wheel
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11940,apache-2.0,bugfix,fix(es/react-compiler): skip TypeScript `this` pseudo-params in scope collector,wbinnssmith/typed-this-react-compiler
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8251,mit,bugfix,io: do not treat zero-length reads as EOF in `Chain`,fix/chain-empty-read
+public:vuejs/core,https://github.com/vuejs/core/pull/15509,mit,bugfix,fix(compiler-vapor): ignore key on <template> v-if branches,fix/vapor-template-if-key
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/14995,mit,bugfix,fix: make unstable_mask optional in Location,fix-unstable-mask-optional
+public:pallets/flask,https://github.com/pallets/flask/pull/4011,bsd-3-clause,bugfix,Install sphinx 4.1-dev from git,fix-sphinx-build
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21096,mit,bugfix,fix: quadratic-time regex in `prefer-template`,prefertemplate-quadratic-regex
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/12743,mit,bugfix,Resolve type ignore comment in JSON Schema code,fix/json-schema-extra-types
+public:babel/babel,https://github.com/babel/babel/pull/18141,mit,bugfix,fix: Avoid bundling `package/sub`,fix-bundle
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/7083,mit,bugfix,"fix(builders,partial): canonical artifact architectures and target matching",fix/builder-targets
+public:denoland/deno,https://github.com/denoland/deno/pull/35924,mit,bugfix,fix(lsp): respect lint rule exclusion for no-slow-types diagnostics,fix/lsp-no-slow-types-exclude
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/12951,mit,bugfix,Do not include annotations that are not part of named tuple fields,fix-named-tuples
+public:psf/black,https://github.com/psf/black/pull/5161,mit,bugfix,Fix crash on `# fmt: skip` after an opening bracket with a standalone comment,fix-fmtskip-bracket-comment-crash
+public:angular/angular,https://github.com/angular/angular/pull/70575,mit,bugfix,fix(core): wait for app stability before cleaning up dehydrated views,fix/defer-hydration-cleanup-race
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35269,mit,bugfix,ESLint Plugin: Avoid ESLint Unstable API Load,fix/eslint-plugin-eslint-10-compat
+public:babel/babel,https://github.com/babel/babel/pull/17504,mit,bugfix,fix: ensure scope.push register in anonymous fn,fix-scope-push-iife
+public:starship/starship,https://github.com/starship/starship/pull/6755,isc,bugfix,fix(git_status): Do not show up-to-date when untracked,git-status-up-to-date-untracked
+public:pallets/click,https://github.com/pallets/click/pull/3466,bsd-3-clause,bugfix,apply Unix line endings for shell completion output for windows compat,fix-zsh-source-line-endings
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1781,apache-2.0,bugfix,fix: don't remove flag value that matches subcommand name,cobra-1777
+public:denoland/deno,https://github.com/denoland/deno/pull/35676,mit,bugfix,fix(desktop): pin @std/http in generated Vite SPA entrypoint + add hermetic compile test,orch/divybot-744
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/9983,mit,bugfix,fix(console): do not fail on warnings on check command,check-no-strict
+public:swc-project/swc,https://github.com/swc-project/swc/pull/12357,apache-2.0,bugfix,fix(es/parser): parse static constructor methods in JavaScript,fix/parser-static-constructor-methods
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17483,mit,bugfix,fix(deps): update dependency valibot to v1.4.2 [security],renovate/npm-valibot-vulnerability
+public:babel/babel,https://github.com/babel/babel/pull/18078,mit,bugfix,Avoid trailing zeroes in Babel 9 generated version,fix-main-ci
+public:swc-project/swc,https://github.com/swc-project/swc/pull/12093,apache-2.0,bugfix,fix(es/parser): reject unicode escapes in RegExp flags,fix/regexp-flags-unicode-escape
+public:starship/starship,https://github.com/starship/starship/pull/7187,isc,bugfix,fix(cmd_duration): avoid freezing on notify on macOS 26,fix-notify-mac
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/12897,mit,bugfix,Ensure custom `__init__()` is called when using `model_validate_strings()`,fix-model-validate-strings-custom-init
+public:denoland/deno,https://github.com/denoland/deno/pull/36258,mit,bugfix,fix(core): allow dynamic imports during cached module evaluation,agent/fix-module-map-reentrant-import
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11715,apache-2.0,bugfix,fix: closed various bugs,fix/various-fixes-pt2
+public:psf/black,https://github.com/psf/black/pull/4484,mit,bugfix,Fix formatting cells with magic methods and starting or trailing empty lines,fix-cells-empty-lines
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17859,mit,bugfix,fix(core): recommend {*path} in the legacy wildcard warning,fix/legacy-wildcard-hint
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1624,apache-2.0,bugfix,labeler: fix syntax,fix-labeler
+public:cli/cli,https://github.com/cli/cli/pull/14154,mit,bugfix,fix(skills): install Codex user skills to ~/.agents/skills,scarletkc/fix-codex-user-skill-path
+public:pydantic/pydantic,https://github.com/pydantic/pydantic/pull/13730,mit,bugfix,Use the field name in `__signature__` when `validate_by_alias` is`False`,fix/signature-validate-by-alias
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19422,apache-2.0,bugfix,fix(discovery/aws): MSK Optional Custom Configuration Fields,aws-sd-msk-configuration-fields
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10885,mit,bugfix,fix `poetry update <dep>` where <dep> is a transitive dependency,fix-update-transitive-dep
+public:psf/black,https://github.com/psf/black/pull/4576,mit,bugfix,Fix diff shades CI,fix-diff-shades-CI
+public:angular/angular,https://github.com/angular/angular/pull/70619,mit,bugfix,fix(router): determine blocking state solely by resource loading status,router-resource-blocking-loading-state
+public:pallets/click,https://github.com/pallets/click/pull/2940,bsd-3-clause,bugfix,testing/CliRunner: Fix regression related to EOF introduced in 262bdf0,fix-cli-runner-prompt-eof-handling
+public:vuejs/core,https://github.com/vuejs/core/pull/15605,mit,bugfix,fix(runtime-vapor): let vdom interop own directive and vnode hooks,edison/fix/interop-directive-root
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11882,apache-2.0,bugfix,fix(lint/noOctalEscape): preserve string value when fixing octal escapes with leading digit 4-7,fix/no-octal-escape-value-corruption
+public:TanStack/query,https://github.com/TanStack/query/pull/11449,mit,bugfix,fix(solid-query): finish SSR when reading a disabled query,issue-11348
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1885,apache-2.0,bugfix,fix: func name in doc strings,fix_docstring_names
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21213,mit,bugfix,fix: prevent unsafe `no-var` autofix with hoisted functions,no-var-unsafe-autofix
+public:cli/cli,https://github.com/cli/cli/pull/12623,mit,bugfix,fix(issue list): reject pull request-only search qualifiers,fix/issue-list-pr-search-qualifier
+public:spf13/cobra,https://github.com/spf13/cobra/pull/2337,apache-2.0,bugfix,fix: actions/setup-go v6,setup-go-v6
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17762,mit,bugfix,fix(deps): update dependency multer to v2.4.0,renovate/multer-2.x
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11800,apache-2.0,bugfix,fix(es/minifier): Support full ES version parsing in minify,kdy1/support-full-es-version-parsing-in-minify
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21094,mit,bugfix,fix: apply ignore configs to computed methods in class-methods-use-this,fix/class-methods-use-this-computed-ignores
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11701,apache-2.0,bugfix,fix: update lz4_flex to resolve RUSTSEC-2026-0041,kdy1/fix-lz4-flex-rustsec-2026-0041
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17154,mit,bugfix,fix(deps): update dependency @nestjs/typeorm to v11.0.3,renovate/nestjs-typeorm-11.x
+public:alacritty/alacritty,https://github.com/alacritty/alacritty/pull/7389,apache-2.0,bugfix,Fix IME popup positioning,fix-ime-positioning
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17186,mit,bugfix,fix(deps): update dependency mongoose to v9.7.2,renovate/mongoose-9.x
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6539,mit,bugfix,fix: couple of resource leaks,goreleaser-bugs3
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10803,mit,bugfix,fix: respect verify=False in authenticator requests,fix/authenticator-verify-false
+public:denoland/deno,https://github.com/denoland/deno/pull/35728,mit,bugfix,fix(ext/http): honor explicit content-length header on HEAD responses,
+public:alacritty/alacritty,https://github.com/alacritty/alacritty/pull/7006,apache-2.0,bugfix,Fix freeze with some drivers when using GLX,fix-freeze-glx
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11796,apache-2.0,bugfix,fix(es/jsx): Preserve quoted JSX attribute newlines,kdy1/fix-jsx-quoted-attribute-newlines
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15340,mit,bugfix,fix(react-router-serve): serve /.well-known files,serve-well-known
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6668,mit,bugfix,fix(nfpm): produce valid arch for Termux packages,fix-termux-package-architecture
+public:pallets/flask,https://github.com/pallets/flask/pull/4115,bsd-3-clause,bugfix,Fix: avoid duplicate loop key in err handler search,bugfix/err-handler-search
+public:pallets/click,https://github.com/pallets/click/pull/2271,bsd-3-clause,bugfix,Introduce Parameter.deprecated + Command.deprecated message customization,fix/mark-param-deprecated
+public:denoland/deno,https://github.com/denoland/deno/pull/36716,mit,bugfix,fix(transpile): don't report diagnostics from bundled assets in declaration emit,fix/transpile-declaration-asset-diagnostics
+public:spf13/cobra,https://github.com/spf13/cobra/pull/668,apache-2.0,bugfix,typo: fix incorrect Specifiy to Specify,fix-incorrect-word
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11220,apache-2.0,bugfix,fix(js_analyze): recognize exported bindings across embedded script blocks,fix/svelte-vue-exported-embedded-bindings
+public:psf/black,https://github.com/psf/black/pull/5189,mit,bugfix,Fix fmt off block before with statement,fix-fmt-off-indent-crash
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19131,apache-2.0,bugfix,discovery: delete last_update_timestamp metric on config reload,fix/discovery-last-update-metric-leak
+public:angular/angular,https://github.com/angular/angular/pull/70140,mit,bugfix,fix(router): avoid view transitions when the user agent provides one,fix/router-ua-view-transition
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8215,mit,bugfix,stream: honor StreamMap next_many limit,fix-stream-map-many-limit
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11838,apache-2.0,bugfix,fix(es/react): exclude self-recursive hooks from refresh dependency array,fix/self-referential-react-refresh
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15170,mit,bugfix,Use ServerRouter nonce when nonce prop is not specified,fix/15142-nonce-clientloader
+public:psf/black,https://github.com/psf/black/pull/5241,mit,bugfix,Fix unstable formatting with comments on optional parens,fix-3701-unstable-multi-pass-comment
+public:psf/black,https://github.com/psf/black/pull/5381,mit,bugfix,Handle UTF-8 offsets when masking notebook magics,fix-5378-nonascii-ipynb-magic
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20538,mit,bugfix,fix: update `ajv` to `6.14.0` to address security vulnerabilities,fix/update-ajv-v9
+public:prettier/prettier,https://github.com/prettier/prettier/pull/19698,mit,bugfix,Fix comment moved into brackets in object type members,fix-object-type-member-comments
+public:babel/babel,https://github.com/babel/babel/pull/17535,mit,bugfix,chore: Fix typo in variable name,fix/typo
+public:denoland/deno,https://github.com/denoland/deno/pull/35903,mit,bugfix,fix(npm): don't fetch registry info for deprecated packages under --cached-only,fix/cached-only-deprecated-npm
+public:babel/babel,https://github.com/babel/babel/pull/18144,mit,bugfix,fix: Load ESM fixture options default exports,fix/issue-18142-esm-fixture-options
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10874,mit,chore-deps,deps: allow findpython 0.8,findpython-0.8
+public:starship/starship,https://github.com/starship/starship/pull/7057,isc,chore-deps,build(deps): update actions/setup-node action to v6,renovate/actions-setup-node-6.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/18984,apache-2.0,chore-deps,chore(deps): update prometheus/promci action to v0.8.4,deps-update/prometheus-promci-0.x
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10670,mit,chore-deps,deps: Update filelock to remove vulnerabilities in poetry.lock,backline/python-05ede76e8cedbf233a6e1a10c5d6d310
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15338,apache-2.0,chore-deps,build(deps): bump github.com/bep/imagemeta from 1.0.0 to 1.0.1,dependabot/go_modules/github.com/bep/imagemeta-1.0.1
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14648,apache-2.0,chore-deps,build(deps): bump google.golang.org/grpc from 1.78.0 to 1.79.3,dependabot/go_modules/google.golang.org/grpc-1.79.3
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19640,apache-2.0,chore-deps,chore(deps): update dependency pnpm to v12,deps-update/pnpm-12.x
+public:spf13/cobra,https://github.com/spf13/cobra/pull/2087,apache-2.0,chore-deps,build(deps): bump actions/setup-go from 4 to 5,dependabot/github_actions/actions/setup-go-5
+public:starship/starship,https://github.com/starship/starship/pull/7664,isc,chore-deps,build(deps): update taiki-e/install-action action to v2.85.11,renovate/taiki-e-install-action-2.x
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15272,apache-2.0,chore-deps,build(deps): bump google.golang.org/grpc from 1.82.1 to 1.83.1,dependabot/go_modules/google.golang.org/grpc-1.83.1
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15063,apache-2.0,chore-deps,deps: Upgrade github.com/evanw/esbuild v0.28.0 => v0.28.1,deps/esbuild0281
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15283,apache-2.0,chore-deps,build(deps): bump github.com/tdewolff/minify/v2 from 2.24.16 to 2.24.17,dependabot/go_modules/github.com/tdewolff/minify/v2-2.24.17
+public:starship/starship,https://github.com/starship/starship/pull/6897,isc,chore-deps,build(deps): update dependency node to v22,renovate/node-22.x
+public:starship/starship,https://github.com/starship/starship/pull/7632,isc,chore-deps,build(deps): update embarkstudios/cargo-deny-action action to v2.1.1,renovate/embarkstudios-cargo-deny-action-2.x
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14527,apache-2.0,chore-deps,build(deps): bump github.com/bep/simplecobra from 0.6.1 to 0.7.0,dependabot/go_modules/github.com/bep/simplecobra-0.7.0
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35782,mit,chore-deps,Build: Keep Yarn's output plain so age-gate rejections stay parseable,valentin/sandbox-age-gate-strip-ansi
+public:starship/starship,https://github.com/starship/starship/pull/6774,isc,chore-deps,build(deps): update mislav/bump-homebrew-formula-action action to v3.4,renovate/mislav-bump-homebrew-formula-action-3.x
+public:angular/angular,https://github.com/angular/angular/pull/70181,mit,chore-deps,build: update all github actions (main),ng-renovate/main-all-github-actions
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14643,apache-2.0,chore-deps,build(deps): bump github.com/magefile/mage from 1.15.0 to 1.16.1,dependabot/go_modules/github.com/magefile/mage-1.16.1
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19290,apache-2.0,chore-deps,build(deps): bump x/text and grpc to fix trivy-reported CVEs,krajo/security-bump-x-text-grpc
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19769,apache-2.0,chore-deps,chore(deps): update github/codeql-action action to v4.38.1,deps-update/github-codeql-action-4.x
+public:starship/starship,https://github.com/starship/starship/pull/7333,isc,chore-deps,build(deps): update rust crate jsonc-parser to 0.32.1,renovate/jsonc-parser-0.x
+public:starship/starship,https://github.com/starship/starship/pull/7202,isc,chore-deps,build(deps): update rust crate whoami to v2,renovate/whoami-2.x
+public:angular/angular,https://github.com/angular/angular/pull/70551,mit,chore-deps,build: update bazel dependencies (22.1.x),ng-renovate/22.1.x-bazel-dependencies
+public:starship/starship,https://github.com/starship/starship/pull/6678,isc,chore-deps,build(deps): update rust crate notify-rust to 4.11.7,renovate/notify-rust-4.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19762,apache-2.0,chore-deps,chore(deps): update dependency prettier to v3.9.8,deps-update/prettier-3.x-lockfile
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/7733,mit,chore-deps,deps: bump `tokio` to `1.44.0` in `tokio-util`,add_sp/bump-deps
+public:starship/starship,https://github.com/starship/starship/pull/6640,isc,chore-deps,build(deps): update rust crate clap_complete to 4.5.47,renovate/clap-crates
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15319,apache-2.0,chore-deps,build(deps): bump golang.org/x/sync from 0.22.0 to 0.23.0,dependabot/go_modules/golang.org/x/sync-0.23.0
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14865,apache-2.0,chore-deps,build(deps): bump github.com/pelletier/go-toml/v2 from 2.3.0 to 2.3.1,dependabot/go_modules/github.com/pelletier/go-toml/v2-2.3.1
+public:starship/starship,https://github.com/starship/starship/pull/6924,isc,chore-deps,build(deps): update rust crate indexmap to 2.11.0,renovate/indexmap-2.x
+public:angular/angular,https://github.com/angular/angular/pull/70163,mit,chore-deps,build: update pnpm to v11.21.0 (22.1.x),ng-renovate/22.1.x-pnpm-11-x
+public:starship/starship,https://github.com/starship/starship/pull/7422,isc,chore-deps,build(deps): update rust crate gix to 0.82.0,renovate/gitoxide-crates
+public:starship/starship,https://github.com/starship/starship/pull/6683,isc,chore-deps,build(deps): update rust crate clap to 4.5.36,renovate/clap-crates
+public:starship/starship,https://github.com/starship/starship/pull/6615,isc,chore-deps,build(deps): update rust crate clap_complete_nushell to 4.5.5,renovate/clap-crates
+public:starship/starship,https://github.com/starship/starship/pull/6585,isc,chore-deps,build(deps): update crate-ci/typos action to v1.29.9,renovate/crate-ci-typos-1.x
+public:angular/angular,https://github.com/angular/angular/pull/70281,mit,chore-deps,build: update cross-repo angular dependencies to v22.2.0-next.2 (main),ng-renovate/main-cross-repo-angular-dependencies
+public:starship/starship,https://github.com/starship/starship/pull/7581,isc,chore-deps,build(deps): update rust crate quick-xml to 0.41.0,renovate/quick-xml-0.x
+public:starship/starship,https://github.com/starship/starship/pull/6661,isc,chore-deps,build(deps): update rust crate clap to 4.5.35,renovate/clap-crates
+public:angular/angular,https://github.com/angular/angular/pull/70448,mit,chore-deps,build: update dependency node to v24.20.0 (main),ng-renovate/main-node-24-x
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15317,apache-2.0,chore-deps,build(deps): bump google.golang.org/grpc from 1.83.1 to 1.83.2,dependabot/go_modules/google.golang.org/grpc-1.83.2
+public:starship/starship,https://github.com/starship/starship/pull/6891,isc,chore-deps,build(deps): update rust crate clap_complete to 4.5.56,renovate/clap-crates
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14819,apache-2.0,chore-deps,build(deps): bump github.com/getkin/kin-openapi from 0.135.0 to 0.137.0,dependabot/go_modules/github.com/getkin/kin-openapi-0.137.0
+public:angular/angular,https://github.com/angular/angular/pull/70493,mit,chore-deps,build: lock file maintenance (22.1.x),pr-takeover-70377
+public:angular/angular,https://github.com/angular/angular/pull/70677,mit,chore-deps,build: update dependency mermaid to v12 (main),ng-renovate/main-mermaid-12-x
+public:angular/angular,https://github.com/angular/angular/pull/70162,mit,chore-deps,build: update pnpm to v11.21.0 (main),ng-renovate/main-pnpm-11-x
+public:starship/starship,https://github.com/starship/starship/pull/6986,isc,chore-deps,build(deps): update rust crate serde to 1.0.225,renovate/serde-monorepo
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20302,mit,chore-deps,chore: install `prettier` as a dev dependency,build/install-prettier
+public:starship/starship,https://github.com/starship/starship/pull/6994,isc,chore-deps,build(deps): update rust crate serde to 1.0.228,renovate/serde-monorepo
+public:vuejs/core,https://github.com/vuejs/core/pull/15477,mit,chore-deps,build: inline enum members imported under an alias,edison/perf/treeshaking
+public:starship/starship,https://github.com/starship/starship/pull/6535,isc,chore-deps,build(deps): update dependency cargo-wix to 0.3.8,renovate/cargo-wix-0.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19064,apache-2.0,chore-deps,chore(deps): update golangci/golangci-lint-action action to v9.3.0,deps-update/golangci-golangci-lint-action-9.x
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35580,mit,chore-deps,Build: Skills M1 part 1 — Import storybookjs/mcp packages with git history,kasper/m1-history-import
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19509,apache-2.0,chore-deps,build: add current-architecture Docker target,build/current-arch-docker-12644
+public:starship/starship,https://github.com/starship/starship/pull/7476,isc,chore-deps,build(deps): pin dependencies,renovate/pin-dependencies
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19351,apache-2.0,chore-deps,chore(deps): update ossf/scorecard-action action to v2.4.4,deps-update/ossf-scorecard-action-2.x
+public:starship/starship,https://github.com/starship/starship/pull/7062,isc,chore-deps,build(deps): update signpath/github-action-submit-signing-request action to v2,renovate/signpath-github-action-submit-signing-request-2.x
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35770,mit,chore-deps,Build: Preapprove `vue-component-meta` for sandbox age gate,norbert/preapprove-vue-component-meta
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14509,apache-2.0,chore-deps,build(deps): bump github.com/gohugoio/hugo-goldmark-extensions/passthrough from 0.3.1 to 0.4.0,dependabot/go_modules/github.com/gohugoio/hugo-goldmark-extensions/passthrough-0.4.0
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19754,apache-2.0,chore-deps,build: remove obsolete Go module replace and exclude directives,arve/remove-obsolete-go-module-directives
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19360,apache-2.0,chore-deps,chore(deps): update actions/stale action to v10.4.0,deps-update/actions-stale-10.x
+public:starship/starship,https://github.com/starship/starship/pull/6653,isc,chore-deps,build(deps): update rust crate log to 0.4.27,renovate/log-0.x
+public:starship/starship,https://github.com/starship/starship/pull/6814,isc,chore-deps,build(deps): update rust crate indexmap to 2.10.0,renovate/indexmap-2.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19632,apache-2.0,chore-deps,chore(deps): update dependency jest-fetch-mock to v4,deps-update/jest-fetch-mock-4.x
+public:starship/starship,https://github.com/starship/starship/pull/6882,isc,chore-deps,build(deps): update mislav/bump-homebrew-formula-action action to v3.5,renovate/mislav-bump-homebrew-formula-action-3.x
+public:starship/starship,https://github.com/starship/starship/pull/7336,isc,chore-deps,build(deps): update rust crate gix to 0.81.0,renovate/gitoxide-crates
+public:angular/angular,https://github.com/angular/angular/pull/70605,mit,chore-deps,build: update cross-repo angular dependencies (main) - autoclosed,ng-renovate/main-cross-repo-angular-dependencies
+public:starship/starship,https://github.com/starship/starship/pull/6424,isc,chore-deps,build(deps): update embarkstudios/cargo-deny-action action to v2.0.4,renovate/embarkstudios-cargo-deny-action-2.x
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14252,apache-2.0,chore-deps,build(deps): bump github.com/aws/aws-sdk-go-v2 from 1.40.1 to 1.41.0,dependabot/go_modules/github.com/aws/aws-sdk-go-v2-1.41.0
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14230,apache-2.0,chore-deps,build(deps): bump github.com/olekukonko/tablewriter from 1.1.1 to 1.1.2,dependabot/go_modules/github.com/olekukonko/tablewriter-1.1.2
+public:starship/starship,https://github.com/starship/starship/pull/7580,isc,chore-deps,build(deps): update rust crate jiff to 0.2.31,renovate/jiff-0.x
+public:starship/starship,https://github.com/starship/starship/pull/6885,isc,chore-deps,build(deps): update actions/download-artifact action to v5,renovate/major-github-artifact-actions
+public:babel/babel,https://github.com/babel/babel/pull/17808,mit,chore-deps,Build: Ensure `make build` will build Babel parser typings,improve-make-watch-files
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9327,apache-2.0,chore-deps,deps: update dependencies for all modules,updatedep1.84
+public:starship/starship,https://github.com/starship/starship/pull/6437,isc,chore-deps,build(deps): update rust crate home to 0.5.11,renovate/home-0.x
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/18855,apache-2.0,chore-deps,chore(deps): update module github.com/quic-go/quic-go to v0.59.1 [security],deps-update/go-github.com-quic-go-quic-go-vulnerability
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19581,apache-2.0,chore-deps,chore(deps): update actions/setup-go action to v7,deps-update/actions-setup-go-7.x
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15139,apache-2.0,chore-deps,build(deps): bump golang.org/x/image from 0.43.0 to 0.44.0,dependabot/go_modules/golang.org/x/image-0.44.0
+public:starship/starship,https://github.com/starship/starship/pull/7378,isc,chore-deps,build(deps): update rust crate notify-rust to 4.13.1,renovate/notify-rust-4.x
+public:spf13/cobra,https://github.com/spf13/cobra/pull/2108,apache-2.0,chore-deps,build(deps): bump golangci/golangci-lint-action from 3.7.0 to 4.0.0,dependabot/github_actions/golangci/golangci-lint-action-4.0.0
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11526,apache-2.0,refactor,"refactor(noVueRefAsOperand): overhaul rule, and make it faster",dyc3/noVueRefAsOperand-overhaul
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11999,apache-2.0,refactor,refactor(es/module): introduce source module lowering pipeline,refactor/module-transform
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11798,apache-2.0,refactor,refactor(codegen): deduplicate local types,dyc3/deduplicate-codegen-local-types
+public:babel/babel,https://github.com/babel/babel/pull/17944,mit,refactor,refactor(eslint): remove compat layers for ESLint < 9,refactor-babel-eslint-plugin
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22822,mit,refactor,refactor(css): remove lightningcss null byte bug workaround,refactor/css-remove-lightningcss-null-byte-bug-workaround
+public:angular/angular,https://github.com/angular/angular/pull/70091,mit,refactor,refactor(forms): modernize Signal Forms tests,refactor/forms-zoneless-when-stable
+public:angular/angular,https://github.com/angular/angular/pull/70755,mit,refactor,refactor(docs-infra): add Angie to the globe illustration,angie-globe-illustration
+public:vuejs/core,https://github.com/vuejs/core/pull/15421,mit,refactor,refactor(runtime-vapor): track transition-group child props with a group-owned render effect,edison/refactor/transition-group-props-tracking
+public:vuejs/core,https://github.com/vuejs/core/pull/15570,mit,refactor,refactor(runtime-vapor): resolve forwarded vapor slot fallbacks through every enclosing vdom outlet,edison/refactor/vapor-slot-outlet-chain
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11992,apache-2.0,refactor,refactor(es/module): Align module transform records with spec terms,refactor/es-module-records
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22310,mit,refactor,refactor(glob): do not rewrite import path for absolute base,04-23-refactor_glob-import_do_not_rewrite_import_path_for_absolute_base
+public:denoland/deno,https://github.com/denoland/deno/pull/36677,mit,refactor,refactor(core): split ModuleMap into focused submodules,refactor/split-module-map
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11534,apache-2.0,refactor,refactor(es/typescript): Precompute namespace import-equals usage in semantic pass,kdy1/merge-ts-more
+public:vuejs/core,https://github.com/vuejs/core/pull/15590,mit,refactor,refactor(vapor): always emit fragment markers in ssr output and drop markerless hydration,edison/refactor/vapor-ssr-keep-markers
+public:angular/angular,https://github.com/angular/angular/pull/70312,mit,refactor,refactor(docs-infra): type the API manifest in the nav entries,type-api-manifest-nav
+public:angular/angular,https://github.com/angular/angular/pull/70079,mit,refactor,refactor(devtools): modernize build pipeline and optimization plugin,devtools-downlevel-async
+public:swc-project/swc,https://github.com/swc-project/swc/pull/12392,apache-2.0,refactor,refactor(es/minifier): Dead code,
+public:angular/angular,https://github.com/angular/angular/pull/70324,mit,refactor,refactor(core): Decouple ɵɵFactoryDeclaration and ɵɵInjectableDeclara…,provany
+public:angular/angular,https://github.com/angular/angular/pull/70092,mit,refactor,refactor(compiler): remove explicit `strict: true`,strict-true
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22587,mit,refactor,refactor: include optional `bundledDev` in `DevEnvironment` instead of having a separate FBM `DevEnvironment`,refactor/include-bundle-in-dev-environment
+public:babel/babel,https://github.com/babel/babel/pull/17807,mit,refactor,refactor: simplify hack pipeline tokenizer state,simplify-hack-pipeline-tokenizer-state
+public:angular/angular,https://github.com/angular/angular/pull/70384,mit,refactor,refactor(docs-infra): remove example configs for tooling that no longer exists,remove-dead-example-config-files
+public:spf13/cobra,https://github.com/spf13/cobra/pull/560,apache-2.0,refactor,Rewrite tests,refactor-tests
+public:vuejs/core,https://github.com/vuejs/core/pull/15460,mit,refactor,refactor(runtime-vapor): share one effective-root descent,edison/refactor/root-chain-walker
+public:angular/angular,https://github.com/angular/angular/pull/70451,mit,refactor,refactor(core): remove old `deferredImports` structure,deferredImports-keyed
+public:vuejs/core,https://github.com/vuejs/core/pull/15354,mit,refactor,refactor(runtime-vapor): key interop vnode-hook suppression by driving vnode,edison/refactor/interop-update-origin
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22339,mit,refactor,refactor: show direct path type in bad character warning,improve-config-char-warn
+public:grpc/grpc-go,https://github.com/grpc/grpc-go/pull/9125,apache-2.0,refactor,refactor(transport): extract shared stream state handling logic in `loopyWriter.processData()`,refactor/#9117-dedupe-data-frame-handling
+public:angular/angular,https://github.com/angular/angular/pull/70900,mit,refactor,refactor(router): give internal error classes an explicit name,refactor/router-error-names
+public:vuejs/core,https://github.com/vuejs/core/pull/15357,mit,refactor,refactor(runtime-vapor): consolidate the unmount-suspense ambient behind named operations,edison/refactor/interop-unmount-suspense
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11382,apache-2.0,refactor,refactor(lint): put `impl Rule` blocks first,dyc3/refactor-impl-rule-first
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/14929,mit,refactor,refactor(create-react-router): use native Fetch,use-native-fetch-in-crr
+public:vuejs/core,https://github.com/vuejs/core/pull/15350,mit,refactor,refactor(runtime-vapor): replace vnode-hook hijacking with internal iu/ibu notification channel,edison/refactor/interop
+public:angular/angular,https://github.com/angular/angular/pull/70349,mit,refactor,refactor(router): replace internal any types,splincode/router-internal-type-safety
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11363,apache-2.0,refactor,refactor(core): settings as tracked functions,refactor/tracked-settings
+public:TanStack/query,https://github.com/TanStack/query/pull/10918,mit,test,test(solid-query/useMutationState): centralize 'queryClient' setup with 'beforeEach',test/solid-query-useMutationState-centralize-queryclient
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11130,apache-2.0,test,test(format/html): run the prettier-plugin-svelte suite,dyc3/svelte-plugin-tests
+public:TanStack/query,https://github.com/TanStack/query/pull/11425,mit,test,test(svelte-query/createMutation): add tests for optimistic update rollback and success paths using cache-based 'onMutateResult',test/svelte-query-createmutation-optimistic-rollback
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17712,mit,test,test(common): cover remaining branches in core and http decorators,test/common-decorators-core-coverage
+public:TanStack/query,https://github.com/TanStack/query/pull/11491,mit,test,test(query-core/mutationObserver): add type tests for 'MutationObserver' and its result branches,test/query-core-mutation-observer-type-tests
+public:TanStack/query,https://github.com/TanStack/query/pull/10889,mit,test,test(query-core/queryObserver): split 'shouldFetchOnWindowFocus' test by 'refetchOnWindowFocus' value,test/query-core-query-observer-split-should-fetch-on-window-focus
+public:TanStack/query,https://github.com/TanStack/query/pull/11485,mit,test,test(query-core/queriesObserver): add type tests for 'QueriesObserver' and its combine inference,test/query-core-queries-observer-type-tests
+public:TanStack/query,https://github.com/TanStack/query/pull/10937,mit,test,test(react-query): replace deprecated 'toBeCalledTimes' with 'toHaveBeenCalledTimes',test/react-query-replace-deprecated-vitest-aliases
+public:TanStack/query,https://github.com/TanStack/query/pull/11423,mit,test,test(solid-query/useQuery): add tests for 'initialData' with a failed refetch and 'skipToken' dependent query,test/solid-query-usequery-initialdata-skiptoken
+public:TanStack/query,https://github.com/TanStack/query/pull/11091,mit,test,"test({react,preact}-query/usePrefetchQuery): use the '.then()' convention consistently",use-then-convention
+public:denoland/deno,https://github.com/denoland/deno/pull/35829,mit,test,test(resolver): cover the extensionless-CJS binary guard,orch/desktop-cjs-analyzer-test
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21098,mit,test,test: add error locations to `no-label-var`,test/no-label-var-error-locations
+public:TanStack/query,https://github.com/TanStack/query/pull/11417,mit,test,test(angular-query-experimental/inject-query): add tests for 'enabled' signal transitions and 'initialData' with a failed refetch,test/angular-query-inject-query-enabled-initialdata
+public:TanStack/query,https://github.com/TanStack/query/pull/11078,mit,test,"test({react,preact}-query/usePrefetchInfiniteQuery): inline the shared 'Suspended' component into each test",test/inline-suspended-infinite-component-per-test
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21185,mit,test,test: add error locations info to `no-void`,add-location-info-no-void-test
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17165,mit,test,test: remove leftover debug console.log statements,chore/remove-debug-console-logs
+public:TanStack/query,https://github.com/TanStack/query/pull/10915,mit,test,test(solid-query/useMutation): add 'mutateAsync' callback tests for when 'useMutation' has no callbacks,test/solid-query-useMutation-mutate-async-no-callbacks
+public:TanStack/query,https://github.com/TanStack/query/pull/10896,mit,test,"test(query-core/queryObserver): add test for 'refetchOnWindowFocus' as ""always"" in 'shouldFetchOnWindowFocus'",test/query-core-query-observer-should-fetch-on-window-focus-always
+public:pallets/click,https://github.com/pallets/click/pull/3223,bsd-3-clause,test,Add cross-reference to tests from `test_defaults.py`,test-cross-refs
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10110,mit,test,tests: adapt tests to cosmetic changes caused by poetry-core#826,simplify-python-marker
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20835,mit,test,test: add unit tests for lib/shared/severity,test/add-severity-tests
+public:angular/angular,https://github.com/angular/angular/pull/70595,mit,test,test(core): reduce `fakeAsync` usage in tests,cleanup-core-fake-async
+public:angular/angular,https://github.com/angular/angular/pull/70872,mit,test,test(router): add test coverage for route resource reloading and inpu…,resourcetestcoverage
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23247,mit,test,test(bundled-dev): run hmr-ssr spec in bundled dev mode under test-serve-bundled,test/hmr-ssr-bundled-dev
+public:TanStack/query,https://github.com/TanStack/query/pull/11030,mit,test,test(solid-query-devtools/devtoolsPanel): assert the default 'onClose' is a no-op instead of 'expect.any(Function)',test/solid-query-devtools-onclose-assertion
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20924,mit,test,test: add `data` property to invalid tests cases for rules,add-data
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11209,apache-2.0,test,test(format/html): format embedded content in the formatter tests,dyc3/html-formatter-embed-tests
+public:TanStack/query,https://github.com/TanStack/query/pull/11052,mit,test,test(query-devtools/PiPContext): assert exact spy arguments instead of 'objectContaining'/'stringContaining',test/query-devtools-pipcontext-exact-observer-options
+public:TanStack/query,https://github.com/TanStack/query/pull/11593,mit,test,"test({angular,vue,solid}-query/queryOptions): add type tests for an optional 'initialData' object",test/angular-vue-solid-query-optional-initialdata-object
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/9992,mit,test,test: fix test due to changes in poetry-core,tests/fix-format-defaults
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20406,mit,test,test: replace deprecated rules in `linter` tests,test/replace-deprecated-rules-in-linter-tests
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20318,mit,test,test: add regression tests for message placeholder interpolation,placeholder-interpolation-stringification-tests
+public:TanStack/query,https://github.com/TanStack/query/pull/10951,mit,test,test(solid-query/useQueries): add test for not fetching during the restoring period when 'isRestoring' is true,test/solid-query-useQueries-isRestoring
+public:TanStack/query,https://github.com/TanStack/query/pull/11496,mit,test,"test(query-core/infiniteQueryObserver): add type tests for the infinite options, result branches and page fetching",test/query-core-infinite-query-observer-type-tests
+public:TanStack/query,https://github.com/TanStack/query/pull/11403,mit,test,test(vue-query/useMutation): add tests for optimistic update rollback and concurrent 'mutate'/'mutateAsync' calls,test/vue-query-usemutation-coverage
+public:TanStack/query,https://github.com/TanStack/query/pull/11601,mit,test,test(svelte-query/createMutation): rename per-call 'onSuccess' mocks to 'onSuccessMutate' to align with react-query,test/svelte-query-align-mock-names
+public:TanStack/query,https://github.com/TanStack/query/pull/11241,mit,test,test(query-broadcast-client-experimental): replace inline 'new Promise' timeouts with 'sleep' from 'query-test-utils',test/query-broadcast-client-use-sleep-helper
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21147,mit,test,test: add error locations to `no-undef`,test-no-undef-error-locations
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6358,mit,test,"test: speed up ko, client tests",tests-speed
+public:denoland/deno,https://github.com/denoland/deno/pull/36416,mit,test,test: isolate package imports specs,agent/isolate-package-imports-specs
+public:pallets/click,https://github.com/pallets/click/pull/3129,bsd-3-clause,test,Fix test_edit to work with BSD sed,test_edit
+public:TanStack/query,https://github.com/TanStack/query/pull/11459,mit,test,test(vue-query/useMutation): add tests for per-call callbacks passed as arguments of 'mutate'/'mutateAsync',test/vue-query-mutation-per-call-callbacks
+public:TanStack/query,https://github.com/TanStack/query/pull/11495,mit,test,"test(query-core/utils): add type tests for every exported helper, filter and type alias",test/query-core-utils-type-tests
+public:eslint/eslint,https://github.com/eslint/eslint/pull/21117,mit,test,test: Add error location details to `no-eq-null` rule,test/add-error-locations-to-no-eq-null
+public:angular/angular,https://github.com/angular/angular/pull/70640,mit,test,test(core): reduce fakeAsync usage in animation tests,cleanup-core-animation-fake-async
+public:TanStack/query,https://github.com/TanStack/query/pull/11122,mit,test,test(lit-query): replace 'toBeDefined'/'toBeGreaterThan' with exact-value assertions,test/lit-query-exact-assertions
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20398,mit,test,test: enable `strict` mode in type tests,chore-turn-on-strict-mode-in-type-test
+public:angular/angular,https://github.com/angular/angular/pull/70591,mit,test,test(core): remove redundant change detection configuration,cleanup-core-onpush
+public:TanStack/query,https://github.com/TanStack/query/pull/11461,mit,test,test(angular-query/inject-query): assert refetch queryKey outside the discarded promise callback,test/angular-query-refetch-assertions
+public:pallets/flask,https://github.com/pallets/flask/pull/5797,bsd-3-clause,test,push preserved contexts in correct order,test-redirect-session
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20904,mit,test,test: add CodePath type coverage,test/code-path-type-coverage
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6834,mit,test,test(builders): drop TestBuildSpecificModes,test/drop-duplicate-builder-tests
+public:TanStack/query,https://github.com/TanStack/query/pull/10916,mit,test,test(solid-query/useIsFetching): centralize 'queryClient' setup with 'beforeEach' and rename injected client to 'customClient',test/solid-query-useIsFetching-centralize-queryclient
+public:TanStack/query,https://github.com/TanStack/query/pull/10938,mit,test,test(solid-query): replace deprecated 'toBeCalledTimes' with 'toHaveBeenCalledTimes',test/solid-query-replace-deprecated-vitest-aliases
+public:TanStack/query,https://github.com/TanStack/query/pull/11608,mit,test,test(vue-query/useQueries): assert the other query is not refetched when refetching a single query,test/vue-query-usequeries-refetch-isolation
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11458,apache-2.0,test,test(es/minifier): Add test case for merge_imports order preservation,claude/issue-11257-20260121-0259
+public:TanStack/query,https://github.com/TanStack/query/pull/11021,mit,test,test(solid-query-devtools/devtools): add tests for forwarding option changes after mount,test/solid-query-devtools-reactive-options
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6835,mit,test,test: stop cloning repositories from github,test/hermetic-clones
+public:TanStack/query,https://github.com/TanStack/query/pull/11075,mit,test,"test({react,preact}-query/usePrefetchQuery): assert the 'Loading...' fallback is rendered before the prefetch resolves",test/prefetch-query-loading-fallback-assertion
+public:TanStack/query,https://github.com/TanStack/query/pull/11080,mit,test,"test({react,preact}-query/usePrefetchQuery): inline the 'generateQueryFn' factory into each call site",test/inline-generatequeryfn-usePrefetchQuery
+public:TanStack/query,https://github.com/TanStack/query/pull/11053,mit,test,test(query-core): assert exact cache event payloads in subscribe callbacks,test/query-core-cache-callback-exact-event-args
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8070,mit,test,test: remove `churn()` task from `lifo_stealable`,eliza/no-churn
+public:pallets/click,https://github.com/pallets/click/pull/3808,bsd-3-clause,test,Document type auto-conversion and test `set` and `frozenset`,test-frozenset-types
+public:TanStack/query,https://github.com/TanStack/query/pull/11250,mit,test,test(vue-query/useQuery): move suspense regression tests into 'useQuery.test.ts',test/vue-query-useQuery-suspense-move
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11885,apache-2.0,test,test(codegen): clean up useless tests,dyc3/cleanup-tests
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35561,mit,test,Test: Add the expectCurrentOrBetter comparator to the docgen harness,valentin/sb11-story-1-8-expect-current-or-better-comparator
+public:TanStack/query,https://github.com/TanStack/query/pull/10900,mit,test,test(query-core/queryObserver): add tests for 'notifyOnChangeProps' as a function controlling listener notification,test/query-core-query-observer-notify-on-change-props-function
+public:prettier/prettier,https://github.com/prettier/prettier/pull/19927,mit,test,Fix test on Node.js v26,test-26
+public:TanStack/query,https://github.com/TanStack/query/pull/11421,mit,test,"test({react,preact}-query/useMutation): add tests for optimistic update rollback and success paths using cache-based 'onMutateResult'",test/react-preact-query-usemutation-optimistic-rollback
+public:angular/angular,https://github.com/angular/angular/pull/70544,mit,test,test(docs-infra): add route discovery and prerendering smoke test target,ci/validate-adev-production-build
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11804,apache-2.0,feature,chore: yaml linting,feat/no-duplicate-map-keys
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/15225,apache-2.0,feature,hugolib: Make .Render take an optional context argument,feat/renderadditionaldata-15077
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11716,apache-2.0,feature,feat(es/react-compiler): advance upstream fixture parity pipeline,kdy1/react-compiler-upstream-parity-pipeline-followup
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11832,apache-2.0,feature,feat: yaml quotes and bracket spacing,feat/bracket-spacing-yaml
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/14596,mit,feature,feat(rsc): add support for throwing redirect Response's at RSC render time,render_redirects
+public:denoland/deno,https://github.com/denoland/deno/pull/35694,mit,feature,feat(ext/node): implement v8.setHeapSnapshotNearHeapLimit,orcha/impl-e40098c6
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11635,apache-2.0,feature,feat(es): add TypeScript + React transforms and tsc corpus tests,kdy1/swc-es-transforms-ts-react-near-full-tsc
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14530,apache-2.0,feature,Move HugoInfo to resources/page + some related improvements,feat/misccleanup-20250216
+public:denoland/deno,https://github.com/denoland/deno/pull/35900,mit,feature,feat(desktop): enable `--hmr` for React Router,feat/react-router-desktop-hmr
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11941,apache-2.0,feature,feat(swc): gate react compiler re-export,kdy1/swc-react-compiler-feature
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11757,apache-2.0,feature,"feat(type_inference): handle built in global types with class members, lower WeakMap instance members",dyc3/lower-class-members
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11734,apache-2.0,feature,feat(type-gen): expand lowering codegen to cover more types,dyc3/feat-lowering-expansion
+public:tokio-rs/tokio,https://github.com/tokio-rs/tokio/pull/8281,mit,feature,feat: support the wasm32-unknown-emscripten target,emscripten-target
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11798,apache-2.0,feature,feat(es/minify): support extracting comments,kdy1/extract-comments-swc-minify
+public:starship/starship,https://github.com/starship/starship/pull/7643,isc,feature,feat: Add `jj_bookmark` module,ab/modules-jj-bookmark-add-rendering-tests/ornmzwuppwnm
+public:pallets/flask,https://github.com/pallets/flask/pull/4189,bsd-3-clause,feature,Add `exclude-patterns` option to `flask run` CLI,feat/use-exclude-patterns-reloader
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6440,mit,feature,feat: retry go mod proxy on 404 with exponential backoff,copilot/retry-go-mod-proxy-errors
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14384,apache-2.0,feature,Rename common/maps to common/hmaps,feat/renamemapscmaps
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1035,apache-2.0,feature,Custom completions coded in Go (instead of Bash),feat/customCompletionInGo
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1192,apache-2.0,feature,Have Cobra create 'completion' command automatically,feat/cobraCompletionCommand
+public:TanStack/query,https://github.com/TanStack/query/pull/11308,mit,feature,feat(solid-query): rewrite the adapter onto Solid 2.0's native async model,feat/solid-query-v6-native-rewrite
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20948,mit,feature,feat: add checkRelationalComparisons to no-constant-binary-expression,no-constant-binary-expression-relational
+public:denoland/deno,https://github.com/denoland/deno/pull/36102,mit,feature,feat(check): download the pinned native TypeScript compiler,feat/native-tsc-download
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11756,apache-2.0,feature,feat(codegen): lower primitive and scalar literal types,dyc3/lower-primitive-and-literal-types
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6442,mit,feature,feat(telegram): message thread id,telegram-thread-id
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14376,apache-2.0,feature,Decode webp.ImageConfig natively,feat/nativeconfig-14371
+public:eslint/eslint,https://github.com/eslint/eslint/pull/20788,mit,feature,"chore: enhance config-rule to support oneOf, anyOf, and nested schemas",feat/enhance-config-rule
+public:angular/angular,https://github.com/angular/angular/pull/70437,mit,feature,feat(router): expose router resources in public API,resourcepublicapi
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11732,apache-2.0,feature,feat(lint/js): add noMeaninglessVoidOperator,dyc3/port-no-meaningless-void
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14418,apache-2.0,feature,Add modulequeries file cache for module version queries,feat/cachequeries-14417
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11394,apache-2.0,feature,feat: enable markdown,feat/enable-markdown
+public:angular/angular,https://github.com/angular/angular/pull/70453,mit,feature,feat(core): add utility for testing directives,create-directive
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11777,apache-2.0,feature,feat(swc_common): add SourceMapper.map_raw_pos,mischnic/SourceMapper-map_raw_pos
+public:psf/black,https://github.com/psf/black/pull/4772,mit,feature,Improve vim plugin error message,feat/improve-vim-plugin-error-message
+public:cli/cli,https://github.com/cli/cli/pull/13533,mit,feature,feat(discussion): add discussion edit command,babakks/add-discussion-edit-cmd
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1608,apache-2.0,feature,feat: Add how to load completions in your current zsh session,feat-zsh-completion-help
+public:starship/starship,https://github.com/starship/starship/pull/7671,isc,feature,feat(git_branch): add `ignore_remotes` option,git_branch_ignore_remotes
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11685,apache-2.0,feature,feat(parser): add flow syntax mode and strip integration,kdy1/flow-strip-parser
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22444,mit,feature,feat: update rolldown to 1.0.1,05-13-feat_update_rolldown_to_1.0.1
+public:TanStack/query,https://github.com/TanStack/query/pull/11326,mit,feature,feat(solid-query): built-in single-flight consumer via FLIGHT_DATA_SOURCE,feat/flight-data-source
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11831,apache-2.0,feature,feat: move swc ast explorer into workspace,kdy1/move-swc-ast-explorer
+public:starship/starship,https://github.com/starship/starship/pull/6684,isc,feature,feat(nu): Add job support for nushell,patch-1
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/9814,mit,feature,feat(cli): add --markers to add command,cli-add-markers
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11975,apache-2.0,feature,feat(wasm): add @swc/nodejs-support-wasm,kdy1/nodejs-wasm-typescript-api
+public:denoland/deno,https://github.com/denoland/deno/pull/35938,mit,feature,feat(check): type-check with native tsc by default,feat/check-native-tsc
+public:vitejs/vite,https://github.com/vitejs/vite/pull/23110,mit,feature,feat: add closeServer and closePreviewServer hooks,close-server-hook
+public:angular/angular,https://github.com/angular/angular/pull/70188,mit,feature,feat(compiler): allow template to access private props,discard-private-props
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11062,apache-2.0,feature,feat(format/yaml): normalize node property placement,dyc3/yaml-fmt-node-properties
+public:nestjs/nest,https://github.com/nestjs/nest/pull/17834,mit,feature,"feat(common,core): add built-in, adapter-agnostic cookies",feat/cookies
+public:vitejs/vite,https://github.com/vitejs/vite/pull/22280,mit,feature,feat: searched params attached to workers are now preserved,feat/worker-search-params
+public:starship/starship,https://github.com/starship/starship/pull/6936,isc,feature,feat(git_branch): add ignore_bare_repo flag,feat/git-branch-ignore-bare-repo
+public:remix-run/react-router,https://github.com/remix-run/react-router/pull/15276,mit,feature,feat(create-react-router): detect nub package manager,brophdawg11/finish-line-pr-15266
+public:starship/starship,https://github.com/starship/starship/pull/6388,isc,feature,feat(vcs): Introduce the VCS module,ab/one-vcs-to-bind-them-all
+public:starship/starship,https://github.com/starship/starship/pull/6811,isc,feature,feat: new module `xmake`,feat/xmake-module
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11158,apache-2.0,feature,feat(graph): traversal of HTML-ish files,feat/property-graph-html
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14218,apache-2.0,feature,Add signed and notarized MacOS pkg builds,feat/notarizemac-14135
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11886,apache-2.0,feature,feat(codegen): lower keyof type operators,dyc3/lower-keyof
+public:denoland/deno,https://github.com/denoland/deno/pull/36016,mit,feature,feat(ext/node): support raw chacha20 cipher in crypto.createCipheriv,feat/node-chacha20-cipher
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14224,apache-2.0,feature,testscripts: Move layouts file to new structure,feat/commandstextlayouts
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1938,apache-2.0,feature,Add env variable to suppress completion descriptions on create,feat/disable-descriptions-envvar
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11051,apache-2.0,feature,feat(format/yaml): indent comments per their block structure,dyc3/yaml-fmt-comment-indent
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11870,apache-2.0,feature,feat(codegen): lower builtin constructors and Iterable,dyc3/lower-builtin-constructors
+public:TanStack/query,https://github.com/TanStack/query/pull/11263,mit,feature,feat(query-core): export cache config types,mutation-and-query-cache-config-type-export
+public:denoland/deno,https://github.com/denoland/deno/pull/35935,mit,feature,chore: remove the dead forked typescript-go integration,feat/check-native-tsgo
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/9974,mit,feature,feat(source/show): notify when PyPI is implicit,command/sources/show-implicit-pypi-notice
+public:starship/starship,https://github.com/starship/starship/pull/7691,isc,feature,feat: add `jj_change` module,ab/modules-jj-change-add-rendering-tests/kvprlktqorlo
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11690,apache-2.0,feature,feat(react-compiler): phase1 crate API baseline and fixture harness,kdy1/react-compiler-swc-phase1-crate-api
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19502,apache-2.0,feature,scrape: support zstd-compressed responses,feat-scrape-zstd
+public:gohugoio/hugo,https://github.com/gohugoio/hugo/pull/14328,apache-2.0,feature,tpl/reflect: Make the IsImageResource implementation less technical,feat/isimageresourcerefine
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/35585,mit,feature,Core: Add additionnal field for component API in manifest,feat/manifest-api-markdown
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6412,mit,feature,feat: added blake3 checksumming support,blake3
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6385,mit,feature,feat(nfpm): set archvariant in deb for goamd64,nfpm-goamd64
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11079,apache-2.0,feature,feat(format/html): lay out the srcset attribute,dyc3/html-srcset-attribute
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6810,mit,feature,feat: release summary,workflow
+public:psf/black,https://github.com/psf/black/pull/5237,mit,feature,Report parse errors as file:line:column,feat/parse-error-location
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11052,apache-2.0,feature,feat(format/yaml): keep node properties on the entry line,dyc3/yaml-fmt-collection-props
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11421,apache-2.0,feature,chore(wasm): enable JS plugins via `unstable` feature,feat/js-plugin-wasm
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11729,apache-2.0,feature,feat(unit_tests): support suite() as an alias of describe() in test rules (#11727),feat/support-suite-alias
+public:babel/babel,https://github.com/babel/babel/pull/17653,mit,feature,feat(standalone): export async transform,export-async-transform-standalone
+public:babel/babel,https://github.com/babel/babel/pull/17482,mit,feature,feat: read standalone targets from `data-targets`,add-targets-standalone-script-tag
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11356,apache-2.0,feature,feat(useSortedClasses): sort `@container` and other bare utilities with modifiers,feat/use-sorted-classes-container-utility
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6324,mit,feature,feat(homebrew_cask): allow globs in manpages,cask-glob-manpages
+public:storybookjs/storybook,https://github.com/storybookjs/storybook/pull/36166,mit,feature,Angular: Raise the supported floor to 21,feat/angular-21-floor
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11253,apache-2.0,feature,feat: markdown linter,feat/markdown-linter
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11686,apache-2.0,feature,feat(plugins): add semantic model,feat/plugin-semantic-model
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10097,mit,feature,feat(python): use findpython,feature/findpython
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11691,apache-2.0,feature,feat(es/parser): extend flow declare export strip compatibility,kdy1/flow-strip-declare-export-compat
+public:denoland/deno,https://github.com/denoland/deno/pull/35914,mit,feature,feat(cli): add --min-dep-age alias,codex/min-dep-age-alias
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6300,mit,feature,feat(mcp): always use current schema url,feat/mcp-use-latest-schema
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11113,apache-2.0,feature,feat(css_formatter): scss and css comments inside declarations,db/comments-formatting-css
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11076,apache-2.0,feature,feat(useSortedClasses): sort sort_v4 candidates by property signature,feat/use-sorted-classes-property-signature
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11700,apache-2.0,feature,feat(lint): add noObsoleteTags,dyc3/port-no-obsolete-tags
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11669,apache-2.0,performance,perf(analyze): avoid rebuilding tokens when counting lines,dbezrukov/analyzer-line-count-perf
+public:denoland/deno,https://github.com/denoland/deno/pull/35881,mit,performance,perf(ext/fetch): remove quadratic line buffering in EventSource,perf/text-line-stream-quadratic
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11670,apache-2.0,performance,perf(swc_ecma_parser): optimize underscore stripping in numeric literal hot path,kdy1/fix-11649-optimize-underscore-stripping
+public:TanStack/query,https://github.com/TanStack/query/pull/11225,mit,performance,perf(query-core): Skip unused query result tracking,scttcper/skip-redundant-query-tracking
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1957,apache-2.0,performance,Micro-optimizations,perf/micro-opt
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19143,apache-2.0,performance,perf(parsing): Parse metrics without recursion,parse-no-recurse
+public:denoland/deno,https://github.com/denoland/deno/pull/35810,mit,performance,"perf(ext/web): shared underlying-source algorithms, hoist resource-bridge read request",perf/web-streams-source-dispatch
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11514,apache-2.0,performance,perf(md): reduce checks for link lookahead,perf/markdown-parser
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6850,mit,performance,perf(git): ask git once,perf/git-ask-once
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11662,apache-2.0,performance,perf: reuse token text and CSS property names,dbezrukov/rowan-token-text-slices
+public:starship/starship,https://github.com/starship/starship/pull/6387,isc,performance,perf(ancestor-scan): preallocate and reuse a single `PathBuf`,ab/push-ssmnukyyston
+public:swc-project/swc,https://github.com/swc-project/swc/pull/11902,apache-2.0,performance,perf: Optimize Atom equality,perf/optimize-atom-eq
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11251,apache-2.0,performance,"perf(noImportCycles): exclude node_modules, add more tests",dyc3/perf-no-import-cycles-scc-2
+public:denoland/deno,https://github.com/denoland/deno/pull/35813,mit,performance,perf(ext/web): persistent pump for the generic pipeTo loop,perf/pipeto-persistent-pump
+public:goreleaser/goreleaser,https://github.com/goreleaser/goreleaser/pull/6827,mit,performance,perf: skip needless docker probes; make the ko registry test hermetic,perf/docker-probe
+public:denoland/deno,https://github.com/denoland/deno/pull/36422,mit,performance,perf(ext/web): apply the base64url op design to standard base64,perf/base64-op-unification
+public:denoland/deno,https://github.com/denoland/deno/pull/36263,mit,performance,perf(snapshot): mangle internal source identifiers,agent/mangle-snapshot-source-identifiers
+public:denoland/deno,https://github.com/denoland/deno/pull/35705,mit,performance,perf(ext/node): remove per-chunk copying on TLSWrap data paths,perf/tls-wrap-hot-path
+public:denoland/deno,https://github.com/denoland/deno/pull/35862,mit,performance,perf(ext/web): avoid copy-back in op_base64_atob large path,perf/base64-decode
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11505,apache-2.0,performance,perf(markdown): reduce checks and string allocations,perf/markdown-parser
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11679,apache-2.0,performance,perf(css_formatter): avoid duplicate separated-list traversal,dbezrukov/css-separated-list-perf
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/11042,mit,performance,Reduce virtual environment discovery subprocesses,perf/lazy-virtualenv-discovery
+public:denoland/deno,https://github.com/denoland/deno/pull/36693,mit,performance,perf(core): split OpCtx into shared OpCommonCtx + borrowed op declarations,perf/opctx-split
+public:vuejs/core,https://github.com/vuejs/core/pull/14843,mit,performance,perf(compiler-vapor): emit v-model modifiers as direct values,edison/perf/vModelModifiersValue
+public:biomejs/biome,https://github.com/biomejs/biome/pull/11466,apache-2.0,performance,perf(markdown): hoist list sibling scan,dyc3/optimize-markdown-formatter
+public:spf13/cobra,https://github.com/spf13/cobra/pull/1692,apache-2.0,performance,perf(bash-v2): speed up filtering menu-complete descriptions,perf/bash-v2-menucomplete-descfilter
+public:prometheus/prometheus,https://github.com/prometheus/prometheus/pull/19702,apache-2.0,performance,perf(scrape): avoid duplicate staleness tracking in AppenderV2,roidelapluie/perf-single-staleness
+public:vuejs/core,https://github.com/vuejs/core/pull/15329,mit,performance,perf(runtime-vapor): trim v-for hot-path allocations,edison/refactor/v-for
+public:vuejs/core,https://github.com/vuejs/core/pull/14803,mit,performance,perf(vapor): add fast path for static class names,edison/perf/setClass
+public:python-poetry/poetry,https://github.com/python-poetry/poetry/pull/10895,mit,performance,perf: use filename field instead of parsing filename from URL,perf/link-filename

@@ -1,0 +1,77 @@
+Fixture label, not shown to users: nothing established or emerging anywhere
+===========================================================================
+
+Summary: We could not measure any stage yet, so this map has no reading for your organisation.
+
+Stages:
+- Product spec (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: one of the numbers this level needs was not supplied.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- Tech spec (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: one of the numbers this level needs was not supplied.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: design documents are not compared with the code they describe.
+- Plan (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: your tools cannot show this level, so it stays open.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- Code (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: one of the numbers this level needs was not supplied.
+    conversational: This level has no measure of its own; it is met once a higher level of this stage is met.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- Review (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: one of the numbers this level needs was not supplied.
+    conversational: This level has no measure of its own; it is met once a higher level of this stage is met.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- Test & QA (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: your tools cannot show this level, so it stays open.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: one of the numbers this level needs was not supplied.
+- CI/CD (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: one of the numbers this level needs was not supplied.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: whether checks and builds passed is not read, so this level cannot be read.
+- Deploy (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: one of the numbers this level needs was not supplied.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: one of the numbers this level needs was not supplied.
+    orchestrated: Ours: deploy and rollback events are not read.
+- Operate (established: none; emerging: none)
+    Whole row: Nothing in this stage could be measured yet.
+    assisted: Ours: one of the numbers this level needs was not supplied.
+    conversational: Ours: one of the numbers this level needs was not supplied.
+    supervised agentic: Ours: one of the numbers this level needs was not supplied.
+    autonomous: Ours: incident and alert events are not read.
+    orchestrated: Ours: incident and alert events are not read.
+
+What we cannot see:
+- (ours) Some of the numbers behind parts of the map could not be read.
+- (ours) Design documents are not compared with the code they describe.
+- (ours) Whether a check or build passed is not read.
+- (ours) Deploy and rollback events are not read.
+- (ours) Incident and alert events are not read.
+- (ours) Whether agents coordinate this organisation's work under its own policies, the highest level on the map, is not read.

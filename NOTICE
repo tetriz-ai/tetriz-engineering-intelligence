@@ -1,0 +1,45 @@
+tetriz-engineering-intelligence
+Copyright 2026 Workloom Solutions Private Limited
+
+This repository includes the following third-party material:
+
+- model-service/datasets/ redistributes PR titles and head branches copied from
+  66 public repositories licensed under MIT, Apache-2.0, BSD-3-Clause and ISC.
+  The per-source copyright and licence schedule is in
+  model-service/datasets/THIRD_PARTY_NOTICES.md, with the full licence texts in
+  model-service/datasets/licenses/ and the provenance statement in
+  model-service/datasets/PROVENANCE.md.
+- CODE_OF_CONDUCT.md is adapted from the Contributor Covenant, version 2.1,
+  https://www.contributor-covenant.org/version/2/1/code_of_conduct/,
+  licensed under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/.
+- model-service/stage/gorand.py ports the random source and Shuffle of Go's math/rand
+  (https://go.dev/src/math/rand/), including its seeding table, from The Go Programming
+  Language, licensed under the BSD 3-Clause License, https://go.dev/LICENSE:
+
+    Copyright 2009 The Go Authors.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+
+       * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+       * Redistributions in binary form must reproduce the above
+    copyright notice, this list of conditions and the following disclaimer
+    in the documentation and/or other materials provided with the
+    distribution.
+       * Neither the name of Google LLC nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+    A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+    OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+    LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

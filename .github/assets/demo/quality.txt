@@ -1,0 +1,10 @@
+blamed: claimed=1 resolved=1
+scored: candidates=1 degraded=1 fixes_resolved=1
+
+candidate CULPRIT by dev@example.com
+  reached by:  BLAME_AFTER_HOPS
+  confidence:  0.531
+  context:     same_file (degraded: true)
+  age at fix:  31 days
+
+fix pr-42: RESOLVED / SCORED_OK

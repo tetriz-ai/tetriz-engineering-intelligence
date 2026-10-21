@@ -1,0 +1,246 @@
+source,source_url,license,bucket,title,branch
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4832,mit,security-compliance,fix(deps)!: patch x/crypto vulnerabilities,fix/trivy-crypto-vulnerabilities
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4823,mit,infra-devops,fix(codecov): authenticate master uploads and fix the invalid config,fix-codecov
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4807,mit,security-compliance,fix(deps): bump golang.org/x/net and golang.org/x/text to patched versions,fix/bump-x-text
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4800,mit,security-compliance,fix(engine): add default ReadHeaderTimeout to http.Server in Run methods,fix/4760-default-read-header-timeout
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4787,mit,infra-devops,chore(deps): bump the actions group across 1 directory with 4 updates,dependabot/github_actions/actions-e911333b0e
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4709,mit,infra-devops,test(context): use t.TempDir() for SaveUploadedFile permission test on WSL,fix-tests-wsl
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4707,mit,security-compliance,update validator library to version 10.30.3,validator-update
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4678,mit,security-compliance,chore(deps): bump golang.org/x/net to v0.55.0,chore-bump-golang-x-net
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4640,mit,infra-devops,chore(deps): bump the actions group across 1 directory with 2 updates,dependabot/github_actions/actions-c79b9a0d13
+public:gin-gonic/gin,https://github.com/gin-gonic/gin/pull/4580,mit,infra-devops,chore(deps): upgrade Go dependencies and CI action versions,chore/upgrade-deps-and-actions
+public:psf/requests,https://github.com/psf/requests/pull/7628,apache-2.0,infra-devops,Bump the actions group with 3 updates,dependabot/github_actions/actions-f545b4e0f6
+public:psf/requests,https://github.com/psf/requests/pull/7616,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.16.3 to 0.16.4 in the pre-commit group,dependabot/pre_commit/pre-commit-64a36dddd0
+public:psf/requests,https://github.com/psf/requests/pull/7609,apache-2.0,infra-devops,Update lock-issues.yml to latest dependencies,fix-gh-token
+public:psf/requests,https://github.com/psf/requests/pull/7608,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.16.2 to 0.16.3 in the pre-commit group,dependabot/pre_commit/pre-commit-40da8d85bd
+public:psf/requests,https://github.com/psf/requests/pull/7606,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.16.1 to 0.16.2 in the pre-commit group,dependabot/pre_commit/pre-commit-43b95424c2
+public:psf/requests,https://github.com/psf/requests/pull/7603,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.16.0 to 0.16.1 in the pre-commit group,dependabot/pre_commit/pre-commit-9906b4e273
+public:psf/requests,https://github.com/psf/requests/pull/7598,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.22 to 0.16.0 in the pre-commit group,dependabot/pre_commit/pre-commit-278290806f
+public:psf/requests,https://github.com/psf/requests/pull/7597,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.21 to 0.15.22 in the pre-commit group,dependabot/pre_commit/pre-commit-db56d43c31
+public:psf/requests,https://github.com/psf/requests/pull/7596,apache-2.0,infra-devops,Bump the actions group with 2 updates,dependabot/github_actions/actions-aa615053dc
+public:psf/requests,https://github.com/psf/requests/pull/7591,apache-2.0,infra-devops,Bump the actions group with 3 updates,dependabot/github_actions/actions-e021b9f00e
+public:psf/requests,https://github.com/psf/requests/pull/7590,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.20 to 0.15.21 in the pre-commit group,dependabot/pre_commit/pre-commit-606ed9fe1a
+public:psf/requests,https://github.com/psf/requests/pull/7562,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.18 to 0.15.20 in the pre-commit group,dependabot/pre_commit/pre-commit-936ef416c3
+public:psf/requests,https://github.com/psf/requests/pull/7561,apache-2.0,infra-devops,Bump actions/setup-python from 6.2.0 to 6.3.0 in the actions group,dependabot/github_actions/actions-14db7af2f3
+public:psf/requests,https://github.com/psf/requests/pull/7551,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.17 to 0.15.18 in the pre-commit group,dependabot/pre_commit/pre-commit-65d5fb4974
+public:psf/requests,https://github.com/psf/requests/pull/7540,apache-2.0,infra-devops,Bump actions/checkout from 6.0.2 to 7.0.0 in the actions group,dependabot/github_actions/actions-2217aebe03
+public:psf/requests,https://github.com/psf/requests/pull/7539,apache-2.0,infra-devops,Inline pre-commit linting,inline-precommit-job
+public:psf/requests,https://github.com/psf/requests/pull/7536,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.16 to 0.15.17 in the pre-commit group,dependabot/pre_commit/pre-commit-7ce54c4e99
+public:psf/requests,https://github.com/psf/requests/pull/7515,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.15 to 0.15.16 in the pre-commit group,dependabot/pre_commit/pre-commit-b4d5183fd0
+public:psf/requests,https://github.com/psf/requests/pull/7503,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.14 to 0.15.15 in the pre-commit group,dependabot/pre_commit/pre-commit-274dc188f8
+public:psf/requests,https://github.com/psf/requests/pull/7497,apache-2.0,infra-devops,Disable commonly ignored Pyright linting rules,typing/disable-pyright-lints
+public:psf/requests,https://github.com/psf/requests/pull/7493,apache-2.0,infra-devops,Bump https://github.com/astral-sh/ruff-pre-commit from v0.15.12 to 0.15.14 in the pre-commit group,dependabot/pre_commit/pre-commit-d5752893ea
+public:psf/requests,https://github.com/psf/requests/pull/7492,apache-2.0,infra-devops,Bump github/codeql-action from 4.35.1 to 4.36.0 in the actions group,dependabot/github_actions/actions-754f0868f5
+public:expressjs/express,https://github.com/expressjs/express/pull/7465,mit,infra-devops,ci: add npm staged publication with dist-tag support,4-npm-publish
+public:expressjs/express,https://github.com/expressjs/express/pull/7464,mit,infra-devops,ci: add npm staged publication with dist-tag support,5-npm-publish
+public:expressjs/express,https://github.com/expressjs/express/pull/7462,mit,infra-devops,build(deps): bump the github-actions group with 5 updates,dependabot/github_actions/github-actions-1d439f0074
+public:expressjs/express,https://github.com/expressjs/express/pull/7460,mit,infra-devops,chore: group github actions updates,group-github-action-updates
+public:expressjs/express,https://github.com/expressjs/express/pull/7440,mit,security-compliance,deps: qs@~6.16.0,fix/issue-7439-qs-6.16.0
+public:expressjs/express,https://github.com/expressjs/express/pull/7403,mit,infra-devops,build(deps): bump actions/checkout from 7.0.0 to 7.0.1,dependabot/github_actions/actions/checkout-7.0.1
+public:expressjs/express,https://github.com/expressjs/express/pull/7400,mit,infra-devops,build(deps): bump github/codeql-action/upload-sarif from 4.36.0 to 4.37.3,dependabot/github_actions/github/codeql-action/upload-sarif-4.37.3
+public:expressjs/express,https://github.com/expressjs/express/pull/7399,mit,infra-devops,build(deps): bump coverallsapp/github-action from 2.3.7 to 2.3.8,dependabot/github_actions/coverallsapp/github-action-2.3.8
+public:expressjs/express,https://github.com/expressjs/express/pull/7390,mit,security-compliance,deps: bump body-parser to ^2.3.0 to fix CVE-2026-12590,fix/body-parser-cve-2026-12590
+public:expressjs/express,https://github.com/expressjs/express/pull/7345,mit,infra-devops,build(deps): bump actions/checkout from 6.0.2 to 7.0.0,dependabot/github_actions/actions/checkout-7.0.0
+public:expressjs/express,https://github.com/expressjs/express/pull/7305,mit,security-compliance,fix: bump qs minimum to 6.15.2,fix/7304-bump-qs-6.15.2
+public:expressjs/express,https://github.com/expressjs/express/pull/7297,mit,infra-devops,build(deps): bump github/codeql-action from 4.35.2 to 4.36.0,dependabot/github_actions/github/codeql-action-4.36.0
+public:expressjs/express,https://github.com/expressjs/express/pull/7218,mit,infra-devops,ci: build express with node.js v26,build-node26
+public:expressjs/express,https://github.com/expressjs/express/pull/7212,mit,infra-devops,build(deps): bump github/codeql-action from 4.35.1 to 4.35.2,dependabot/github_actions/github/codeql-action-4.35.2
+public:expressjs/express,https://github.com/expressjs/express/pull/7211,mit,infra-devops,build(deps): bump actions/upload-artifact from 7.0.0 to 7.0.1,dependabot/github_actions/actions/upload-artifact-7.0.1
+public:expressjs/express,https://github.com/expressjs/express/pull/7210,mit,infra-devops,build(deps): bump actions/setup-node from 6.3.0 to 6.4.0,dependabot/github_actions/actions/setup-node-6.4.0
+public:fastify/fastify,https://github.com/fastify/fastify/pull/7058,mit,observability,[Backport 5.x] perf: avoid resetting the level of request child loggers,backport-7056-to-5.x
+public:fastify/fastify,https://github.com/fastify/fastify/pull/7056,mit,observability,perf: avoid resetting the level of request child loggers,perf/skip-empty-child-logger-level
+public:fastify/fastify,https://github.com/fastify/fastify/pull/7003,mit,infra-devops,[Backport 5.x] chore: npm ignore remaining agent files,backport-6996-to-5.x
+public:fastify/fastify,https://github.com/fastify/fastify/pull/6996,mit,infra-devops,chore: npm ignore remaining agent files,fix/npmignore-agent-files
+public:fastify/fastify,https://github.com/fastify/fastify/pull/6952,mit,infra-devops,[Backport 5.x] ci: allow backport in pr title,backport-6948-to-5.x
+public:fastify/fastify,https://github.com/fastify/fastify/pull/6948,mit,infra-devops,ci: allow backport in pr title,ci/pr-title
+public:sveltejs/svelte,https://github.com/sveltejs/svelte/pull/18750,mit,infra-devops,Version Packages,changeset-release/main
+public:sveltejs/svelte,https://github.com/sveltejs/svelte/pull/18729,mit,infra-devops,chore: bump playwright,bump-playwright
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21948,apache-2.0,security-compliance,Prepare Patch Release 2.6.6,release_2_6_6
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21914,apache-2.0,security-compliance,fix(checkpoint): prevent arbitrary code execution via `_class_path` in `load_from_checkpoint`,fix/load-from-checkpoint-class-path-rce
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21891,apache-2.0,infra-devops,ci: bump torch ceiling to <2.14.0 and fix torch-tensorrt/DeepSpeed fallout,ci/bump-torch-tensorrt-ceiling
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21888,apache-2.0,infra-devops,ci: remove the markdown link checker,ci/remove-markdown-link-check
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21870,apache-2.0,ai-ml,Remove dead PyTorch < 2.6 version guards,chore/remove-dead-torch-guards
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21858,apache-2.0,ai-ml,Fixes mypy issues with `bitsandbytes > 0.48`,fix/bitsandbytes-0-48-typing
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21851,apache-2.0,infra-devops,ci: drop PyTorch 2.1-2.5 and raise minimum to 2.6,ci/drop-old-torch-versions-1
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21835,apache-2.0,infra-devops,ci: add pytorch 2.12 and 2.13 to cpu tests,ci/add-pytorch-2.12-2.13
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21832,apache-2.0,security-compliance,fix(checkpoint): prevent arbitrary code execution via `_instantiator` in `load_from_checkpoint`,bugfix/21822-instantiator-rce
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21831,apache-2.0,ai-ml,Fix FSDPPrecision rejecting a scaler for 16-mixed precision,fix/fsdp-precision-16mixed-scaler
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21828,apache-2.0,infra-devops,ci: bump ubuntu in `readthedocs`,ci/bump-ubuntu-readthedocs
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21821,apache-2.0,ai-ml,Add fsspec URL support for distributed checkpoints in ModelParallelStrategy,feature/model-parallel-fsspec-support
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21805,apache-2.0,ai-ml,Fix FSDP CPU offloading when shards are already on CPU,fix-fsdp-offload-to-cpu
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21776,apache-2.0,observability,Profile dataloader initialization in FitLoop and update outdated docs,issue-21771
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21775,apache-2.0,ai-ml,Support remote storage (fsspec URLs) for FSDP checkpoints,feature/fsdp-fsspec-support
+public:Lightning-AI/pytorch-lightning,https://github.com/Lightning-AI/pytorch-lightning/pull/21774,apache-2.0,ai-ml,fix(FSDP): pass explicit CPU    device to satisfy torch>=2.5 device_id contract,feature/cpu-fail-on-fsdp
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29529,mit,infra-devops,ci : bump ty to 0.0.84,cisc/ci-bump-ty
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29514,mit,infra-devops,ci : enable GGML_SCHED_DEBUG_REALLOC=1 for ctest workflows,gg/ci-debug-realloc
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29511,mit,ai-ml,hexagon: support tiled Q4_0 and Q8_0 GET_ROWS,hexagon-q4q8-getrows
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29503,mit,ai-ml,opencl: refine a8x bin kernel loading condition,lh/fix-bin-kernels-load-condition
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29502,mit,ai-ml,hexagon: support for backend sampler,hexagon-sampler
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29481,mit,infra-devops,musa: build the docker images from the PH1 MUSA SDK image,xd/musa-docker-sdk-bump
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29449,mit,infra-devops,hexagon: find software divide calls using binary inspection tool,tr/hex-inspect-bin
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29422,mit,ai-ml,gguf-py : ByteLevel processing defaults bos/eos to False,cisc/specialvocab-bytelevel-special-token-defaults
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29417,mit,ai-ml,gguf-py : TemplateProcessing has final word on add_special_token,cisc/specialvocab-add-special-token-override
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29403,mit,ai-ml,audio: fix mel preprocessor in LFM2 audio,ykhrustalev/lfm2a-mel-fix
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29401,mit,ai-ml,"opencl: add bin kernel `kernel_gemm_noshuffle_q5_k_f32_32b_trans_ila_a8_bin`, `kernel_gemm_noshuffle_q5_k_q8_1_dp4a_ila_a8_bin`",q5_k-a8-dp4a-bin-kernel
+public:ggml-org/llama.cpp,https://github.com/ggml-org/llama.cpp/pull/29396,mit,ai-ml,sync : ggml,sync-ggml-26-09-24
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26204,mit,infra-devops,bump delta + unity_catalog extensions for v1.5.6,bump-delta-unity--v1.5.6
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26202,mit,infra-devops,Bump vortex to b86c6ab223b53b445ec4c96e74f26dcb616d9c4f,bump_vortex
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26162,mit,data-pipeline,[Parquet] Backport of #25891,v1_5_parquet_variant_required_fields
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26152,mit,infra-devops,Add HyperLogLog or exact-hash dependent tests to the hash zero skiplist,add_to_hash_zero_skiplist
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26133,mit,infra-devops,Fix remote pushdown bump quack,fix_remote_pushdow_bump_quack
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26130,mit,data-pipeline,Fix 64-byte VARIANT strings written as empty short strings to Parquet,fix/variant-short-string-64
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26126,mit,infra-devops,bump httpfs,bump_httpfs
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26123,mit,infra-devops,Try to use prebuilt duckdb archive files in extension build jobs,improve-ci-sep-24
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26119,mit,infra-devops,"Bump Postgres, MySQL and SQLite",bump_scanners
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26117,mit,infra-devops,EXPLAIN SQL prerequisites,sql-export-review-prerequisites
+public:duckdb/duckdb,https://github.com/duckdb/duckdb/pull/26115,mit,infra-devops,"Dont deploy on arm64 compat, retry rclone if missing",fix-arm64-release-main
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23209,apache-2.0,ui-design,fix interval form showing incorrect value and time unit,interval-form
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23180,apache-2.0,observability,Log the real size when refusing to publish an oversized event,fix/event-size-warning
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23179,apache-2.0,ui-design,ui-v2: set browser tab titles on entity and index pages,ui-v2/page-titles
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23176,apache-2.0,ui-design,fix typo in search deployment placeholder,typo-placeholder
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23174,apache-2.0,observability,Add `log_prefix` to `ShellOperation` to allow suppressing the PID stream output prefix,devin/1790026713-shell-log-prefix
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23168,apache-2.0,infra-devops,Run Biome from node_modules in UI v2 lint job,devin/1790004519-ui-v2-biome-from-node-modules
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23162,apache-2.0,data-pipeline,prefect-dbt: shut down dbt worker threads when a task times out or is cancelled,devin/1789894460-dbt-runner-cancellation
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23156,apache-2.0,ui-design,Render `data:image/*` URIs in ui-v2 markdown,devin/1789854242-artifact-data-uri-images
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23151,apache-2.0,infra-devops,Add `container_wait_timeout` to `DockerWorkerJobConfiguration`,devin/1789757600-docker-container-wait-timeout
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23149,apache-2.0,infra-devops,Fix flaky test_multiple_workers_receive_distinct_messages,devin/1789751798-fix-flaky-multi-worker-cleanup-test
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23148,apache-2.0,ui-design,fix date clearing on cancel,range-cancel
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23143,apache-2.0,ui-design,Add browser-local pinned deployments to the React UI,ui-v2/pinned-deployments
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23135,apache-2.0,infra-devops,Add Osano and GTM to Prefect 2.x docs,desertaxle/add-osano-gtm-prefect-v2
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23134,apache-2.0,infra-devops,Add Osano and GTM to Prefect 1.x docs,desertaxle/add-osano-gtm-prefect-v1
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23133,apache-2.0,security-compliance,Add Osano consent manager to Prefect docs,desertaxle/add-osano-prefect-docs
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23132,apache-2.0,infra-devops,Omit inferred securityGroups so ECS tasks use the VPC default security group,devin/1789569625-ecs-omit-security-groups
+public:PrefectHQ/prefect,https://github.com/PrefectHQ/prefect/pull/23131,apache-2.0,infra-devops,Remove stale Python 3.12 skip markers from prefect-shell test_output,devin/1789507368-shell-py312-skips
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/9025,apache-2.0,infra-devops,Update github/codeql-action action to v4.38.2,renovate/github-codeql-action-4.x
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/9019,apache-2.0,infra-devops,Add Marc Schäfer as a project Triager,add-marc-schaefer-triager
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/9018,apache-2.0,infra-devops,Add ps-mir as an approver,add-ps-mir-approver
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8997,apache-2.0,security-compliance,"Revert ""Update module google.golang.org/grpc to v1.84.0 (#8982)""",fix-govulncheck
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8995,apache-2.0,infra-devops,Update open-telemetry/shared-workflows action to v0.16.0,renovate/open-telemetry-shared-workflows-0.x
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8993,apache-2.0,observability,metricdatatest: use attribute collection formatting,feat/metricdatatest-string-formatting-8210
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8992,apache-2.0,infra-devops,Update open-telemetry/shared-workflows action to v0.15.0,renovate/open-telemetry-shared-workflows-0.x
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8987,apache-2.0,infra-devops,Update github/codeql-action action to v4.38.1,renovate/github-codeql-action-4.x
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8981,apache-2.0,observability,fix(sdk/metric): preserve int64 precision in sum and histogram aggregations,fix-issue-8980
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8975,apache-2.0,infra-devops,chore(deps): update codecov/codecov-action action to v7.1.1,renovate/codecov-codecov-action-7.x
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8971,apache-2.0,observability,sdk/metric: Document nil AttributeFilter behavior,docs/default-attributes-view-fallback
+public:open-telemetry/opentelemetry-go,https://github.com/open-telemetry/opentelemetry-go/pull/8969,apache-2.0,observability,sdk/trace/x: deduplicate tracestate combination error report in ProbabilitySampler,x-probability-sampler-handle-once
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1581,mit,security-compliance,chore: bump zapgrpc/internal/test deps,justinhwang/deps
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1580,mit,infra-devops,"build: install govulncheck via official action, drop tools module",justinhwang/vuln
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1579,mit,infra-devops,build(deps): bump codecov/codecov-action from 5 to 7,dependabot/github_actions/codecov/codecov-action-7
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1578,mit,infra-devops,build(deps): bump actions/setup-go from 5 to 7,dependabot/github_actions/actions/setup-go-7
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1577,mit,infra-devops,build(deps): bump actions/checkout from 4 to 7,dependabot/github_actions/actions/checkout-7
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1574,mit,infra-devops,"ci: test on Go 1.27, drop 1.25",ci/bump-go-matrix-127
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1573,mit,infra-devops,chore(lint): migrate to golangci-lint v2,justinhwang/ci
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1567,mit,observability,fix: set content type for AtomicLevel HTTP responses,fix/atomic-level-content-type
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1535,mit,infra-devops,[chore] CI: test on Go 1.26,go-126
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1534,mit,observability,zapcore: Add PreWriteHook for transforming entries before write,prewritehook
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1508,mit,infra-devops,"ci: Test with Go 1.24, Go 1.25",ci/test-go-125
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1502,mit,infra-devops,Fix lint check name,joaks/niliness
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1477,mit,security-compliance,test(AtomicLevel): demonstrate Handler is not vulnerable to XSS,atomiclevel-handler-no-xss
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1470,mit,infra-devops,build(deps): bump codecov/codecov-action from 4 to 5,dependabot/github_actions/codecov/codecov-action-5
+public:uber-go/zap,https://github.com/uber-go/zap/pull/1464,mit,infra-devops,ci: Test with Go 1.23,chore/bump-gha-go123
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/523,mit,infra-devops,Pin GitHub Actions to commit SHAs and harden CI workflows,mf/ci-hardening
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/511,mit,security-compliance,fix: return ErrInvalidType for an invalid aud claim type in MapClaims,fix/mapclaims-aud-invalid-type
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/509,mit,security-compliance,mapclaims: stop treating exp=0 as a missing claim,fix/mapclaims-zero-numeric-date
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/507,mit,infra-devops,Bump crate-ci/typos from 1.44.0 to 1.46.0,dependabot/github_actions/crate-ci/typos-1.46.0
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/495,mit,infra-devops,Bump crate-ci/typos from 1.42.1 to 1.44.0,dependabot/github_actions/crate-ci/typos-1.44.0
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/492,mit,infra-devops,Bump crate-ci/typos from 1.41.0 to 1.42.1,dependabot/github_actions/crate-ci/typos-1.42.1
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/490,mit,infra-devops,Bump crate-ci/typos from 1.40.0 to 1.41.0,dependabot/github_actions/crate-ci/typos-1.41.0
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/488,mit,infra-devops,Bump crate-ci/typos from 1.39.0 to 1.40.0,dependabot/github_actions/crate-ci/typos-1.40.0
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/487,mit,infra-devops,Bump actions/checkout from 5 to 6,dependabot/github_actions/actions/checkout-6
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/481,mit,infra-devops,Bump golangci/golangci-lint-action from 8 to 9,dependabot/github_actions/golangci/golangci-lint-action-9
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/480,mit,infra-devops,Bump crate-ci/typos from 1.36.2 to 1.39.0,dependabot/github_actions/crate-ci/typos-1.39.0
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/478,mit,infra-devops,Bump github/codeql-action from 3 to 4,dependabot/github_actions/github/codeql-action-4
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/473,mit,security-compliance,Add TPM signature reference,add-examples
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/472,mit,security-compliance,Fix early file close in jwt cli,mf/fix-jwt-main
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/470,mit,infra-devops,Bump crate-ci/typos from 1.35.4 to 1.36.2,dependabot/github_actions/crate-ci/typos-1.36.2
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/469,mit,infra-devops,Bump actions/setup-go from 5 to 6,dependabot/github_actions/actions/setup-go-6
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/462,mit,infra-devops,Update github workflows,mf/bump-go
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/461,mit,infra-devops,Bump crate-ci/typos from 1.34.0 to 1.35.3,dependabot/github_actions/crate-ci/typos-1.35.3
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/458,mit,infra-devops,Add spellcheck Github action to catch common spelling mistakes,410-Add-spelling-linter-and-extensions
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/456,mit,security-compliance,Add `WithNotBeforeRequired` parser option and add test coverage,455-Add-require-nbf-parseroption
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/452,mit,infra-devops,Bump Go version to indicate correct minimum requirement,go-121
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/449,mit,infra-devops,Create CODEOWNERS,oxisto-patch-1
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/441,mit,security-compliance,Fix bug in validation of multiple audiences,multiple-aud-fix
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/440,mit,infra-devops,Bump golangci/golangci-lint-action from 7 to 8,dependabot/github_actions/golangci/golangci-lint-action-8
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/438,mit,infra-devops,Bump GitHub workflows and Go versions,mf/update
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/433,mit,security-compliance,Implementing validation of multiple audiences,multiple-aud
+public:golang-jwt/jwt,https://github.com/golang-jwt/jwt/pull/425,mit,security-compliance,Update `jwt.Parse` example to use `jwt.WithValidMethods`,parse-example
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1535,apache-2.0,security-compliance,Fix callback exception handling to be per-Connection instead of per-Context,claude/pyopenssl-context-exception-race-b3vsr5
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1534,apache-2.0,security-compliance,Fix segfault in X509.set_serial_number for negative serials,fix-negative-serial-number-segfault
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1533,apache-2.0,infra-devops,Bump re-actors/alls-green from 1.2.2 to 1.3.0,dependabot/github_actions/re-actors/alls-green-1.3.0
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1528,apache-2.0,infra-devops,Bump pypa/gh-action-pypi-publish from 1.14.1 to 1.14.2,dependabot/github_actions/pypa/gh-action-pypi-publish-1.14.2
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1524,apache-2.0,infra-devops,Bump actions/setup-python from 6.3.0 to 7.0.0,dependabot/github_actions/actions/setup-python-7.0.0
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1523,apache-2.0,infra-devops,Bump pypa/gh-action-pypi-publish from 1.14.0 to 1.14.1,dependabot/github_actions/pypa/gh-action-pypi-publish-1.14.1
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1521,apache-2.0,infra-devops,Bump actions/checkout from 7.0.0 to 7.0.1,dependabot/github_actions/actions/checkout-7.0.1
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1519,apache-2.0,infra-devops,Bump actions/cache from 5.0.5 to 6.1.0,dependabot/github_actions/actions/cache-6.1.0
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1518,apache-2.0,infra-devops,Bump actions/setup-python from 6.2.0 to 6.3.0,dependabot/github_actions/actions/setup-python-6.3.0
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1517,apache-2.0,infra-devops,Bump actions/checkout from 6.0.3 to 7.0.0,dependabot/github_actions/actions/checkout-7.0.0
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1515,apache-2.0,infra-devops,Prepare 26.3.0 release,claude/ecstatic-knuth-r9v9z3
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1514,apache-2.0,security-compliance,Deprecate X509Name and the remaining APIs that consume or return it,claude/lucid-tesla-5lzZ6
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1513,apache-2.0,infra-devops,"Require cryptography 49, drop Python 3.8",claude/loving-meitner-bv8ml5
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1512,apache-2.0,security-compliance,Enforce that Session is only re-used with the Context it came from,claude/inspiring-knuth-lxIez
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1511,apache-2.0,security-compliance,Deprecate Context.set_passwd_cb,claude/wizardly-darwin-Wl1I5
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1510,apache-2.0,security-compliance,Deprecate all the mutable APIs on X509,claude/hopeful-mccarthy-0xMH2
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1509,apache-2.0,security-compliance,"Deprecate PKey.generate_key, PKey.check, and dump_privatekey",claude/deprecate-pkey-dump-privatekey
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1508,apache-2.0,security-compliance,Add as_cryptography parameter to Connection.get_client_ca_list,claude/client-ca-list-as-cryptography
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1507,apache-2.0,security-compliance,Remove deprecated CSR functionality,claude/affectionate-fermi-We0bL
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1506,apache-2.0,infra-devops,Fix zizmor findings in GitHub Actions workflows,claude/optimistic-cannon-AoE3C
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1505,apache-2.0,infra-devops,bump aws-lc version,alex-patch-1
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1504,apache-2.0,infra-devops,Bump actions/checkout from 6.0.2 to 6.0.3,dependabot/github_actions/actions/checkout-6.0.3
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1500,apache-2.0,security-compliance,Prepare 26.2.0 release,claude/bump-cryptography-version-7O0xn
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1497,apache-2.0,security-compliance,add Connection.set_options,ssl-set-options
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1496,apache-2.0,infra-devops,Remove tests-cryptography-main for Python 3.8,alex-patch-2
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1495,apache-2.0,security-compliance,Prepare 26.1.0 release,release-26.1.0
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1492,apache-2.0,infra-devops,Bump actions/upload-artifact from 7.0.0 to 7.0.1 in /.github/actions/upload-coverage,dependabot/github_actions/dot-github/actions/upload-coverage/actions/upload-artifact-7.0.1
+public:pyca/pyopenssl,https://github.com/pyca/pyopenssl/pull/1491,apache-2.0,infra-devops,Bump actions/upload-artifact from 7.0.0 to 7.0.1,dependabot/github_actions/actions/upload-artifact-7.0.1
+public:docker/compose,https://github.com/docker/compose/pull/14258,apache-2.0,infra-devops,get-relay-info tells providers where to bind for the relay,provider-relay-info
+public:docker/compose,https://github.com/docker/compose/pull/14256,apache-2.0,infra-devops,build(deps): bump codecov/codecov-action from 7.1.0 to 7.1.1,dependabot/github_actions/codecov/codecov-action-7.1.1
+public:docker/compose,https://github.com/docker/compose/pull/14254,apache-2.0,infra-devops,build(deps): bump the docker-actions group across 1 directory with 3 updates,dependabot/github_actions/docker-actions-a8efc8d947
+public:docker/compose,https://github.com/docker/compose/pull/14247,apache-2.0,infra-devops,build(deps): bump codecov/codecov-action from 7.0.0 to 7.1.0,dependabot/github_actions/codecov/codecov-action-7.1.0
+public:docker/compose,https://github.com/docker/compose/pull/14242,apache-2.0,infra-devops,test(e2e): reproduce #14223 -- additional_contexts to a disabled service,14223-additional-contexts-disabled-service
+public:docker/compose,https://github.com/docker/compose/pull/14238,apache-2.0,infra-devops,fix(provider): clean up stale relay and guard start/restart against it,relay-stale-cleanup-and-lifecycle-guard
+public:docker/compose,https://github.com/docker/compose/pull/14236,apache-2.0,infra-devops,fix(relay): reconnect to new networks when routes are unchanged,relay-network-reconnect
+public:docker/compose,https://github.com/docker/compose/pull/14235,apache-2.0,infra-devops,"ci: lint, vet and test relay/ as its own module",relay-module-ci
+public:docker/compose,https://github.com/docker/compose/pull/14234,apache-2.0,infra-devops,test(e2e): reproduce --project-directory ignored on an oci:// project (#14224),14224-project-directory-oci
+public:docker/compose,https://github.com/docker/compose/pull/14231,apache-2.0,infra-devops,build(deps): bump github/codeql-action/upload-sarif from 4.37.9 to 4.38.0,dependabot/github_actions/github/codeql-action/upload-sarif-4.38.0
+public:docker/compose,https://github.com/docker/compose/pull/14228,apache-2.0,infra-devops,"test(e2e): wait on state, not on an unsynchronized log line",flaky-e2e-wait-conditions
+public:docker/compose,https://github.com/docker/compose/pull/14225,apache-2.0,infra-devops,chore: update docker-agent-action to v2.0.9,auto/update-docker-agent-action
+public:docker/compose,https://github.com/docker/compose/pull/14218,apache-2.0,infra-devops,build(deps): bump tags.cncf.io/container-device-interface from 1.1.0 to 1.1.1,dependabot/go_modules/tags.cncf.io/container-device-interface-1.1.1
+public:docker/compose,https://github.com/docker/compose/pull/14207,apache-2.0,infra-devops,golangci-lint: enable perfsprint linter,perfsprint
+public:docker/compose,https://github.com/docker/compose/pull/14197,apache-2.0,infra-devops,chore: update docker-agent-action to v2.0.8,auto/update-docker-agent-action
+public:docker/compose,https://github.com/docker/compose/pull/14196,apache-2.0,infra-devops,feat(compose): warn on unsupported compose-file attributes,warn-unsupported-attributes
+public:docker/compose,https://github.com/docker/compose/pull/14195,apache-2.0,infra-devops,build(deps): bump softprops/action-gh-release from 3.0.2 to 3.0.3,dependabot/github_actions/softprops/action-gh-release-3.0.3
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14237,apache-2.0,infra-devops,[release/2.4] Conditional actions,cherry-pick-14232-to-release/2.4
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14232,apache-2.0,infra-devops,Conditional actions,conditional-actions
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14231,apache-2.0,infra-devops,update runc binary to v1.5.2,bump_runc
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14227,apache-2.0,infra-devops,Prepare release notes for v2.2.9,prepare-release-2.2.9
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14226,apache-2.0,infra-devops,Prepare release notes for v2.3.6,prepare-release-2.3.6
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14221,apache-2.0,infra-devops,Add Maksym to CRI KEP issue template,kep
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14211,apache-2.0,infra-devops,[release/2.3] cri: tolerate wrapped ENOTSUP during relabel,cherry-pick-14207-to-release/2.3
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14201,apache-2.0,observability,Use stable OpenTelemetry shim service name,shim_telemetry
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14200,apache-2.0,security-compliance,[release/2.4] core/unpack: don't honor id-mapping labels from image annotations,cherry-pick-13855-to-release/2.4
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14195,apache-2.0,infra-devops,build(deps): bump azure/login from 3.0.2 to 3.1.0,dependabot/github_actions/azure/login-3.1.0
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14189,apache-2.0,infra-devops,"Drop upgrade tests from 1.7, add 2.3 and 2.4",upgrade-tests
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14188,apache-2.0,infra-devops,[release/2.4] ctr: disable slice flag separator on commands,cherry-pick-14185-to-release/2.4
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14185,apache-2.0,infra-devops,ctr: disable slice flag separator on commands,fix_cli_flag_separator
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14184,apache-2.0,security-compliance,[release/1.7] pkg/oci: mask thermal interrupt info,cherry-pick-c176f-to-release/1.7
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14183,apache-2.0,infra-devops,[release/2.0] pkg/oci: mask thermal interrupt info,cherry-pick-c176f-to-release/2.0
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14182,apache-2.0,security-compliance,[release/2.2] pkg/oci: mask thermal interrupt info,cherry-pick-c176f-to-release/2.2
+public:containerd/containerd,https://github.com/containerd/containerd/pull/14180,apache-2.0,infra-devops,[release/2.3] release: don't mark 2.3 releases as latest,2.3-is-not-latest
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4088,mit,ui-design,Add `ScrollArea.Content` part,chance/fix-1666
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4079,mit,infra-devops,New release,changeset-release/stable
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4071,mit,infra-devops,New release (#4070),stable
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4070,mit,infra-devops,New release,changeset-release/stable
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4050,mit,infra-devops,New release (#4049),stable
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4049,mit,infra-devops,New release,changeset-release/stable
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4048,mit,infra-devops,New release,changeset-release/stable
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4020,mit,ui-design,Split modules in `radix-ui` for subpath imports,chance/add-subpath-entrypoints
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4018,mit,infra-devops,Migrate e2e tests from Cypress to Playwright,chance/playwright-migration
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4017,mit,infra-devops,New release (#4016),stable
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4016,mit,infra-devops,New release,changeset-release/stable
+public:radix-ui/primitives,https://github.com/radix-ui/primitives/pull/4008,mit,ui-design,Slider: Add `preserveThumbOrder` prop,chance/slider-preserve-thumb-order
+public:mantinedev/mantine,https://github.com/mantinedev/mantine/pull/9208,mit,ui-design,[docs] Fix truncated code examples,fix-truncated-example-code
+public:mantinedev/mantine,https://github.com/mantinedev/mantine/pull/9176,mit,ui-design,[@mantine/notifications] Fix uneven spacing in expanded stacks,fix/stacked-notification-spacing
+public:mantinedev/mantine,https://github.com/mantinedev/mantine/pull/9083,mit,infra-devops,[core] Setup release automation,release-automation
+public:mantinedev/mantine,https://github.com/mantinedev/mantine/pull/9082,mit,infra-devops,[core] Setup npm oidc publishing with GitHub actions,npm-oidc-publishing
+public:mantinedev/mantine,https://github.com/mantinedev/mantine/pull/9061,mit,ui-design,[@mantine/core] ColorInput: Add support for fullWidth prop,fix/colorinput-colorpicker-full-width

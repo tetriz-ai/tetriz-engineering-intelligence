@@ -1,0 +1,1 @@
+{ "include": ["contract", "corpus", "evalset", "sdk", "server", "stage"], "extraPaths": ["."] }

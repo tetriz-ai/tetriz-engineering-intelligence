@@ -1,0 +1,52 @@
+{
+  "accuracy": 0.9175,
+  "gate_macro_f1": 0.9,
+  "macro_f1": 0.9194,
+  "passes_gate": true,
+  "per_bucket": {
+    "bugfix": {
+      "f1": 0.897,
+      "precision": 0.853,
+      "recall": 0.946,
+      "support": 92
+    },
+    "chore-deps": {
+      "f1": 0.918,
+      "precision": 0.936,
+      "recall": 0.901,
+      "support": 81
+    },
+    "docs": {
+      "f1": 0.881,
+      "precision": 0.949,
+      "recall": 0.822,
+      "support": 90
+    },
+    "feature": {
+      "f1": 0.946,
+      "precision": 0.946,
+      "recall": 0.946,
+      "support": 93
+    },
+    "performance": {
+      "f1": 0.954,
+      "precision": 0.939,
+      "recall": 0.969,
+      "support": 32
+    },
+    "refactor": {
+      "f1": 0.895,
+      "precision": 0.872,
+      "recall": 0.919,
+      "support": 37
+    },
+    "test": {
+      "f1": 0.945,
+      "precision": 0.932,
+      "recall": 0.958,
+      "support": 72
+    }
+  },
+  "test_rows": 497,
+  "train_rows": 2281
+}
