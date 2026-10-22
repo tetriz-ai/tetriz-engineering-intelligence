@@ -7,6 +7,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Go](https://img.shields.io/badge/go-1.25.2%2B-00ADD8.svg)
 
+<a href="https://www.producthunt.com/products/tetriz-engg-intelligence-connectors?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-tetriz-engg-intelligence-connectors" target="_blank" rel="noopener noreferrer"><img alt="Tetriz Engg Intelligence + Connectors - Connect coding sessions to PRs, issues, quality, and ROI | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1288748&amp;theme=light&amp;t=1792669657317"></a>
+
 If you have to show what AI coding tools changed in your team's delivery, the evidence sits in
 session logs, pull requests and tracker issues that nothing joins. These ten Go packages join the
 records you supply, all offline except `prworktype`. They link sessions to pull requests and pull
